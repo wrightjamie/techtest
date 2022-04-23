@@ -1,0 +1,10 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="8em"
+    height="8em"
+    viewBox="0 0 620 620">
+    <circle cx="310" cy="310" r="310" style="fill:var(--white)" />
+    <circle cx="310" cy="310" r="300" style="fill:var(--blue)" />
+    <circle cx="310" cy="310" r="200" style="fill:var(--white)" />
+    <circle cx="310" cy="310" r="100" style="fill:var(--red)" />
+</svg>
