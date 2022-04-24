@@ -1,5 +1,3 @@
-import { useLayoutEffect } from "react";
-
 const posts = {
   name: "post",
   label: "Posts",
@@ -23,6 +21,40 @@ const posts = {
       name: "title",
       widget: "string",
       required: true,
+    },
+    {
+      label: "Author",
+      name: "author",
+      widget: "string",
+      required: true,
+    },
+    {
+      label: "Featured Image",
+      name: "thumbnail",
+      widget: "image",
+      default: "",
+      required: false,
+    },
+    {
+      label: "Date",
+      name: "date",
+      widget: "datetime",
+      default: "",
+      required: false,
+    },
+    {
+      label: "Excerpt",
+      name: "excerpt",
+      widget: "markdown",
+      default: "",
+      required: false,
+    },
+    {
+      label: "Body",
+      name: "body",
+      widget: "markdown",
+      default: "",
+      required: false,
     },
   ],
 };
