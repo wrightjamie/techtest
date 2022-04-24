@@ -34,6 +34,34 @@ const page = {
       required: false,
     },
     {
+      label: "Header",
+      name: "header",
+      widget: "object",
+      fields: [
+        {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "",
+          required: false,
+        },
+        {
+          label: "Version",
+          name: "version",
+          widget: "string",
+          default: "",
+          required: false,
+        },
+        {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          default: "",
+          required: false,
+        },
+      ],
+    },
+    {
       label: "Links",
       name: "links",
       widget: "list",
