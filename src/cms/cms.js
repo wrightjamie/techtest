@@ -1,5 +1,5 @@
 import CMS from "netlify-cms-app";
-import pages from "@/cms/pages";
+import pages from "../cms/pages";
 
 window.CMS_MANUAL_INIT = true;
 
