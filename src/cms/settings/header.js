@@ -2,7 +2,7 @@
 import links from "../partials/links";
 
 const header = {
-  file: "content/pages/header.md",
+  file: "content/settings/header.md",
   label: "Header Links",
   name: "Header_links",
   fields: [

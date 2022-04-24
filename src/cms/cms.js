@@ -1,5 +1,5 @@
 import CMS from "netlify-cms-app";
-import pages from "../cms/pages";
+import settings from "../cms/settings";
 
 window.CMS_MANUAL_INIT = true;
 
@@ -20,6 +20,6 @@ CMS.init({
     },
     media_folder: "/static/img",
     public_folder: "/img",
-    collections: [pages],
+    collections: [settings],
   },
 });
