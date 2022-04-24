@@ -10,6 +10,7 @@ const page = {
       name: "layout",
       widget: "hidden",
       default: "index",
+      required: true,
     },
     {
       label: "Type",
