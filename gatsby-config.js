@@ -65,5 +65,6 @@ module.exports = {
         img: path.join(__dirname, "static/img"),
       },
     },
+    "gatsby-plugin-netlify",
   ],
 };
