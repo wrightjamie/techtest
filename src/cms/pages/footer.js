@@ -3,8 +3,8 @@ import links from "../partials/links";
 
 const footer = {
   file: "content/pages/footer.md",
-  label: "Footer Links",
-  name: "Footer_links",
+  label: "Footer",
+  name: "Footer",
   fields: [
     {
       label: "Layout",
@@ -21,12 +21,33 @@ const footer = {
       required: true,
     },
     {
-      label: "Column Title",
-      name: "column_title",
+      label: "Copyright Statement",
+      name: "copyright",
       widget: "string",
-      default: "Links:",
+      default: "Copyright 2459 Poulton-le-Fylde Squadron",
     },
-    links,
+    {
+      label: "Year",
+      name: "year",
+      widget: "number",
+      default: "2022",
+    },
+    {
+      label: "Footer Columns",
+      name: "columns",
+      widget: "list",
+      min: 1,
+      max: 4,
+      fields: [
+        {
+          label: "Column Title",
+          name: "column_title",
+          widget: "string",
+          default: "Links:",
+        },
+        links,
+      ],
+    },
   ],
 };
 

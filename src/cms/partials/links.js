@@ -22,6 +22,12 @@ const links = {
           widget: "string",
           required: false,
         },
+        {
+          label: "Icon",
+          name: "icon",
+          widget: "select",
+          options: ["facebook", "twitter", "mail"],
+        },
       ],
     },
   ],
