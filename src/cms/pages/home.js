@@ -60,6 +60,7 @@ const page = {
           default: "",
           required: false,
         },
+        links,
       ],
     },
     links,
