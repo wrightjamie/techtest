@@ -1,4 +1,5 @@
 //import seo from "@/cms/partials/seo";
+import links from "../partials/links";
 
 const page = {
   file: "content/pages/home.md",
@@ -61,32 +62,7 @@ const page = {
         },
       ],
     },
-    {
-      label: "Links",
-      name: "links",
-      widget: "list",
-      fields: [
-        {
-          label: "Link",
-          name: "link",
-          widget: "object",
-          fields: [
-            {
-              label: "Content",
-              name: "content",
-              widget: "string",
-              required: false,
-            },
-            {
-              label: "URL",
-              name: "url",
-              widget: "string",
-              required: false,
-            },
-          ],
-        },
-      ],
-    },
+    links,
     //seo,
   ],
 };
