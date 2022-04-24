@@ -13,12 +13,6 @@ const page = {
       required: true,
     },
     {
-      label: "Type",
-      name: "type",
-      widget: "hidden",
-      default: "page",
-    },
-    {
       label: "Title",
       name: "title",
       widget: "string",
