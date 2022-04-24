@@ -1,9 +1,10 @@
-import home from "../pages/home";
+import header from "../pages/header";
+import header from "../pages/footer";
 
 const pages = {
   name: "pages",
   label: "Pages",
-  files: [home],
+  files: [header, footer],
 };
 
 export default pages;
