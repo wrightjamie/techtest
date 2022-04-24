@@ -1,4 +1,4 @@
-import home from "@/cms/pages/home";
+import home from "../pages/home";
 
 const pages = {
   name: "pages",
