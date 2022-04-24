@@ -1,7 +1,7 @@
 //import seo from "@/cms/partials/seo";
 import links from "../partials/links";
 
-const header = {
+const footer = {
   file: "content/pages/footer.md",
   label: "Footer Links",
   name: "Footer_links",
