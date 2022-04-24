@@ -56,15 +56,16 @@ module.exports = {
         name: "pages",
       },
     },
-    {
-      resolve: "gatsby-plugin-root-import",
-      options: {
-        "@": path.join(__dirname, "src"),
-        "~": path.join(__dirname, ""),
-        styles: path.join(__dirname, "src/styles"),
-        img: path.join(__dirname, "static/img"),
-      },
-    },
+
+    // {
+    //   resolve: "gatsby-plugin-root-import",
+    //   options: {
+    //     "@": path.join(__dirname, "src"),
+    //     "~": path.join(__dirname, ""),
+    //     styles: path.join(__dirname, "src/styles"),
+    //     img: path.join(__dirname, "static/img"),
+    //   },
+    // },
     "gatsby-plugin-netlify",
   ],
 };
