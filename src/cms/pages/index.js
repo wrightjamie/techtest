@@ -1,5 +1,5 @@
 import header from "../pages/header";
-import header from "../pages/footer";
+import footer from "../pages/footer";
 
 const pages = {
   name: "pages",
