@@ -45,7 +45,7 @@ const posts = {
     {
       label: "Excerpt",
       name: "excerpt",
-      widget: "markdown",
+      widget: "text",
       default: "",
       required: false,
     },
