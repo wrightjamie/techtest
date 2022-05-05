@@ -23,13 +23,6 @@ const posts = {
       required: true,
     },
     {
-      label: "Slug",
-      name: "slug",
-      widget: "hidden",
-      default: "{{slug}}",
-      required: true,
-    },
-    {
       label: "Author",
       name: "author",
       widget: "string",
