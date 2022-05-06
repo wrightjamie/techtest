@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-// import { graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Facebook from "../svg/facebook.svg";
 import RAFAClogo from "../svg/rafacLogo.svg";
 
@@ -130,23 +130,16 @@ const links = [
 ];
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
       <section style={pageStyles}>
         <title>Home Page</title>
         <Facebook />
         <RAFAClogo />
-        <h1 style={headingStyles}>
-          Congratulations
-          <br />
-          <span style={headingAccentStyles}>
-            — you just made a Gatsby site!{" "}
-          </span>
-          <span role="img" aria-label="Party popper emojis">
-            🎉🎉🎉
-          </span>
-        </h1>
+        <h1 style={headingStyles}>Congratulations</h1>
+        <h2>landing</h2>
         <p style={paragraphStyles}>
           Edit <code style={codeStyles}>src/pages/index.js</code> to see this
           page update in real-time.{" "}
@@ -190,5 +183,17 @@ const IndexPage = () => {
     </Layout>
   );
 };
+
+// export const query = graphql`
+//   query {
+//     markdownRemark(frontmatter: { template: { eq: "home" } }) {
+//       frontmatter {
+//         landing {
+//           tag
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default IndexPage;

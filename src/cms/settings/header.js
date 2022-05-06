@@ -7,8 +7,8 @@ const header = {
   name: "Header_links",
   fields: [
     {
-      label: "Layout",
-      name: "layout",
+      label: "Template",
+      name: "template",
       widget: "hidden",
       default: "settings",
       required: true,

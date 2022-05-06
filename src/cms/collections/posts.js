@@ -43,6 +43,13 @@ const posts = {
       required: false,
     },
     {
+      label: "Featured",
+      name: "featured",
+      widget: "boolean",
+      default: true,
+      required: true,
+    },
+    {
       label: "Excerpt",
       name: "excerpt",
       widget: "text",
