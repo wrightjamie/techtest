@@ -1,5 +1,5 @@
 ---
-layout: page
+template: page
 title: With Content
 slug: posts/with-content
 author: Jamie Wright

@@ -131,7 +131,7 @@ const links = [
 
 // markup
 const IndexPage = ({ data }) => {
-  console.log(data);
+  const landing = data.markdownRemark.frontmatter.landing;
   return (
     <Layout>
       <section style={pageStyles}>
@@ -139,7 +139,7 @@ const IndexPage = ({ data }) => {
         <Facebook />
         <RAFAClogo />
         <h1 style={headingStyles}>Congratulations</h1>
-        <h2>landing</h2>
+        <h2>{landing.tag}</h2>
         <p style={paragraphStyles}>
           Edit <code style={codeStyles}>src/pages/index.js</code> to see this
           page update in real-time.{" "}
@@ -184,16 +184,16 @@ const IndexPage = ({ data }) => {
   );
 };
 
-// export const query = graphql`
-//   query {
-//     markdownRemark(frontmatter: { template: { eq: "home" } }) {
-//       frontmatter {
-//         landing {
-//           tag
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query {
+    markdownRemark(frontmatter: { template: { eq: "home" } }) {
+      frontmatter {
+        landing {
+          tag
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

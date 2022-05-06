@@ -1,4 +1,5 @@
 ---
+template: layout
 column_title: Test
 links:
   - link:
