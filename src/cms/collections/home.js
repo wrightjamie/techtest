@@ -5,7 +5,8 @@ const home = {
     preview: false,
   },
   description: "Setup for Home Page",
-  file: "content/home.md",
+  folder: "content",
+  file: "home.md",
 
   fields: [
     {
