@@ -40,7 +40,7 @@ const posts = {
       name: "date",
       widget: "datetime",
       default: "",
-      required: false,
+      required: true,
     },
     {
       label: "Featured",

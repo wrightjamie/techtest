@@ -10,7 +10,7 @@ const footer = {
       label: "Template",
       name: "template",
       widget: "hidden",
-      default: "settings",
+      default: "footer",
       required: true,
     },
     {

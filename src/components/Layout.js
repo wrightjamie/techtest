@@ -5,11 +5,8 @@ const Layout = ({ children }) => {
   const data = useStaticQuery(
     graphql`
       query SiteMetaData {
-        markdownRemark(frontmatter: { template: { eq: "layout" } }) {
+        header: markdownRemark(frontmatter: { template: { eq: "header" } }) {
           frontmatter {
-            title
-            version
-            description
             links {
               link {
                 content
@@ -30,15 +27,19 @@ const Layout = ({ children }) => {
 
   return (
     <main>
+      <b>Start of header</b>
       <h1>{data.site.siteMetadata.title}</h1>
+      SIte links from md...
       <ul>
-        {data.markdownRemark.frontmatter.links.map((link) => (
+        {data.header.frontmatter.links.map((link) => (
           <li key={link.link.id}>
             <a href={link.link.url}>{link.link.content}</a>
           </li>
         ))}
       </ul>
+      <b>End of header... children next</b>
       {children}
+      <b>anything after the children...</b>
     </main>
   );
 };

@@ -10,7 +10,7 @@ const header = {
       label: "Template",
       name: "template",
       widget: "hidden",
-      default: "settings",
+      default: "header",
       required: true,
     },
     {

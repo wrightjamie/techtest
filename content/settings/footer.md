@@ -1,5 +1,5 @@
 ---
-template: layout
+template: footer
 column_title: Test
 links:
   - link:

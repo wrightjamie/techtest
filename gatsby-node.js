@@ -15,7 +15,7 @@ exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
       allMarkdownRemark(
-        filter: { frontmatter: { layout: { in: ["post", "page"] } } }
+        filter: { frontmatter: { template: { in: ["post", "page"] } } }
       ) {
         edges {
           node {
@@ -23,7 +23,7 @@ exports.createPages = async function ({ actions, graphql }) {
               slug
             }
             frontmatter {
-              layout
+              template
             }
           }
         }
