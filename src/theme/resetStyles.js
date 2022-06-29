@@ -15,6 +15,7 @@ export const Reset = css`
 */
   * {
     margin: 0;
+    padding: 0;
   }
   /*
   3. Allow percentage-based heights in the application
