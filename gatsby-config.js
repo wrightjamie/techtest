@@ -11,7 +11,8 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    "gatsby-plugin-sass",
+    "gatsby-plugin-styled-components",
+    //    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

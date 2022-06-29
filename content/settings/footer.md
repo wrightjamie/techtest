@@ -1,10 +1,5 @@
 ---
 template: footer
-column_title: Test
-links:
-  - link:
-      content: A link
-      url: /admin/
 copyright: Copyright 2459 Squadron Royal Air Force Air Cadets
 year: 2022
 columns:
@@ -12,7 +7,7 @@ columns:
     links:
       - link:
           content: Facebook
-          url: www.facebook.com/2459Squadron
+          url: http://www.facebook.com/2459Squadron
           icon: facebook
       - link:
           content: Twitter

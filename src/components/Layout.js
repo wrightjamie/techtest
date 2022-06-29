@@ -1,6 +1,11 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
+import { GlobalStyle } from "../theme/globalStyle";
+
+import Header from "./header/header";
+import Footer from "./footer/footer";
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(
     graphql`
@@ -11,6 +16,20 @@ const Layout = ({ children }) => {
               link {
                 content
                 url
+              }
+            }
+          }
+        }
+        footer: markdownRemark(frontmatter: { template: { eq: "footer" } }) {
+          frontmatter {
+            columns {
+              column_title
+              links {
+                link {
+                  content
+                  icon
+                  url
+                }
               }
             }
           }
@@ -26,21 +45,15 @@ const Layout = ({ children }) => {
   console.log(data);
 
   return (
-    <main>
-      <b>Start of header</b>
-      <h1>{data.site.siteMetadata.title}</h1>
-      SIte links from md...
-      <ul>
-        {data.header.frontmatter.links.map((link) => (
-          <li key={link.link.id}>
-            <a href={link.link.url}>{link.link.content}</a>
-          </li>
-        ))}
-      </ul>
-      <b>End of header... children next</b>
-      {children}
-      <b>anything after the children...</b>
-    </main>
+    <>
+      <GlobalStyle />
+      <div>
+        <Header data={data} />
+        <main>{children}</main>
+        <b>anything after the children...</b>
+        <Footer data={data} />
+      </div>
+    </>
   );
 };
 
