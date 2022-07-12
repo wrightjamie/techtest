@@ -3,10 +3,15 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import { GlobalStyle } from "../theme/globalStyle";
 
+import { styled } from "styled-components";
+
 import Header from "./header/header";
 import Footer from "./footer/footer";
+import { LayoutContainer, UtilityContainer } from "./utils/utility";
 
-const Layout = ({ children }) => {
+//const LayoutContainer = styled()``; //Move 1st row to second line
+
+const Layout = ({ children, lead }) => {
   const data = useStaticQuery(
     graphql`
       query SiteMetaData {
@@ -47,12 +52,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <div>
+      <LayoutContainer as="main">
         <Header data={data} />
-        <main>{children}</main>
-        <b>anything after the children...</b>
-        <Footer data={data} />
-      </div>
+        {lead}
+        {children}
+      </LayoutContainer>
+      <Footer data={data} />
     </>
   );
 };

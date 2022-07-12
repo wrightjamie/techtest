@@ -8,6 +8,10 @@ export const UtilityContainer = styled.div`
   }
 `;
 
+export const LayoutContainer = styled(UtilityContainer)`
+  background: blue;
+`;
+
 export const UtilityFlex = styled.div`
   display: flex;
   gap: var(--gap);

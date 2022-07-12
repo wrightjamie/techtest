@@ -59,8 +59,9 @@ const HeaderWrapper = styled(UtilityFlex)``;
 const MenuButton = styled.button``;
 
 const HeaderContainer = styled(UtilityContainer)`
+  grid-row: 2/3;
   inset: 0 0 auto 0;
-  position: fixed;
+  position: sticky;
   height: 2rem;
   background-color: green;
 `;
