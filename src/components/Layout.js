@@ -9,8 +9,6 @@ import Header from "./header/header";
 import Footer from "./footer/footer";
 import { LayoutContainer, UtilityContainer } from "./utils/utility";
 
-//const LayoutContainer = styled()``; //Move 1st row to second line
-
 const Layout = ({ children, lead }) => {
   const data = useStaticQuery(
     graphql`
@@ -47,7 +45,6 @@ const Layout = ({ children, lead }) => {
       }
     `
   );
-  console.log(data);
 
   return (
     <>

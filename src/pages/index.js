@@ -3,6 +3,8 @@ import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 
+import Logo from "../svg/rafacLogo.svg";
+
 import Card from "../components/card";
 
 // markup
@@ -22,12 +24,14 @@ const IndexPage = ({ data }) => {
 
   const LeadPage = () => (
     <>
-      <Page>
+      <Page fullHeight>
         <div>
           <h1>Congratulations</h1>
           <h2>{landing.tag}</h2>
         </div>
         <div>
+          <StyledLogo />
+          <p>{dummy.landing.content}</p>
           <p>{dummy.landing.content}</p>
           <div>
             <Link to={dummy.landing.cta1.to}>{dummy.landing.cta1.title}</Link>
@@ -102,8 +106,15 @@ export const query = graphql`
 export default IndexPage;
 
 const Page = styled.section`
-  height: 100vh;
-  overflow-y: hidden;
+  height: ${(props) =>
+    props.fullHeight ? "100vh" : "calc(100vh - var(--headerHeight))"};
+
+  scroll-snap-align: start;
+  overflow: hidden;
 `;
 
 const PageHeader = styled.h2``;
+
+const StyledLogo = styled(Logo)`
+  height: 3em;
+`;

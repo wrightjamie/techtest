@@ -1,7 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+
+import { UtilityContainer } from "../utils/utility";
 
 const Footer = ({ data }) => (
-  <footer>
+  <FooterStop>
     <h4>the footer</h4>
     <ul>
       {data.footer.frontmatter.columns.map((column) => (
@@ -17,7 +20,12 @@ const Footer = ({ data }) => (
         </div>
       ))}
     </ul>
-  </footer>
+  </FooterStop>
 );
 
 export default Footer;
+
+const FooterStop = styled(UtilityContainer)`
+  scroll-snap-align: end;
+  background-color: pink;
+`;
