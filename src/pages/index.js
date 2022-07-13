@@ -3,6 +3,8 @@ import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 
+import Card from "../components/card";
+
 // markup
 const IndexPage = ({ data }) => {
   console.log(data);
@@ -17,7 +19,7 @@ const IndexPage = ({ data }) => {
       cta2: { title: "Learn more", to: "learnmore" },
     },
   };
-  console.log(dummy);
+
   const LeadPage = () => (
     <>
       <Page>
@@ -46,15 +48,22 @@ const IndexPage = ({ data }) => {
   return (
     <Layout lead={<LeadPage />}>
       <Page>
-        <section>A Card</section>
-        <section>A Card</section>
-        <section>A Card</section>
+        <PageHeader>A Page Title</PageHeader>
+        <Card />
+        <Card />
+        <Card />
       </Page>
       <Page>
-        <section>A Card</section>
-        <section>A Card</section>
-        <section>A Card</section>
-        <section>A Card</section>
+        <PageHeader>A Page Title</PageHeader>
+        <img src="img/dsc01214.jpg" />
+        <p>{dummy.landing.content}</p>
+      </Page>
+      <Page>
+        <PageHeader>A Page Title</PageHeader>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </Page>
     </Layout>
   );
@@ -94,4 +103,7 @@ export default IndexPage;
 
 const Page = styled.section`
   height: 100vh;
+  overflow-y: hidden;
 `;
+
+const PageHeader = styled.h2``;

@@ -60,6 +60,7 @@ const MenuButton = styled.button``;
 
 const HeaderContainer = styled(UtilityContainer)`
   grid-row: 2/3;
+  grid-column 1/-1;
   inset: 0 0 auto 0;
   position: sticky;
   height: 2rem;
