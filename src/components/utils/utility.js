@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const UtilityContainer = styled.div`
   display: grid;
+
+  ${(props) => (props.bleed ? "grid-column: 1/-1" : "")};
   grid-template-columns: 1fr min(100%, 50rem) 1fr;
   > * {
     grid-column: 2;

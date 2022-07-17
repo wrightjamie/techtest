@@ -64,7 +64,7 @@ const HeaderContainer = styled(UtilityContainer)`
   inset: 0 0 auto 0;
   position: sticky;
   height: var(--headerHeight);
-  background-color: green;
+  background-color: var(--col-header);
 `;
 
 const StyledNav = styled(UtilityFlex)`

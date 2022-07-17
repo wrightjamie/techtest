@@ -13,6 +13,8 @@ export const Variables = css`
 
     --col-img-cover: rgba(27, 50, 87, 0.7);
     --col-bg: var(--col-light);
+    --col-header: var(--col-text);
+    --col-bg-main: var(--white);
 
     --gap: 1rem;
 

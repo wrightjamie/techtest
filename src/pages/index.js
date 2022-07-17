@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Logo from "../svg/rafacLogo.svg";
 
 import Card from "../components/card";
+import { UtilityContainer } from "../components/utils/utility";
 
 // markup
 const IndexPage = ({ data }) => {
@@ -24,28 +25,30 @@ const IndexPage = ({ data }) => {
 
   const LeadPage = () => (
     <>
-      <Page fullHeight>
-        <div>
-          <h1>Congratulations</h1>
-          <h2>{landing.tag}</h2>
-        </div>
-        <div>
-          <StyledLogo />
-          <p>{dummy.landing.content}</p>
-          <p>{dummy.landing.content}</p>
+      <UtilityContainer bleed>
+        <Page overlay fullHeight>
           <div>
-            <Link to={dummy.landing.cta1.to}>{dummy.landing.cta1.title}</Link>
-            <Link to={dummy.landing.cta2.to}>{dummy.landing.cta2.title}</Link>
+            <h1>Congratulations</h1>
+            <h2>{landing.tag}</h2>
           </div>
-          <nav>
-            <a href="facebook.com">F</a>
-            <a href="twitter.com">T</a>
-            <a href="contact.com">M</a>
-            <span>|</span>
-            <a href="button">L</a>
-          </nav>
-        </div>
-      </Page>
+          <div>
+            <StyledLogo />
+            <p>{dummy.landing.content}</p>
+            <p>{dummy.landing.content}</p>
+            <div>
+              <Link to={dummy.landing.cta1.to}>{dummy.landing.cta1.title}</Link>
+              <Link to={dummy.landing.cta2.to}>{dummy.landing.cta2.title}</Link>
+            </div>
+            <nav>
+              <a href="facebook.com">F</a>
+              <a href="twitter.com">T</a>
+              <a href="contact.com">M</a>
+              <span>|</span>
+              <a href="button">L</a>
+            </nav>
+          </div>
+        </Page>
+      </UtilityContainer>
     </>
   );
 
@@ -108,12 +111,26 @@ export default IndexPage;
 const Page = styled.section`
   height: ${(props) =>
     props.fullHeight ? "100vh" : "calc(100vh - var(--headerHeight))"};
+  background-color: ${(props) =>
+    props.overlay ? "var(--col-img-cover)" : "var(--col-bg-main)"};
 
   scroll-snap-align: start;
   overflow: hidden;
 `;
 
-const PageHeader = styled.h2``;
+const PageHeader = styled.h2`
+  background-color: var(--col-img-cover);
+  margin: var(--gap);
+  padding: 0 var(--gap);
+  color: var(--white);
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: clamp(2rem, -6rem + 24vw, 3rem);
+  word-spacing: -0.5ex;
+  &:before {
+    content: "#";
+  }
+`;
 
 const StyledLogo = styled(Logo)`
   height: 3em;

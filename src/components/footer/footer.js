@@ -27,5 +27,5 @@ export default Footer;
 
 const FooterStop = styled(UtilityContainer)`
   scroll-snap-align: end;
-  background-color: pink;
+  background-color: var(--col-header);
 `;
