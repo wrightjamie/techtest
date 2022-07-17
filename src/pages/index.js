@@ -6,11 +6,11 @@ import styled from "styled-components";
 import Logo from "../svg/rafacLogo.svg";
 
 import Card from "../components/card";
+import { Page } from "../components/page";
 import { UtilityContainer } from "../components/utils/utility";
 
 // markup
 const IndexPage = ({ data }) => {
-  console.log(data);
   const landing = data.landing.frontmatter.landing;
   const recent = data.recent.edges;
 
@@ -107,16 +107,6 @@ export const query = graphql`
 `;
 
 export default IndexPage;
-
-const Page = styled.section`
-  height: ${(props) =>
-    props.fullHeight ? "100vh" : "calc(100vh - var(--headerHeight))"};
-  background-color: ${(props) =>
-    props.overlay ? "var(--col-img-cover)" : "var(--col-bg-main)"};
-
-  scroll-snap-align: start;
-  overflow: hidden;
-`;
 
 const PageHeader = styled.h2`
   background-color: var(--col-img-cover);
