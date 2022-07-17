@@ -8,9 +8,7 @@ export const UtilityContainer = styled.div`
   }
 `;
 
-export const LayoutContainer = styled(UtilityContainer)`
-  background: blue;
-`;
+export const LayoutContainer = styled(UtilityContainer)``;
 
 export const UtilityFlex = styled.div`
   display: flex;

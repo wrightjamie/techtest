@@ -12,6 +12,7 @@ export const Variables = css`
     --col-accent: rgb(255, 217, 17);
 
     --col-img-cover: rgba(27, 50, 87, 0.7);
+    --col-bg: var(--col-light);
 
     --gap: 1rem;
 

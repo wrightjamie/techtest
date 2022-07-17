@@ -9,6 +9,7 @@ export const Base = css`
   body {
     height: 100%;
     overflow: hidden;
+    background-color: var(--col-bg);
   }
   #gatsby-focus-wrapper {
     scroll-snap-type: y mandatory;
