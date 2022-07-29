@@ -4,7 +4,14 @@ export const UtilityContainer = styled.div`
   display: grid;
 
   ${(props) => (props.bleed ? "grid-column: 1/-1" : "")};
+
   grid-template-columns: 1fr min(100%, 50rem) 1fr;
+
+  ${(props) =>
+    props.background
+      ? `background-image: url(${props.background}); background-size: cover;`
+      : ""}
+
   > * {
     grid-column: 2;
   }

@@ -10,10 +10,29 @@ export const Page = styled.section`
   overflow: hidden;
 
   display: grid;
+
+  padding-inline: var(--gap);
 `;
 
-/*
-const hero = css`
+export const TopPage = styled(Page)`
+  color: var(--col-light);
+  grid-template:
+    "title logo" auto
+    "title text" auto
+    "title social" auto
+    "footer footer" auto/
+    1fr 1fr;
+  @media (orientation: portrait) {
+    grid-template:
+      "logo" auto
+      "title" auto
+      "text" 1fr
+      "social" auto
+      "footer" auto;
+  }
+`;
+
+export const HeroPage = styled(Page)`
   grid-template:
     "header header" auto
     "a b" 1fr
@@ -27,8 +46,7 @@ const hero = css`
       "footer" auto;
   }
 `;
-
-const grid = css`
+export const ThreePage = styled(Page)`
   grid-template:
     "header header header" auto
     "a b c" 1fr
@@ -43,7 +61,7 @@ const grid = css`
   }
 `;
 
-const double = css`
+export const FourPage = styled(Page)`
   grid-template:
     "header header header" auto
     "a a b" 1fr
@@ -59,7 +77,7 @@ const double = css`
   }
 `;
 
-const chequer = css`
+export const ChequeredPage = styled(Page)`
   grid-template:
     "header header" auto
     "a b" 1fr
@@ -77,4 +95,3 @@ const chequer = css`
       1fr;
   }
 `;
-*/

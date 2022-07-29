@@ -23,4 +23,9 @@ export const Base = css`
   svg {
     height: 1em;
   }
+  em {
+    font-size: var(--f-s-500);
+    font-weight: var(--f-w-500);
+    font-style: normal;
+  }
 `;

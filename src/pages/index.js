@@ -6,13 +6,14 @@ import styled from "styled-components";
 import Logo from "../svg/rafacLogo.svg";
 
 import Card from "../components/card";
-import { Page } from "../components/page";
+import { Page, TopPage } from "../components/page";
 import { UtilityContainer } from "../components/utils/utility";
 
 // markup
 const IndexPage = ({ data }) => {
   const landing = data.landing.frontmatter.landing;
   const recent = data.recent.edges;
+  const meta = data.site.siteMetadata;
 
   const dummy = {
     landing: {
@@ -23,31 +24,59 @@ const IndexPage = ({ data }) => {
     },
   };
 
+  const LeadPageTitle = styled.div`
+    grid-area: title;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: var(--f-s-900);
+      font-variant: small-caps;
+      font-weight: var(--f-w-900);
+    }
+    em {
+      color: var(--col-accent);
+      font-size: var(--f-s-700);
+      font-style: italic;
+      font-weight: var(--f-w-600);
+    }
+  `;
+  const LeadPageText = styled.div`
+    grid-area: text;
+  `;
+  const LeadPageSocial = styled.nav`
+    grid-area: social;
+  `;
+  const LeadPageLogo = styled(Logo)`
+    height: 3em;
+    grid-area: logo;
+  `;
+
   const LeadPage = () => (
     <>
-      <UtilityContainer bleed>
-        <Page overlay fullHeight>
-          <div>
-            <h1>Congratulations</h1>
-            <h2>{landing.tag}</h2>
-          </div>
-          <div>
-            <StyledLogo />
-            <p>{dummy.landing.content}</p>
+      <UtilityContainer bleed background="img/Torp.jpg">
+        <TopPage overlay fullHeight>
+          <LeadPageTitle>
+            <h1>{meta.title}</h1>
+            <em>{landing.tag}</em>
+          </LeadPageTitle>
+          <LeadPageLogo />
+          <LeadPageText>
+            <em>{dummy.landing.content}</em>
             <p>{dummy.landing.content}</p>
             <div>
               <Link to={dummy.landing.cta1.to}>{dummy.landing.cta1.title}</Link>
               <Link to={dummy.landing.cta2.to}>{dummy.landing.cta2.title}</Link>
             </div>
-            <nav>
-              <a href="facebook.com">F</a>
-              <a href="twitter.com">T</a>
-              <a href="contact.com">M</a>
-              <span>|</span>
-              <a href="button">L</a>
-            </nav>
-          </div>
-        </Page>
+          </LeadPageText>
+          <LeadPageSocial>
+            <a href="facebook.com">F</a>
+            <a href="twitter.com">T</a>
+            <a href="contact.com">M</a>
+            <span>|</span>
+            <a href="button">L</a>
+          </LeadPageSocial>
+        </TopPage>
       </UtilityContainer>
     </>
   );
@@ -78,6 +107,12 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+
     landing: markdownRemark(frontmatter: { template: { eq: "home" } }) {
       frontmatter {
         landing {
@@ -109,6 +144,7 @@ export const query = graphql`
 export default IndexPage;
 
 const PageHeader = styled.h2`
+  grid-area: header;
   background-color: var(--col-img-cover);
   margin: var(--gap);
   padding: 0 var(--gap);
@@ -120,8 +156,4 @@ const PageHeader = styled.h2`
   &:before {
     content: "#";
   }
-`;
-
-const StyledLogo = styled(Logo)`
-  height: 3em;
 `;
