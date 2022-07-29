@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const UtilityContainer = styled.div`
   display: grid;
 
   ${(props) => (props.bleed ? "grid-column: 1/-1" : "")};
 
-  grid-template-columns: 1fr min(100%, 50rem) 1fr;
+  grid-template-columns: 1fr min(100%, var(--max-width)) 1fr;
 
   ${(props) =>
     props.background
@@ -27,4 +27,13 @@ export const UtilityFlex = styled.div`
 
 export const UtilityNavList = styled(UtilityFlex)`
   list-style: none;
+`;
+
+export const flow = css`
+  /*
+  Andy Bell, flow
+  */
+  * + * {
+    margin-top: var(--flow-space);
+  }
 `;

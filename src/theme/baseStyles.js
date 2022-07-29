@@ -8,7 +8,7 @@ export const Base = css`
   }
   body {
     height: 100%;
-    min-width: 360px;
+    min-width: var(--min-width);
     overflow: hidden;
     background-color: var(--col-bg);
   }

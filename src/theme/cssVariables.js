@@ -17,6 +17,10 @@ export const Variables = css`
     --col-bg-main: var(--white);
 
     --gap: 1rem;
+    --flow-space: var(--gap);
+
+    --max-width: 64em;
+    --min-width: 300px;
 
     --headerHeight: 3rem;
 

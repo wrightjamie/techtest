@@ -72,4 +72,12 @@ export const Reset = css`
   #__next {
     isolation: isolate;
   }
+
+  /*
+  10. Remove link styling
+  */
+  a {
+    color: unset;
+    text-decoration: unset;
+  }
 `;

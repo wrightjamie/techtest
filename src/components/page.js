@@ -5,44 +5,37 @@ export const Page = styled.section`
     props.fullHeight ? "100vh" : "calc(100vh - var(--headerHeight))"};
   background-color: ${(props) =>
     props.overlay ? "var(--col-img-cover)" : "var(--col-bg-main)"};
+  ${(props) =>
+    props.background
+      ? `background-image: url(${props.background});
+      background-attachment: fixed;
+    background-position: 50%;
+    background-size: cover;`
+      : ""}
 
   scroll-snap-align: start;
   overflow: hidden;
 
   display: grid;
+  gap: var(--gap);
 
-  padding-inline: var(--gap);
+  padding: var(--gap);
 `;
 
 export const TopPage = styled(Page)`
   color: var(--col-light);
-  grid-template:
-    "title logo" auto
-    "title text" auto
-    "title social" auto
-    "footer footer" auto/
-    1fr 1fr;
-  @media (orientation: portrait) {
-    grid-template:
-      "logo" auto
-      "title" auto
-      "text" 1fr
-      "social" auto
-      "footer" auto;
-  }
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const HeroPage = styled(Page)`
   grid-template:
-    "header header" auto
-    "a b" 1fr
+    "a content" 1fr
     "footer footer" auto/
     1fr 1fr;
   @media (orientation: portrait) {
     grid-template:
-      "header" auto
-      "a" 1fr
-      "b" 1fr
+      "content" 1fr
       "footer" auto;
   }
 `;
