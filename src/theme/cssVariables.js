@@ -25,5 +25,18 @@ export const Variables = css`
     --f-s-base: 16px;
     --f-lh-body: 1.6;
     --f-lh-heading: 1.1;
+    --f-lh-tight: 1.3;
+
+    --f-s-300: 0.75rem;
+    --f-s-400: 1rem;
+    --f-s-500: 1.2rem;
+    --f-s-600: 1.5rem;
+    --f-s-700: 2rem;
+    --f-s-900: 3rem;
+
+    --f-w-500: 500;
+    --f-w-600: 600;
+    --f-w-500: 500;
+    --f-w-900: 700;
   }
 `;
