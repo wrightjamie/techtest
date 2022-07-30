@@ -88,3 +88,18 @@ export const ChequeredPage = styled(Page)`
       1fr;
   }
 `;
+
+export const PageHeader = styled.h2`
+  grid-area: header;
+  background-color: var(--col-img-cover);
+  margin: var(--gap);
+  padding: 0 var(--gap);
+  color: var(--white);
+  font-variant: small-caps;
+  font-weight: 600;
+  font-size: clamp(2rem, -6rem + 24vw, 3rem);
+  word-spacing: -0.5ex;
+  &:before {
+    content: "#";
+  }
+`;

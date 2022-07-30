@@ -33,7 +33,7 @@ export const flow = css`
   /*
   Andy Bell, flow
   */
-  * + * {
+  > * + * {
     margin-top: var(--flow-space);
   }
 `;

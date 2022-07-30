@@ -79,5 +79,9 @@ export const Reset = css`
   a {
     color: unset;
     text-decoration: unset;
+    &:hover {
+      color: var(--col-hover, var(--white));
+      text-decoration: underline;
+    }
   }
 `;
