@@ -7,8 +7,8 @@ import Twitter from "../../svg/twitter.svg";
 import Phone from "../../svg/phone.svg";
 import Mail from "../../svg/mail.svg";
 
-import { TopPage } from "../page";
-import { UtilityContainer, flow } from "../utils/utility";
+import { TopPage, NextPage } from "../page";
+import { UtilityContainer, flow, VisHidden } from "../utils/utility";
 
 const LeadPage = ({ data }) => {
   return (
@@ -41,6 +41,7 @@ const LeadPage = ({ data }) => {
               <Mail />
             </a>
           </LeadPageSocial>
+          <NextPage link="#page2" text="Learn More" />
         </TopPage>
       </UtilityContainer>
     </>

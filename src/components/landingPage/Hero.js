@@ -11,7 +11,7 @@ const Hero = ({ data }) => {
         <p>{data.content}</p>
         <Cta>
           <CtaButton to={data.cta1.to}>{data.cta1.title}</CtaButton>
-          <Link to={data.cta2.to}>{data.cta2.title}</Link>
+          <StyledLink to={data.cta2.to}>{data.cta2.title}</StyledLink>
         </Cta>
       </HeroContainer>
     </>
@@ -40,6 +40,17 @@ const Cta = styled.div`
   justify-content: center;
 `;
 
+const StyledLink = styled(Link)`
+  color: var(--col-light);
+  cursor: pointer;
+  line-height: var(--f-lh-heading);
+  padding: calc(var(--gap) / 2) var(--gap);
+  &:hover,
+  &:focus-within {
+    text-decoration: underline;
+    color: var(--white);
+  }
+`;
 const CtaButton = styled(Link)`
   background-color: var(--bg-col, var(--red));
   border-radius: 5px;
@@ -50,7 +61,8 @@ const CtaButton = styled(Link)`
   font-weight: var(--f-w-600);
   line-height: var(--f-lh-heading);
   padding: calc(var(--gap) / 2) var(--gap);
-  &:hover {
+  &:hover,
+  &:focus-within {
     text-decoration: underline;
     color: var(--white);
     background-color: var(--bg-col-hover, var(--blue));

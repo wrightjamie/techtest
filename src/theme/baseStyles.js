@@ -5,7 +5,10 @@ export const Base = css`
     font-size: var(--f-s-base);
     font-family: var(--f-sans);
     color: var(--col-text);
+
+    scroll-behavior: smooth;
   }
+
   body {
     height: 100%;
     min-width: var(--min-width);
@@ -19,6 +22,7 @@ export const Base = css`
     overflow-x: hidden;
     overflow-y: auto;
     scroll-padding-top: var(--headerHeight);
+    scroll-behavior: smooth;
   }
   svg {
     height: 1em;

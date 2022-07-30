@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 
 import LeadPage from "../components/landingPage/LeadPage";
 import Card from "../components/card";
-import { Page, HeroPage, PageHeader } from "../components/page";
+import { Page, HeroPage, PageHeader, NextPage } from "../components/page";
 import Hero from "../components/landingPage/Hero";
 
 // markup
@@ -37,21 +37,24 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout lead={<LeadPage data={leadpagedata} />}>
-      <HeroPage background="img/advTrg.jpg">
+      <HeroPage id="page2" background="img/advTrg.jpg">
         <Hero data={heropagedata} />
+        <NextPage link="#page3" />
       </HeroPage>
-      <Page>
+      <Page id="page3">
         <PageHeader>A Page Title</PageHeader>
         <Card />
         <Card />
         <Card />
+        <NextPage link="#page4" />
       </Page>
-      <Page>
+      <Page id="page4">
         <PageHeader>A Page Title</PageHeader>
         <img src="img/dsc01214.jpg" />
         <p>{dummy.landing.content}</p>
+        <NextPage link="#page5" />
       </Page>
-      <Page>
+      <Page id="page5">
         <PageHeader>A Page Title</PageHeader>
         <Card />
         <Card />

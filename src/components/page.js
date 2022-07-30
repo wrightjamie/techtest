@@ -1,4 +1,6 @@
+import React from "react";
 import styled from "styled-components";
+import { VisHidden } from "./utils/utility";
 
 export const Page = styled.section`
   height: ${(props) =>
@@ -102,4 +104,33 @@ export const PageHeader = styled.h2`
   &:before {
     content: "#";
   }
+`;
+
+export const NextPage = ({ link, text }) => {
+  return (
+    <>
+      <NextPageContainer>
+        <a href={link}>
+          {text && <NextPageText>{text}</NextPageText>}
+          <NextPageArrow>&#8681;</NextPageArrow>
+        </a>
+      </NextPageContainer>
+    </>
+  );
+};
+const NextPageContainer = styled.div`
+  flex-basis: 100%;
+  grid-area: footer;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  line-height: var(--f-lh-heading);
+`;
+const NextPageText = styled.div`
+  font-size: var(--f-s-400);
+`;
+const NextPageArrow = styled.div`
+  font-size: var(--f-s-700);
+  font-weight: var(--f-w-900);
+  text-align: center;
 `;
