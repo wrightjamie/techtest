@@ -22,6 +22,19 @@ export const Page = styled.section`
   gap: var(--gap);
 
   padding: var(--gap);
+
+  > section:nth-of-type(1) {
+    grid-area: a;
+  }
+  > section:nth-of-type(2) {
+    grid-area: b;
+  }
+  > section:nth-of-type(3) {
+    grid-area: c;
+  }
+  > section:nth-of-type(4) {
+    grid-area: d;
+  }
 `;
 
 export const TopPage = styled(Page)`
@@ -32,11 +45,13 @@ export const TopPage = styled(Page)`
 
 export const HeroPage = styled(Page)`
   grid-template:
+    "header header" auto
     "a content" 1fr
     "footer footer" auto/
     1fr 1fr;
   @media (orientation: portrait) {
     grid-template:
+      "header" auto
       "content" 1fr
       "footer" auto;
   }
@@ -61,14 +76,14 @@ export const FourPage = styled(Page)`
     "header header header" auto
     "a a b" 1fr
     "c d d" 1fr
-    "footer footer footer" auto;
+    "footer footer footer" auto/1fr 1fr 1fr;
   @media (orientation: portrait) {
     grid-template:
       "header header" auto
       "a a" 1fr
       "b c" 1fr
       "d d" 1fr
-      "footer footer" auto;
+      "footer footer" auto/ 1fr 1fr;
   }
 `;
 
@@ -93,10 +108,15 @@ export const ChequeredPage = styled(Page)`
 
 export const PageHeader = styled.h2`
   grid-area: header;
-  background-color: var(--col-img-cover);
-  margin: var(--gap);
+
   padding: 0 var(--gap);
-  color: var(--white);
+
+  ${(props) =>
+    props.inverted
+      ? `
+      background-color: var(--col-img-cover);
+color: var(--white);`
+      : `color: var(--col-header);`}
   font-variant: small-caps;
   font-weight: 600;
   font-size: clamp(2rem, -6rem + 24vw, 3rem);
