@@ -3,10 +3,13 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 const Card = ({}) => {
+  const images = ["advTrg.jpg", "glider.jpg", "tutor.jpg"];
+  const image = "img/" + images[Math.floor(Math.random() * images.length)];
+
   return (
     <section>
       <Link to="/">
-        <img src="img/dsc01214.jpg" />
+        <img src={image} />
         <div>
           <h3>A Title</h3>
           <p>
