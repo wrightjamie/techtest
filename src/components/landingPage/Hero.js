@@ -7,12 +7,17 @@ const Hero = ({ data }) => {
   return (
     <>
       <HeroContainer>
-        <h3>Ready?</h3>
+        {data.title && <h3>{data.title}</h3>}
+        {data.em && <em>{data.em}</em>}
         <p>{data.content}</p>
-        <Cta>
-          <CtaButton to={data.cta1.to}>{data.cta1.title}</CtaButton>
-          <StyledLink to={data.cta2.to}>{data.cta2.title}</StyledLink>
-        </Cta>
+        {data.cta1 && (
+          <Cta>
+            <CtaButton to={data.cta1.to}>{data.cta1.title}</CtaButton>
+            {data.cta2 && (
+              <StyledLink to={data.cta2.to}>{data.cta2.title}</StyledLink>
+            )}
+          </Cta>
+        )}
       </HeroContainer>
     </>
   );
