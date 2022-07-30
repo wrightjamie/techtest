@@ -4,7 +4,14 @@ import { graphql } from "gatsby";
 
 import LeadPage from "../components/landingPage/LeadPage";
 import Card from "../components/card";
-import { Page, HeroPage, PageHeader, NextPage } from "../components/page";
+import {
+  Page,
+  HeroPage,
+  PageHeader,
+  NextPage,
+  ThreePage,
+  FourPage,
+} from "../components/page";
 import Hero from "../components/landingPage/Hero";
 
 // markup
@@ -15,6 +22,7 @@ const IndexPage = ({ data }) => {
 
   const dummy = {
     landing: {
+      title: "Ready?",
       content1:
         "Cras egestas sed purus consequat convallis. Nunc a libero rutrum, mollis dui ut, mattis lacus. Etiam lobortis tortor a mi consequat.",
       content2:
@@ -30,6 +38,7 @@ const IndexPage = ({ data }) => {
     content2: dummy.landing.content2,
   };
   const heropagedata = {
+    title: dummy.landing.title,
     content: dummy.landing.content2,
     cta1: dummy.landing.cta1,
     cta2: dummy.landing.cta2,
@@ -41,26 +50,25 @@ const IndexPage = ({ data }) => {
         <Hero data={heropagedata} />
         <NextPage link="#page3" />
       </HeroPage>
-      <Page id="page3">
+      <ThreePage id="page3">
         <PageHeader>A Page Title</PageHeader>
         <Card />
         <Card />
         <Card />
         <NextPage link="#page4" />
-      </Page>
-      <Page id="page4">
-        <PageHeader>A Page Title</PageHeader>
-        <img src="img/dsc01214.jpg" />
-        <p>{dummy.landing.content}</p>
+      </ThreePage>
+      <HeroPage id="page4" background="img/advTrg.jpg">
+        <PageHeader inverted>A Page Title</PageHeader>
+        <Hero data={heropagedata} />
         <NextPage link="#page5" />
-      </Page>
-      <Page id="page5">
+      </HeroPage>
+      <FourPage id="page5">
         <PageHeader>A Page Title</PageHeader>
         <Card />
         <Card />
         <Card />
         <Card />
-      </Page>
+      </FourPage>
     </Layout>
   );
 };
