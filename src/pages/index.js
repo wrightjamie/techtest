@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
         <Card />
         <NextPage link="#page4" />
       </ThreePage>
-      <HeroPage id="page4" background="img/advTrg.jpg">
+      <HeroPage left id="page4" background="img/advTrg.jpg">
         <PageHeader inverted>A Page Title</PageHeader>
         <Hero data={heropagedata} />
         <NextPage link="#page5" />
