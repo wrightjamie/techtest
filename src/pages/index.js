@@ -3,14 +3,14 @@ import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 
 import LeadPage from "../components/landingPage/LeadPage";
-import Card from "../components/card";
+import CardLink from "../components/card_link";
 import {
-  Page,
   HeroPage,
   PageHeader,
   NextPage,
   ThreePage,
   FourPage,
+  ChequeredPage,
 } from "../components/page";
 import Hero from "../components/landingPage/Hero";
 
@@ -52,9 +52,9 @@ const IndexPage = ({ data }) => {
       </HeroPage>
       <ThreePage id="page3">
         <PageHeader>A Page Title</PageHeader>
-        <Card />
-        <Card />
-        <Card />
+        <CardLink />
+        <CardLink />
+        <CardLink />
         <NextPage link="#page4" />
       </ThreePage>
       <HeroPage left id="page4" background="img/advTrg.jpg">
@@ -64,11 +64,19 @@ const IndexPage = ({ data }) => {
       </HeroPage>
       <FourPage id="page5">
         <PageHeader>A Page Title</PageHeader>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <CardLink />
+        <CardLink />
+        <CardLink />
+        <CardLink />
+        <NextPage link="#page6" />
       </FourPage>
+      <ChequeredPage id="page6">
+        <PageHeader>A Page Title</PageHeader>
+        <CardLink />
+        <CardLink />
+        <CardLink />
+        <CardLink />
+      </ChequeredPage>
     </Layout>
   );
 };

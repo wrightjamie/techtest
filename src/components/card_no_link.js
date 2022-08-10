@@ -10,16 +10,14 @@ const Card = ({}) => {
   return (
     <>
       <StyledSection>
-        <Link to="/">
-          <img src={image} />
-          <div>
-            <h2>A Title</h2>
-            <p>
-              Cras egestas sed purus consequat convallis. Nunc a libero rutrum,
-              mollis dui ut, mattis lacus.
-            </p>
-          </div>
-        </Link>
+        <img src={image} />
+        <div>
+          <h2>A Title</h2>
+          <p>
+            Cras egestas sed purus consequat convallis. Nunc a libero rutrum,
+            mollis dui ut, mattis lacus.
+          </p>
+        </div>
       </StyledSection>
     </>
   );
@@ -33,10 +31,6 @@ const StyledSection = styled.section`
 
   --heading: var(--f-s-heading, var(--f-s-500));
 
-  * {
-    transition: all 0.5s ease-in-out;
-  }
-
   img {
     position: absolute;
     object-fit: cover;
@@ -46,13 +40,9 @@ const StyledSection = styled.section`
   }
   div {
     position: absolute;
-    inset: 0;
+    inset: auto 0 0;
 
-    opacity: 0.7;
     background-color: var(--col-img-cover);
-    transform: translateY(
-      calc(100% - var(--heading) * var(--f-lh-heading) - var(--gap))
-    );
     padding: calc(var(--gap) / 2);
     ${flow}
   }
@@ -60,24 +50,9 @@ const StyledSection = styled.section`
     font-size: var(--heading);
     font-weight: var(--f-w-600);
     line-height: var(--f-lh-heading);
-    color: var(--col-light);
+    color: var(--white);
   }
   p {
     color: var(--col-light);
-  }
-
-  &:hover,
-  &:focus-within {
-    img {
-      transform: scale(1.05);
-    }
-    div {
-      opacity: 1;
-      transform: none;
-    }
-    h2 {
-      color: var(--white);
-      text-decoration: underline;
-    }
   }
 `;
