@@ -3,17 +3,17 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { flow } from "./utils/utility";
 
-const CardLink = ({}) => {
+const CardLink = ({ data }) => {
   const images = ["advTrg.jpg", "glider.jpg", "tutor.jpg"];
   const image = "img/" + images[Math.floor(Math.random() * images.length)];
 
   return (
     <>
       <StyledSection>
-        <Link to="/">
+        <Link to={data.link}>
           <img src={image} />
           <div>
-            <h2>A Title</h2>
+            <h2>{data.title}</h2>
             <p>
               Cras egestas sed purus consequat convallis. Nunc a libero rutrum,
               mollis dui ut, mattis lacus.

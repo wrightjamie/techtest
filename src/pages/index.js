@@ -20,6 +20,8 @@ const IndexPage = ({ data }) => {
   const recent = data.recent.edges;
   const meta = data.site.siteMetadata;
 
+  console.log(recent); //TODO - remove
+
   const dummy = {
     landing: {
       title: "Ready?",
@@ -44,6 +46,10 @@ const IndexPage = ({ data }) => {
     cta2: dummy.landing.cta2,
   };
 
+  const card_data = {
+    title: "Here is a title",
+    link: "/blog/",
+  };
   return (
     <Layout lead={<LeadPage data={leadpagedata} />}>
       <HeroPage id="page2" background="img/advTrg.jpg">
@@ -52,9 +58,9 @@ const IndexPage = ({ data }) => {
       </HeroPage>
       <ThreePage id="page3">
         <PageHeader>A Page Title</PageHeader>
-        <CardLink />
-        <CardLink />
-        <CardLink />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
         <NextPage link="#page4" />
       </ThreePage>
       <HeroPage left id="page4" background="img/advTrg.jpg">
@@ -64,18 +70,18 @@ const IndexPage = ({ data }) => {
       </HeroPage>
       <FourPage id="page5">
         <PageHeader>A Page Title</PageHeader>
-        <CardLink />
-        <CardLink />
-        <CardLink />
-        <CardLink />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
         <NextPage link="#page6" />
       </FourPage>
       <ChequeredPage id="page6">
         <PageHeader>A Page Title</PageHeader>
-        <CardLink />
-        <CardLink />
-        <CardLink />
-        <CardLink />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
+        <CardLink data={card_data} />
       </ChequeredPage>
     </Layout>
   );
