@@ -46,7 +46,7 @@ export const TopPage = styled(Page)`
 export const HeroPage = styled(Page)`
   grid-template:
     "header header" auto
-    "a content" 1fr
+    ${(props) => (props.left ? `"content a" 1fr` : `"a content" 1fr`)}
     "footer footer" auto/
     1fr 1fr;
   @media (orientation: portrait) {
