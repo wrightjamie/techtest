@@ -57,10 +57,14 @@ const IndexPage = ({ data }) => {
         <NextPage link="#page3" />
       </HeroPage>
       <ThreePage id="page3">
-        <PageHeader>A Page Title</PageHeader>
-        <CardLink data={card_data} />
-        <CardLink data={card_data} />
-        <CardLink data={card_data} />
+        <PageHeader>Recent</PageHeader>
+        {recent.map((post, index) => {
+          const recent_post = {
+            title: post.node.frontmatter.title,
+            link: post.node.fields.slug,
+          };
+          return <CardLink key={index} data={recent_post} />;
+        })}
         <NextPage link="#page4" />
       </ThreePage>
       <HeroPage left id="page4" background="img/advTrg.jpg">
