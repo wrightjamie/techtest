@@ -11,7 +11,7 @@ const posts = {
   fields: [
     {
       label: "Type of Post",
-      name: "teamplate",
+      name: "template",
       widget: "select",
       options: ["post", "page"],
       required: true,
