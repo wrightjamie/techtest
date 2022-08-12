@@ -108,7 +108,7 @@ export const query = graphql`
     }
 
     recent: allMarkdownRemark(
-      limit: 4
+      limit: 3
       sort: { order: DESC, fields: frontmatter___date }
       filter: { frontmatter: { template: { eq: "post" } } }
     ) {
