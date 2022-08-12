@@ -1,6 +1,6 @@
 ---
 teamplate: post
-title: A post of type page
+title: A Post with Content
 slug: posts/a-post-of-type-page
 author: WO Jamie Wright
 thumbnail: /img/20210429_221616.jpg
