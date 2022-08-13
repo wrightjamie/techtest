@@ -23,9 +23,10 @@ export default function BlogPost({ data }) {
             <PostDate>{post.frontmatter.date}</PostDate>
           )}
         </PostHeader>
-        {post.fields.excerpt && (
+        {/* TODO - sort out excerpt
+        {post.fields?.excerpt && (
           <PostExcerpt>{post.frontmatter.excerpt}</PostExcerpt>
-        )}
+        )} */}
         <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Post>
     </Layout>
@@ -104,4 +105,9 @@ const PostDate = styled.span`
   margin-left: auto;
   font-size: var(--f-s-300);
 `;
-const PostExcerpt = styled.div``;
+
+//TODO: Sort out what an excerpt is and how it is presented.
+// const PostExcerpt = styled.em`
+//   font-weight: var(--f-w-600);
+//   font-size: var(--f-s-500);
+// `;
