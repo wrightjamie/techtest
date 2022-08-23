@@ -29,9 +29,13 @@ export default Header;
 const H1Link = ({ siteTitle }) => (
   <StyledLink as={Link} to="/">
     <StyledRoundel />
-    <h1>{siteTitle}</h1>
+    <H1>{siteTitle}</H1>
   </StyledLink>
 );
+
+const H1 = styled.h1`
+  margin-left: calc(var(--roundel-size) + var(--gap));
+`;
 
 const Nav = ({ links }) => (
   <StyledNav as="nav">
@@ -51,20 +55,31 @@ const NavItems = ({ children }) => (
 );
 
 const StyledRoundel = styled(Roundel)`
-  height: 2em;
+  height: var(--roundel-size);
+  position: absolute;
+  top: var(--half-gap);
 `;
 const StyledLink = styled(UtilityFlex)``;
-const HeaderWrapper = styled(UtilityFlex)``;
+const HeaderWrapper = styled(UtilityFlex)`
+  padding-inline: var(--gap);
+`;
 
 const MenuButton = styled.button``;
 
 const HeaderContainer = styled(UtilityContainer)`
+  --roundel-size: 4rem;
+
   grid-row: 2/3;
   grid-column: 1/-1;
   inset: 0 0 auto 0;
   position: sticky;
+  z-index: 10;
+
   height: var(--headerHeight);
   background-color: var(--col-header);
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+
+  color: var(--col-light);
 `;
 
 const StyledNav = styled(UtilityFlex)`
