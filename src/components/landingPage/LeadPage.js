@@ -78,7 +78,6 @@ const LeadPageSocial = styled.nav`
   justify-content: end;
   font-size: var(--f-s-700);
   svg {
-    fill: currentColor;
     margin-inline-start: var(--gap);
   }
 `;
