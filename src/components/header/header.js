@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import Roundel from "../../svg/rafroundel.svg";
+import SocialLinks from "../utils/social_links";
 
 import {
   UtilityContainer,
@@ -35,6 +36,12 @@ const H1Link = ({ siteTitle }) => (
 
 const H1 = styled.h1`
   margin-left: calc(var(--roundel-size) + var(--gap));
+  color: white;
+  font-variant: small-caps;
+  a:hover &,
+  a:focus & {
+    color: var(--col-light);
+  }
 `;
 
 const Nav = ({ links }) => (
@@ -46,6 +53,7 @@ const Nav = ({ links }) => (
         </li>
       ))}
     </NavItems>
+    <SocialLinks />
     <MenuButton>==</MenuButton>
   </StyledNav>
 );
@@ -64,7 +72,9 @@ const HeaderWrapper = styled(UtilityFlex)`
   padding-inline: var(--gap);
 `;
 
-const MenuButton = styled.button``;
+const MenuButton = styled.button`
+  display: none;
+`;
 
 const HeaderContainer = styled(UtilityContainer)`
   --roundel-size: 4rem;
