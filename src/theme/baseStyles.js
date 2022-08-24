@@ -26,7 +26,6 @@ export const Base = css`
   }
   svg {
     height: 1em;
-    fill: currentColor;
   }
   em {
     font-size: var(--f-s-500);
