@@ -17,6 +17,7 @@ export const Variables = css`
     --col-bg-main: var(--white);
 
     --gap: 1rem;
+    --half-gap: calc(var(--gap) / 2);
     --flow-space: var(--gap);
 
     --max-width: 64em;
