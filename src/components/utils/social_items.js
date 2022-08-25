@@ -47,11 +47,13 @@ const StyledLink = styled.a`
   align-items: center;
   justify-content: center;
   padding: 5px;
+  border-radius: 1000vh;
   color: var(--col-light);
-  &:hover {
-    background: var(--fg);
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: var(--fg);
     border-color: var(--ac);
     color: var(--ac);
-    border-radius: 1000vh;
   }
 `;
