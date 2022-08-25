@@ -9,6 +9,7 @@ import {
   UtilityFlex,
   UtilityNavList,
 } from "../utils/utility";
+import { SocialItems } from "../utils/social_items";
 
 const Header = ({ data }) => {
   const links = data.header.frontmatter.links;
@@ -39,6 +40,7 @@ const H1 = styled.h1`
 
 const Nav = ({ links }) => (
   <StyledNav as="nav">
+    <SocialItems />
     <NavItems>
       {links.map((link) => (
         <li key={link.link.id}>

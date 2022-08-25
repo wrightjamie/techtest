@@ -2,13 +2,14 @@ import * as React from "react";
 import styled from "styled-components";
 
 import Logo from "../../svg/rafacLogo.svg";
-import Facebook from "../../svg/facebook.svg";
-import Twitter from "../../svg/twitter.svg";
-import Phone from "../../svg/phone.svg";
-import Mail from "../../svg/mail.svg";
+// import Facebook from "../../svg/facebook.svg";
+// import Twitter from "../../svg/twitter.svg";
+// import Phone from "../../svg/phone.svg";
+// import Mail from "../../svg/mail.svg";
 
 import { TopPage, NextPage } from "../page";
 import { UtilityContainer, flow, VisHidden } from "../utils/utility";
+import { SocialItems } from "../utils/social_items";
 
 const LeadPage = ({ data }) => {
   return (
@@ -28,18 +29,7 @@ const LeadPage = ({ data }) => {
             <p>{data.content2}</p>
           </LeadPageText>
           <LeadPageSocial>
-            <a href="facebook.com">
-              <Facebook />
-            </a>
-            <a href="twitter.com">
-              <Twitter />
-            </a>
-            <a href="phone.com">
-              <Phone />
-            </a>
-            <a href="contact.com">
-              <Mail />
-            </a>
+            <SocialItems />
           </LeadPageSocial>
           <NextPage link="#page2" text="Learn More" />
         </TopPage>
