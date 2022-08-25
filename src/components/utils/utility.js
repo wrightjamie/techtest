@@ -31,7 +31,6 @@ export const UtilityFlex = styled.div`
 
 export const UtilityNavList = styled.ul`
   ${flex}
-  color:red;
   list-style: none;
 `;
 
