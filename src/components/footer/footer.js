@@ -26,6 +26,6 @@ const Footer = ({ data }) => (
 export default Footer;
 
 const FooterStop = styled(UtilityContainer)`
-  scroll-snap-align: end;
+  //scroll-snap-align: end;
   background-color: var(--col-header);
 `;
