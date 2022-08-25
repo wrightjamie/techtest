@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import Facebook from "../../svg/facebook.svg";
 import Twitter from "../../svg/twitter.svg";
@@ -12,26 +13,36 @@ export const SocialItems = () => {
     <>
       <UtilityNavList>
         <li>
-          <a href="facebook.com">
+          <StyledLink href="facebook.com">
             <Facebook />
-          </a>
+          </StyledLink>
         </li>
         <li>
-          <a href="twitter.com">
+          <StyledLink href="twitter.com">
             <Twitter />
-          </a>
+          </StyledLink>
         </li>
         <li>
-          <a href="phone.com">
+          <StyledLink href="phone.com">
             <Phone />
-          </a>
+          </StyledLink>
         </li>
         <li>
-          <a href="contact.com">
+          <StyledLink href="contact.com">
             <Mail />
-          </a>
+          </StyledLink>
         </li>
       </UtilityNavList>
     </>
   );
 };
+
+const StyledLink = styled.a`
+  border: solid red 1px;
+  border-radius: 1000vh;
+  display: flex;
+  aspect-ratio: 1/1;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+`;
