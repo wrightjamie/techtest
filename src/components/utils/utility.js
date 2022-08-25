@@ -19,13 +19,19 @@ export const UtilityContainer = styled.div`
 
 export const LayoutContainer = styled(UtilityContainer)``;
 
-export const UtilityFlex = styled.div`
+const flex = css`
   display: flex;
   gap: var(--gap);
   align-items: center;
 `;
 
-export const UtilityNavList = styled(UtilityFlex)`
+export const UtilityFlex = styled.div`
+  ${flex}
+`;
+
+export const UtilityNavList = styled.ul`
+  ${flex}
+  color:red;
   list-style: none;
 `;
 
