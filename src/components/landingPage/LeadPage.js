@@ -67,10 +67,10 @@ const LeadPageSocial = styled.nav`
   display: flex;
   justify-content: end;
   font-size: var(--f-s-700);
-  svg {
-    fill: currentColor;
-    margin-inline-start: var(--gap);
-  }
+  //svg {
+  //  fill: currentColor;
+  //  margin-inline-start: var(--gap);
+  //}
 `;
 const LeadPageLogo = styled.div`
   font-size: var(--f-s-900);
