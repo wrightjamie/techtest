@@ -13,10 +13,11 @@ export const SocialItems = () => {
     <>
       <UtilityNavList>
         <li>
-          <StyledLink href="facebook.com">
+          <StyledLink href="facebook.com" circle>
             <Facebook />
           </StyledLink>
         </li>
+
         <li>
           <StyledLink href="twitter.com">
             <Twitter />
@@ -38,11 +39,19 @@ export const SocialItems = () => {
 };
 
 const StyledLink = styled.a`
-  border: solid red 1px;
-  border-radius: 1000vh;
+  --fg: var(--col-fg, var(--col-light));
+  --ac: var(--col-ac, var(--col-header));
+
   display: flex;
   aspect-ratio: 1/1;
   align-items: center;
   justify-content: center;
-  padding: 3px;
+  padding: 5px;
+  color: var(--col-light);
+  &:hover {
+    background: var(--fg);
+    border-color: var(--ac);
+    color: var(--ac);
+    border-radius: 1000vh;
+  }
 `;
