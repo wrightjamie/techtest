@@ -18,6 +18,7 @@ export const H1Link = ({ siteTitle }) => (
 
 const H1 = styled.h1`
   margin-left: calc(var(--roundel-size) + var(--gap));
+  font-variant: small-caps;
 `;
 
 const StyledRoundel = styled(Roundel)`
