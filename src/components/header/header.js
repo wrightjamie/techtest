@@ -52,9 +52,9 @@ const Nav = ({ links }) => (
   </StyledNav>
 );
 
-const NavItems = ({ children }) => (
-  <UtilityNavList as="ul">{children}</UtilityNavList>
-);
+const NavItems = styled(UtilityNavList)`
+  background: red; //Debug
+`;
 
 const StyledRoundel = styled(Roundel)`
   height: var(--roundel-size);
@@ -66,7 +66,12 @@ const HeaderWrapper = styled(UtilityFlex)`
   padding-inline: var(--gap);
 `;
 
-const MenuButton = styled.button``;
+const MenuButton = styled.button`
+  display: none;
+  @media (max-width: 50em) {
+    display: block;
+  }
+`;
 
 const HeaderContainer = styled(UtilityContainer)`
   --roundel-size: 4rem;
@@ -91,4 +96,7 @@ const HeaderContainer = styled(UtilityContainer)`
 const StyledNav = styled(UtilityFlex)`
   margin-left: auto;
   font-size: var(--f-s-500);
+  @media (max-width: 50em) {
+    background: yellow; //Debug
+  }
 `;
