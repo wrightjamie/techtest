@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import Roundel from "../../svg/rafroundel.svg";
+import Nav from "./header_nav";
 
 import {
   UtilityContainer,
@@ -38,24 +39,6 @@ const H1 = styled.h1`
   margin-left: calc(var(--roundel-size) + var(--gap));
 `;
 
-const Nav = ({ links }) => (
-  <StyledNav as="nav">
-    <SocialItems />
-    <NavItems>
-      {links.map((link) => (
-        <li key={link.link.id}>
-          <a href={link.link.url}>{link.link.content}</a>
-        </li>
-      ))}
-    </NavItems>
-    <MenuButton>==</MenuButton>
-  </StyledNav>
-);
-
-const NavItems = styled(UtilityNavList)`
-  background: red; //Debug
-`;
-
 const StyledRoundel = styled(Roundel)`
   height: var(--roundel-size);
   position: absolute;
@@ -64,13 +47,6 @@ const StyledRoundel = styled(Roundel)`
 const StyledLink = styled(UtilityFlex)``;
 const HeaderWrapper = styled(UtilityFlex)`
   padding-inline: var(--gap);
-`;
-
-const MenuButton = styled.button`
-  display: none;
-  @media (max-width: 50em) {
-    display: block;
-  }
 `;
 
 const HeaderContainer = styled(UtilityContainer)`
@@ -90,13 +66,5 @@ const HeaderContainer = styled(UtilityContainer)`
 
   &:focus-within {
     position: fixed;
-  }
-`;
-
-const StyledNav = styled(UtilityFlex)`
-  margin-left: auto;
-  font-size: var(--f-s-500);
-  @media (max-width: 50em) {
-    background: yellow; //Debug
   }
 `;

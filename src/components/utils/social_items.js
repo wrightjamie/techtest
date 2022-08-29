@@ -48,7 +48,7 @@ const StyledLink = styled.a`
   aspect-ratio: 1/1;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 0.25em;
   border-radius: 1000vh;
   color: var(--col-light);
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
