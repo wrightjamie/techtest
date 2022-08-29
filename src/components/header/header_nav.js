@@ -17,7 +17,7 @@ const Nav = ({ links }) => {
 
   return (
     <>
-      <StyledNav as="nav" menuShow={isMenuOpen}>
+      <StyledNav as="nav" open={isMenuOpen} data-menuopen={isMenuOpen}>
         <SocialItems />
         <NavItems>
           {links.map((link) => (
@@ -27,8 +27,14 @@ const Nav = ({ links }) => {
           ))}
         </NavItems>
       </StyledNav>
-      <Overlay menuShow={isMenuOpen} />
-      <MenuButton onClick={onClick}>==</MenuButton>
+      <Overlay open={isMenuOpen} />
+      <MenuButtonHolder>
+        <MenuButton onClick={onClick} open={isMenuOpen}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </MenuButton>
+      </MenuButtonHolder>
     </>
   );
 };
@@ -61,13 +67,70 @@ const NavItems = styled(UtilityNavList)`
   }
 `;
 
-const MenuButton = styled.button`
+const MenuButtonHolder = styled.div`
   display: none;
   margin-left: auto;
+  //margin-right: calc(2 * var(--gap));
+  position: fixed;
+  top: var(--half-gap);
+  right: calc(2.5 * var(--gap));
+  height: calc(var(--headerHeight) - var(--gap));
+  width: calc(var(--headerHeight) - var(--gap));
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: 50em) {
-    display: block;
+    display: flex;
   }
 `;
+
+const MenuButton = styled.button`
+  border-radius: 100%;
+  background-color: transparent;
+  margin: var(--gap);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus {
+    background-color: var(--col-header);
+    box-shadow: 0 0 var(--half-gap) var(--half-gap) var(--col-header);
+    div {
+      opacity: 1;
+    }
+  }
+
+  div {
+    border-radius: 0.1rem;
+    width: 1.65rem;
+    height: 0.2rem;
+    background-color: var(--col-light);
+    opacity: 0.7;
+
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => (open ? "0" : ".7")};
+      transform: ${({ open }) => (open ? "translateX(10px)" : "translateX(0)")};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
+  }
+`;
+
 const StyledNav = styled(UtilityFlex)`
   margin-left: auto;
   font-size: var(--f-s-500);
@@ -81,7 +144,10 @@ const StyledNav = styled(UtilityFlex)`
     font-size: var(--f-s-900);
     padding: var(--gap);
 
-    transform: translateX(${(props) => (props.menuShow ? "100%" : "0")});
+    transform: translateX(${(props) => (props.open ? "100%" : "0")});
+    &:focus-within {
+      transform: translateX(100%);
+    }
     transition: transform 0.5s ease-in-out;
   }
 `;
@@ -93,8 +159,8 @@ const Overlay = styled.div`
     position: fixed;
     inset: 0;
     background: var(--col-img-cover);
-    opacity: ${(props) => (props.menuShow ? ".7" : "0")};
-    transform: translateX(${(props) => (props.menuShow ? "0" : "-100%")});
+    opacity: ${(props) => (props.open ? ".7" : "0")};
+    transform: translateX(${(props) => (props.open ? "0" : "-100%")});
     transition: transform 1ms ease-in-out, opacity 0.5s ease;
   }
 `;

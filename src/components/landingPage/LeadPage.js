@@ -67,6 +67,7 @@ const LeadPageSocial = styled.nav`
   font-size: var(--f-s-700);
 `;
 const LeadPageLogo = styled.div`
+  margin-top: 2rem;
   font-size: var(--f-s-900);
   flex-basis: 100%;
   display: grid;
