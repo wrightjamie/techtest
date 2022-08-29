@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+
+import useBoolean from "../../hooks/useBoolean";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
+import { useOnEsc } from "../../hooks/useOnEsc";
 
 import { H1Link } from "./header_h1";
 import { MenuButton } from "./menu_button";
@@ -13,17 +17,17 @@ import {
 import { SocialItems } from "../utils/social_items";
 
 const Header = ({ data }) => {
-  const [isMenuOpen, setMenuState] = useState(false);
-  const onClick = () => {
-    setMenuState(!isMenuOpen);
-  };
+  const [isMenuOpen, { setToggle, setFalse }] = useBoolean(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setFalse());
+  useOnEsc(() => setFalse());
 
   const links = data.header.frontmatter.links;
   const siteTitle = data.site.siteMetadata.title;
 
   return (
     <HeaderContainer open={isMenuOpen}>
-      <HeaderWrapper>
+      <HeaderWrapper ref={node}>
         <H1Link siteTitle={siteTitle}></H1Link>
         <StyledNav as="nav" open={isMenuOpen} data-menuopen={isMenuOpen}>
           <SocialItems />
@@ -35,9 +39,9 @@ const Header = ({ data }) => {
             ))}
           </NavItems>
         </StyledNav>
-        <Overlay open={isMenuOpen} />
-        <MenuButton open={isMenuOpen} onClickCallback={onClick} />
+        <MenuButton open={isMenuOpen} onClickCallback={setToggle} />
       </HeaderWrapper>
+      <Overlay open={isMenuOpen} />
     </HeaderContainer>
   );
 };

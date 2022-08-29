@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const useBoolean = (initialState = false) => {
+export default function useBoolean(initialState = false) {
   const [state, setState] = useState(initialState);
 
   const handleTrue = () => setState(true);
@@ -17,4 +17,4 @@ const useBoolean = (initialState = false) => {
       setToggle: handleToggle,
     },
   ];
-};
+}
