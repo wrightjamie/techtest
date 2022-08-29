@@ -86,11 +86,15 @@ const StyledNav = styled(UtilityFlex)`
   }
 `;
 const Overlay = styled.div`
-  z-index: -2;
-  position: fixed;
-  inset: 0;
-  background: var(--col-img-cover);
-  opacity: ${(props) => (props.menuShow ? ".7" : "0")};
-  transform: translateX(${(props) => (props.menuShow ? "0" : "-100%")});
-  transition: transform 1ms ease-in-out, opacity 0.5s ease;
+  display: none;
+  @media (max-width: 50em) {
+    display: block;
+    z-index: -2;
+    position: fixed;
+    inset: 0;
+    background: var(--col-img-cover);
+    opacity: ${(props) => (props.menuShow ? ".7" : "0")};
+    transform: translateX(${(props) => (props.menuShow ? "0" : "-100%")});
+    transition: transform 1ms ease-in-out, opacity 0.5s ease;
+  }
 `;

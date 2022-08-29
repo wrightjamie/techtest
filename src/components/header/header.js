@@ -65,6 +65,6 @@ const HeaderContainer = styled(UtilityContainer)`
   color: var(--col-light);
 
   &:focus-within {
-    position: fixed;
+    grid-row: 1/2;
   }
 `;

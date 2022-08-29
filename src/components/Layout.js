@@ -9,7 +9,7 @@ import Header from "./header/header";
 import Footer from "./footer/footer";
 import { LayoutContainer, UtilityContainer } from "./utils/utility";
 
-const Layout = ({ children, lead }) => {
+const Layout = ({ children, lead, scrollStop }) => {
   const data = useStaticQuery(
     graphql`
       query SiteMetaData {
@@ -45,7 +45,7 @@ const Layout = ({ children, lead }) => {
       }
     `
   );
-
+  console.log(scrollStop);
   return (
     <>
       <GlobalStyle />
@@ -54,7 +54,7 @@ const Layout = ({ children, lead }) => {
         {lead}
         {children}
       </LayoutContainer>
-      <Footer data={data} />
+      <Footer data={data} scrollStop={scrollStop} />
     </>
   );
 };

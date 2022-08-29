@@ -6,33 +6,36 @@ import { UtilityContainer, flow, UtilityFlex } from "../utils/utility";
 import { SocialItems } from "../utils/social_items";
 import Logo from "../../svg/rafacBlockLogo.svg";
 
-const Footer = ({ data }) => (
-  <FooterStop>
-    <FooterGrid>
-      {data.footer.frontmatter.columns.map((column) => (
-        <li key={column.id}>
-          <FooterHeader>{column.column_title}</FooterHeader>
-          <FooterItems>
-            {column.links.map((link) => (
-              <FooterItem key={link.link.id}>
-                <a href={link.link.url}>{link.link.content}</a>
-              </FooterItem>
-            ))}
-          </FooterItems>
-        </li>
-      ))}
-      <LogoColumn>
-        <Logo />
-      </LogoColumn>
-    </FooterGrid>
-    <SocialItems />
-    <UtilityFlex jc>
-      <FooterCopyright>
-        ©2022 2459 Poulton-le-Fylde Squadron RAFAC. UK Crown Copyright
-      </FooterCopyright>
-    </UtilityFlex>
-  </FooterStop>
-);
+const Footer = ({ data, scrollStop }) => {
+  console.log(scrollStop);
+  return (
+    <FooterStop data-scrollstop={scrollStop ? "true" : "false"}>
+      <FooterGrid>
+        {data.footer.frontmatter.columns.map((column) => (
+          <li key={column.id}>
+            <FooterHeader>{column.column_title}</FooterHeader>
+            <FooterItems>
+              {column.links.map((link) => (
+                <FooterItem key={link.link.id}>
+                  <a href={link.link.url}>{link.link.content}</a>
+                </FooterItem>
+              ))}
+            </FooterItems>
+          </li>
+        ))}
+        <LogoColumn>
+          <Logo />
+        </LogoColumn>
+      </FooterGrid>
+      <SocialItems />
+      <UtilityFlex jc>
+        <FooterCopyright>
+          ©2022 2459 Poulton-le-Fylde Squadron RAFAC. UK Crown Copyright
+        </FooterCopyright>
+      </UtilityFlex>
+    </FooterStop>
+  );
+};
 
 export default Footer;
 
@@ -41,12 +44,16 @@ const FooterHeader = styled.h4`
   font-weight: var(--f-w-500);
   padding-block-end: var(--half-gap);
 `;
+
 const FooterStop = styled(UtilityContainer)`
-  scroll-snap-align: end;
   background-color: var(--col-header);
   color: var(--col-light);
 
   --social-fs: var(--f-s-600);
+
+  &[data-scrollStop="true"] {
+    scroll-snap-align: end;
+  }
 
   > * {
     margin: var(--gap);

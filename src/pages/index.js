@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
     link: "/blog/",
   };
   return (
-    <Layout lead={<LeadPage data={leadpagedata} />}>
+    <Layout lead={<LeadPage data={leadpagedata} />} scrollStop>
       <HeroPage id="page2" background="img/advTrg.jpg">
         <Hero data={heropagedata} />
         <NextPage link="#page3" />
