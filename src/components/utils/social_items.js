@@ -11,7 +11,7 @@ import { UtilityNavList } from "./utility";
 export const SocialItems = () => {
   return (
     <>
-      <UtilityNavList>
+      <UtilityNavList jc>
         <li>
           <StyledLink href="facebook.com" circle>
             <Facebook />
@@ -41,6 +41,8 @@ export const SocialItems = () => {
 const StyledLink = styled.a`
   --fg: var(--col-fg, var(--col-light));
   --ac: var(--col-ac, var(--col-header));
+
+  font-size: var(--social-fs, inherit);
 
   display: flex;
   aspect-ratio: 1/1;
