@@ -13,28 +13,26 @@ import { SocialItems } from "../utils/social_items";
 
 const LeadPage = ({ data }) => {
   return (
-    <>
-      <UtilityContainer bleed background="img/Torp.jpg">
-        <TopPage overlay fullHeight>
-          <LeadPageLogo>
-            <Logo />
-          </LeadPageLogo>
+    <UtilityContainer bleed background="img/Torp.jpg">
+      <TopPage overlay fullHeight>
+        <LeadPageLogo>
+          <Logo />
+        </LeadPageLogo>
 
-          <LeadPageTitle>
-            <h1>{data.title}</h1>
-            <em>{data.tag}</em>
-          </LeadPageTitle>
-          <LeadPageText>
-            <em>{data.content1}</em>
-            <p>{data.content2}</p>
-          </LeadPageText>
-          <LeadPageSocial>
-            <SocialItems />
-          </LeadPageSocial>
-          <NextPage link="#page2" text="Learn More" />
-        </TopPage>
-      </UtilityContainer>
-    </>
+        <LeadPageTitle>
+          <h1>{data.title}</h1>
+          <em>{data.tag}</em>
+        </LeadPageTitle>
+        <LeadPageText>
+          <em>{data.content1}</em>
+          <p>{data.content2}</p>
+        </LeadPageText>
+        <LeadPageSocial>
+          <SocialItems />
+        </LeadPageSocial>
+        <NextPage link="#page2" text="Learn More" />
+      </TopPage>
+    </UtilityContainer>
   );
 };
 
