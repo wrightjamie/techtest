@@ -51,7 +51,7 @@ const HeaderWrapper = styled(UtilityFlex)`
 const HeaderContainer = styled(UtilityContainer)`
   --roundel-size: 4rem;
 
-  grid-row: ${({ open }) => (open ? "1/2;" : "2/3;")}
+  grid-row: ${({ open }) => (open ? "1/2" : "2/3")};
   grid-column: 1/-1;
   inset: 0 0 auto 0;
   position: sticky;
