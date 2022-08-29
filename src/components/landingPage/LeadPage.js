@@ -13,7 +13,7 @@ import { SocialItems } from "../utils/social_items";
 
 const LeadPage = ({ data }) => {
   return (
-    <UtilityContainer bleed background="img/Torp.jpg">
+    <UtilityContainer bleed background="img/Torp.jpg" gridrow="1/2">
       <TopPage overlay fullHeight>
         <LeadPageLogo>
           <Logo />
