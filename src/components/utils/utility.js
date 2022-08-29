@@ -23,6 +23,8 @@ const flex = css`
   display: flex;
   gap: var(--gap);
   align-items: center;
+
+  ${(props) => (props.jc ? `justify-content: center;` : "")}
 `;
 
 export const UtilityFlex = styled.div`
