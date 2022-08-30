@@ -18,7 +18,7 @@ import Hero from "../components/landingPage/Hero";
 const IndexPage = ({ data }) => {
   const landing = data.landing.frontmatter.landing;
   const recent = data.recent.edges;
-  const meta = data.site.siteMetadata;
+  const meta = data.site.siteMetadata; //TODO Move siteMetaData to a custom hook
 
   console.log(recent); //TODO - remove
 

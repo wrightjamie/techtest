@@ -17,6 +17,7 @@ import {
 import { SocialItems } from "../utils/social_items";
 
 const Header = ({ data }) => {
+  //TODO Extract menu logic into custom hook
   const [isMenuOpen, { setToggle, setFalse }] = useBoolean(false);
   const node = useRef();
   useOnClickOutside(node, () => setFalse());
