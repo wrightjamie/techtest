@@ -45,7 +45,7 @@ const Layout = ({ children, lead, scrollStop }) => {
       }
     `
   );
-  console.log(scrollStop);
+
   return (
     <>
       <GlobalStyle />

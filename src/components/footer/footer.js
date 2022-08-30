@@ -7,7 +7,6 @@ import { SocialItems } from "../utils/social_items";
 import Logo from "../../svg/rafacBlockLogo.svg";
 
 const Footer = ({ data, scrollStop }) => {
-  console.log(scrollStop);
   return (
     <FooterStop data-scrollstop={scrollStop ? "true" : "false"}>
       <FooterGrid>

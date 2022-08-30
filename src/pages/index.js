@@ -20,8 +20,6 @@ const IndexPage = ({ data }) => {
   const recent = data.recent.edges;
   const meta = data.site.siteMetadata; //TODO Move siteMetaData to a custom hook
 
-  console.log(recent); //TODO - remove
-
   const dummy = {
     landing: {
       title: "Ready?",
