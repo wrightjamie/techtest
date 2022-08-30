@@ -15,7 +15,6 @@ import {
 import { SocialItems } from "../utils/social_items";
 
 const Header = ({ data }) => {
-  //TODO Extract menu logic into custom hook
   const [isMenuOpen, node, setToggle] = useMenu();
 
   const links = data.header.frontmatter.links;
