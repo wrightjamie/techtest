@@ -12,7 +12,7 @@
 //TODO Add image manamagement through Gatsby
 //TODO Blog styling
 //TODO Scroll to content link
-//TODO Remove debug console logs
+//DONE Remove debug console logs
 
 ## 🚀 Quick start
 
