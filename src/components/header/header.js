@@ -28,7 +28,7 @@ const Header = ({ data }) => {
           <NavItems>
             {links.map((link) => (
               <li key={link.link.id}>
-                <a href={link.link.url}>{link.link.content}</a>
+                <Link to={link.link.url}>{link.link.content}</Link>
               </li>
             ))}
           </NavItems>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "./utils/link";
 
 const PostLink = ({ post }) => (
   <div>

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import Link from "./link";
+
 import Facebook from "../../svg/facebook.svg";
 import Twitter from "../../svg/twitter.svg";
 import Phone from "../../svg/phone.svg";
@@ -13,7 +15,7 @@ export const SocialItems = () => {
     <>
       <UtilityNavList jc>
         <li>
-          <StyledLink href="facebook.com" circle>
+          <StyledLink href="facebook.com">
             <Facebook />
           </StyledLink>
         </li>
@@ -38,7 +40,7 @@ export const SocialItems = () => {
   );
 };
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   --fg: var(--col-fg, var(--col-light));
   --ac: var(--col-ac, var(--col-header));
 

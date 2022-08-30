@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { UtilityContainer, flow, UtilityFlex } from "../utils/utility";
+import Link from "../utils/link";
 
 import { SocialItems } from "../utils/social_items";
 import Logo from "../../svg/rafacBlockLogo.svg";
@@ -16,7 +17,7 @@ const Footer = ({ data, scrollStop }) => {
             <FooterItems>
               {column.links.map((link) => (
                 <FooterItem key={link.link.id}>
-                  <a href={link.link.url}>{link.link.content}</a>
+                  <Link to={link.link.url}>{link.link.content}</Link>
                 </FooterItem>
               ))}
             </FooterItems>
