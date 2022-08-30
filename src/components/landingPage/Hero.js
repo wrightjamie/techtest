@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import Link from "../utils/link";
 import styled from "styled-components";
 import { flow } from "../utils/utility";
 

@@ -1,8 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 
-import Roundel from "../../svg/rafroundel.svg";
+import useMenu from "../../hooks/useMenu";
+import Link from "../utils/link";
+
+import { H1Link } from "./header_h1";
+import { MenuButton } from "./menu_button";
 
 import {
   UtilityContainer,
@@ -12,66 +15,42 @@ import {
 import { SocialItems } from "../utils/social_items";
 
 const Header = ({ data }) => {
+  const [isMenuOpen, node, setToggle] = useMenu();
+
   const links = data.header.frontmatter.links;
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <HeaderContainer>
-      <HeaderWrapper>
+    <HeaderContainer open={isMenuOpen}>
+      <HeaderWrapper ref={node}>
         <H1Link siteTitle={siteTitle}></H1Link>
-        <Nav links={links}></Nav>
+        <StyledNav as="nav" open={isMenuOpen} data-menuopen={isMenuOpen}>
+          <SocialItems />
+          <NavItems>
+            {links.map((link, index) => (
+              <li key={index}>
+                <Link to={link.link.url}>{link.link.content}</Link>
+              </li>
+            ))}
+          </NavItems>
+        </StyledNav>
+        <MenuButton open={isMenuOpen} onClickCallback={setToggle} />
       </HeaderWrapper>
+      <Overlay open={isMenuOpen} />
     </HeaderContainer>
   );
 };
 
 export default Header;
 
-const H1Link = ({ siteTitle }) => (
-  <StyledLink as={Link} to="/">
-    <StyledRoundel />
-    <H1>{siteTitle}</H1>
-  </StyledLink>
-);
-
-const H1 = styled.h1`
-  margin-left: calc(var(--roundel-size) + var(--gap));
-`;
-
-const Nav = ({ links }) => (
-  <StyledNav as="nav">
-    <SocialItems />
-    <NavItems>
-      {links.map((link) => (
-        <li key={link.link.id}>
-          <a href={link.link.url}>{link.link.content}</a>
-        </li>
-      ))}
-    </NavItems>
-    <MenuButton>==</MenuButton>
-  </StyledNav>
-);
-
-const NavItems = ({ children }) => (
-  <UtilityNavList as="ul">{children}</UtilityNavList>
-);
-
-const StyledRoundel = styled(Roundel)`
-  height: var(--roundel-size);
-  position: absolute;
-  top: var(--half-gap);
-`;
-const StyledLink = styled(UtilityFlex)``;
 const HeaderWrapper = styled(UtilityFlex)`
   padding-inline: var(--gap);
 `;
 
-const MenuButton = styled.button``;
-
 const HeaderContainer = styled(UtilityContainer)`
   --roundel-size: 4rem;
 
-  grid-row: 2/3;
+  grid-row: ${({ open }) => (open ? "1/2" : "2/3")};
   grid-column: 1/-1;
   inset: 0 0 auto 0;
   position: sticky;
@@ -84,11 +63,66 @@ const HeaderContainer = styled(UtilityContainer)`
   color: var(--col-light);
 
   &:focus-within {
-    position: fixed;
+    grid-row: 1/2;
+  }
+`;
+
+const NavItems = styled(UtilityNavList)`
+  @media (max-width: 50em) {
+    display: flex;
+    flex-direction: column;
+    padding: var(--gap);
+    width: 100%;
+    li {
+      width: 100%;
+    }
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      border: solid 1px;
+      border-radius: 5px;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background: var(--col-light);
+        color: var(--col-header);
+        text-decoration: none;
+      }
+    }
   }
 `;
 
 const StyledNav = styled(UtilityFlex)`
   margin-left: auto;
   font-size: var(--f-s-500);
+  @media (max-width: 50em) {
+    z-index: -1;
+    background: var(--col-header);
+    position: fixed;
+    inset: var(--headerHeight) 100% 0 -80%;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: var(--f-s-900);
+    padding: var(--gap);
+
+    transform: translateX(${(props) => (props.open ? "100%" : "0")});
+    &:focus-within {
+      transform: translateX(100%);
+    }
+    transition: transform 0.5s ease-in-out;
+  }
+`;
+const Overlay = styled.div`
+  display: none;
+  @media (max-width: 50em) {
+    display: block;
+    z-index: -2;
+    position: fixed;
+    inset: 0;
+    background: var(--col-img-cover);
+    opacity: ${(props) => (props.open ? ".7" : "0")};
+    transform: translateX(${(props) => (props.open ? "0" : "-100%")});
+    transition: transform 1ms ease-in-out, opacity 0.5s ease;
+  }
 `;

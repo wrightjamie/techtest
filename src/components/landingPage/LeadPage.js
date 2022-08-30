@@ -2,39 +2,33 @@ import * as React from "react";
 import styled from "styled-components";
 
 import Logo from "../../svg/rafacLogo.svg";
-// import Facebook from "../../svg/facebook.svg";
-// import Twitter from "../../svg/twitter.svg";
-// import Phone from "../../svg/phone.svg";
-// import Mail from "../../svg/mail.svg";
 
 import { TopPage, NextPage } from "../page";
-import { UtilityContainer, flow, VisHidden } from "../utils/utility";
+import { UtilityContainer, flow } from "../utils/utility";
 import { SocialItems } from "../utils/social_items";
 
 const LeadPage = ({ data }) => {
   return (
-    <>
-      <UtilityContainer bleed background="img/Torp.jpg">
-        <TopPage overlay fullHeight>
-          <LeadPageLogo>
-            <Logo />
-          </LeadPageLogo>
+    <UtilityContainer bleed background="img/Torp.jpg" gridrow="1/2">
+      <TopPage overlay fullHeight>
+        <LeadPageLogo>
+          <Logo />
+        </LeadPageLogo>
 
-          <LeadPageTitle>
-            <h1>{data.title}</h1>
-            <em>{data.tag}</em>
-          </LeadPageTitle>
-          <LeadPageText>
-            <em>{data.content1}</em>
-            <p>{data.content2}</p>
-          </LeadPageText>
-          <LeadPageSocial>
-            <SocialItems />
-          </LeadPageSocial>
-          <NextPage link="#page2" text="Learn More" />
-        </TopPage>
-      </UtilityContainer>
-    </>
+        <LeadPageTitle>
+          <h1>{data.title}</h1>
+          <em>{data.tag}</em>
+        </LeadPageTitle>
+        <LeadPageText>
+          <em>{data.content1}</em>
+          <p>{data.content2}</p>
+        </LeadPageText>
+        <LeadPageSocial>
+          <SocialItems />
+        </LeadPageSocial>
+        <NextPage link="#page2" text="Learn More" />
+      </TopPage>
+    </UtilityContainer>
   );
 };
 
@@ -69,6 +63,7 @@ const LeadPageSocial = styled.nav`
   font-size: var(--f-s-700);
 `;
 const LeadPageLogo = styled.div`
+  margin-top: 2rem;
   font-size: var(--f-s-900);
   flex-basis: 100%;
   display: grid;

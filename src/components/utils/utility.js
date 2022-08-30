@@ -12,6 +12,8 @@ export const UtilityContainer = styled.div`
       ? `background-image: url(${props.background}); background-size: cover;`
       : ""}
 
+  ${(props) => (props.gridrow ? `grid-row: ${props.gridrow};` : "")}
+
   > * {
     grid-column: 2;
   }
@@ -23,6 +25,8 @@ const flex = css`
   display: flex;
   gap: var(--gap);
   align-items: center;
+
+  ${(props) => (props.jc ? `justify-content: center;` : "")}
 `;
 
 export const UtilityFlex = styled.div`

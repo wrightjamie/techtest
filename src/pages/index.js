@@ -18,9 +18,7 @@ import Hero from "../components/landingPage/Hero";
 const IndexPage = ({ data }) => {
   const landing = data.landing.frontmatter.landing;
   const recent = data.recent.edges;
-  const meta = data.site.siteMetadata;
-
-  console.log(recent); //TODO - remove
+  const meta = data.site.siteMetadata; //TODO Move siteMetaData to a custom hook
 
   const dummy = {
     landing: {
@@ -51,7 +49,7 @@ const IndexPage = ({ data }) => {
     link: "/blog/",
   };
   return (
-    <Layout lead={<LeadPage data={leadpagedata} />}>
+    <Layout lead={<LeadPage data={leadpagedata} />} scrollStop>
       <HeroPage id="page2" background="img/advTrg.jpg">
         <Hero data={heropagedata} />
         <NextPage link="#page3" />

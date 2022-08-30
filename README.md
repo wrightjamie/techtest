@@ -7,6 +7,13 @@
   Gatsby minimal starter
 </h1>
 
+//DONE Create a new Link Component
+//DONE Tidy up unused components in imports
+//TODO Add image manamagement through Gatsby
+//TODO Blog styling
+//TODO Scroll to content link
+//DONE Remove debug console logs
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**

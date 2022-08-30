@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { VisHidden } from "./utils/utility";
+import styled, { keyframes } from "styled-components";
+import { VisHidden, flex } from "./utils/utility";
 
 export const Page = styled.section`
   height: ${(props) =>
@@ -131,13 +131,37 @@ export const NextPage = ({ link, text }) => {
     <>
       <NextPageContainer>
         <a href={link}>
-          {text && <NextPageText>{text}</NextPageText>}
+          {/* {text && <NextPageText>{text}</NextPageText>} */}
           <NextPageArrow>&#8681;</NextPageArrow>
         </a>
       </NextPageContainer>
     </>
   );
 };
+
+const breatheAnimation = keyframes`
+ 0% {
+  background-color:transparent;
+  box-shadow: none;
+  //color:var(--col-text);
+}
+ 10% {
+  background-color: rgb(0 0 0 / 0.2);
+  box-shadow: 0 0 0.5rem 1rem rgb(0 0 0 / 0.2);
+  //color:var(--white);
+}
+15% {
+  background-color: rgb(0 0 0 / 0.2);
+  box-shadow: 0 0 .5rem 1rem rgb(0 0 0 / 0.2);
+//  color:var(--white);
+}
+ 25% {
+  background-color:transparent;
+  box-shadow: none;
+//    color:var(--col-text);
+ }
+`;
+
 const NextPageContainer = styled.div`
   flex-basis: 100%;
   grid-area: footer;
@@ -145,7 +169,29 @@ const NextPageContainer = styled.div`
   justify-content: center;
   align-items: end;
   line-height: var(--f-lh-heading);
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1000vh;
+    transition: all 0.5s ease-in-out;
+    height: calc(var(--f-s-700) * var(--f-lh-heading));
+    width: calc(var(--f-s-700) * var(--f-lh-heading));
+    &:hover {
+      background: rgb(0 0 0 / 0.2);
+      box-shadow: 0 0 10px 10px rgb(0 0 0 / 0.2);
+      color: red;
+      text-decoration: none;
+    }
+    animation-name: ${breatheAnimation};
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
 `;
+//TODO Accessibility of Next Link
+//TODO Bring in a text element to Next Link
+
 const NextPageText = styled.div`
   font-size: var(--f-s-400);
 `;
