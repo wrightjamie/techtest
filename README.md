@@ -7,6 +7,10 @@
   Gatsby minimal starter
 </h1>
 
+//TODO Create a new Link Component
+//TODO Tidy up unused components in imports
+//TODO Add image manamagement through Gatsby
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
