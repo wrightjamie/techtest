@@ -27,8 +27,8 @@ const Header = ({ data }) => {
         <StyledNav as="nav" open={isMenuOpen} data-menuopen={isMenuOpen}>
           <SocialItems />
           <NavItems>
-            {links.map((link) => (
-              <li key={link.link.id}>
+            {links.map((link, index) => (
+              <li key={index}>
                 <Link to={link.link.url}>{link.link.content}</Link>
               </li>
             ))}

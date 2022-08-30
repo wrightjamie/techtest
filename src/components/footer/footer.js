@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { UtilityContainer, flow, UtilityFlex } from "../utils/utility";
+import { UtilityContainer, UtilityFlex } from "../utils/utility";
 import Link from "../utils/link";
 
 import { SocialItems } from "../utils/social_items";
@@ -11,12 +11,12 @@ const Footer = ({ data, scrollStop }) => {
   return (
     <FooterStop data-scrollstop={scrollStop ? "true" : "false"}>
       <FooterGrid>
-        {data.footer.frontmatter.columns.map((column) => (
-          <li key={column.id}>
+        {data.footer.frontmatter.columns.map((column, index) => (
+          <li key={index}>
             <FooterHeader>{column.column_title}</FooterHeader>
             <FooterItems>
-              {column.links.map((link) => (
-                <FooterItem key={link.link.id}>
+              {column.links.map((link, index2) => (
+                <FooterItem key={index2}>
                   <Link to={link.link.url}>{link.link.content}</Link>
                 </FooterItem>
               ))}
