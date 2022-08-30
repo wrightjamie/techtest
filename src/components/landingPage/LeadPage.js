@@ -8,7 +8,7 @@ import Logo from "../../svg/rafacLogo.svg";
 // import Mail from "../../svg/mail.svg";
 
 import { TopPage, NextPage } from "../page";
-import { UtilityContainer, flow, VisHidden } from "../utils/utility";
+import { UtilityContainer, flow } from "../utils/utility";
 import { SocialItems } from "../utils/social_items";
 
 const LeadPage = ({ data }) => {
