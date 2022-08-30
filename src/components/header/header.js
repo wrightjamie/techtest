@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import useMenu from "../../hooks/useMenu";
+import Link from "../utils/link";
 
 import { H1Link } from "./header_h1";
 import { MenuButton } from "./menu_button";
