@@ -1,6 +1,6 @@
 ---
 template: footer
-copyright: Copyright 2459 Squadron Royal Air Force Air Cadets
+copyright: 2459 Poulton-le-Fylde Squadron RAFAC. UK Crown Copyright
 year: 2022
 columns:
   - column_title: Connect With Us
