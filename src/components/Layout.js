@@ -35,6 +35,8 @@ const Layout = ({ children, lead, scrollStop }) => {
                 }
               }
             }
+            copyright
+            year
           }
         }
         site {

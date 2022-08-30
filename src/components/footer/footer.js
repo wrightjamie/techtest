@@ -30,7 +30,7 @@ const Footer = ({ data, scrollStop }) => {
       <SocialItems />
       <UtilityFlex jc>
         <FooterCopyright>
-          ©2022 2459 Poulton-le-Fylde Squadron RAFAC. UK Crown Copyright
+          ©{data.footer.frontmatter.year} {data.footer.frontmatter.copyright}
         </FooterCopyright>
       </UtilityFlex>
     </FooterStop>
