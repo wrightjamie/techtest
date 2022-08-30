@@ -8,7 +8,7 @@
 </h1>
 
 //TODO Create a new Link Component
-//TODO Tidy up unused components in imports
+//DONE Tidy up unused components in imports
 //TODO Add image manamagement through Gatsby
 //TODO Blog styling
 //TODO Scroll to content link
