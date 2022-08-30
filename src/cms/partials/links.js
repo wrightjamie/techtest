@@ -26,7 +26,7 @@ const links = {
           label: "Icon",
           name: "icon",
           widget: "select",
-          options: ["facebook", "twitter", "mail", "none"],
+          options: ["facebook", "twitter", "mail", "phone", "none"],
         },
       ],
     },
