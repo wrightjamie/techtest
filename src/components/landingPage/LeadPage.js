@@ -2,10 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 
 import Logo from "../../svg/rafacLogo.svg";
-// import Facebook from "../../svg/facebook.svg";
-// import Twitter from "../../svg/twitter.svg";
-// import Phone from "../../svg/phone.svg";
-// import Mail from "../../svg/mail.svg";
 
 import { TopPage, NextPage } from "../page";
 import { UtilityContainer, flow, VisHidden } from "../utils/utility";

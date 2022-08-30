@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Link } from "gatsby";
+import Link from "../utils/link";
 import styled from "styled-components";
 
 import useBoolean from "../../hooks/useBoolean";
@@ -35,7 +35,7 @@ const Header = ({ data }) => {
           <NavItems>
             {links.map((link) => (
               <li key={link.link.id}>
-                <a href={link.link.url}>{link.link.content}</a>
+                <Link to={link.link.url}>{link.link.content}</Link>
               </li>
             ))}
           </NavItems>
