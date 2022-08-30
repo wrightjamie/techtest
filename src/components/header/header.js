@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import { Link } from "gatsby";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 import useBoolean from "../../hooks/useBoolean";
