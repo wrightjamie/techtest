@@ -1,4 +1,4 @@
-const links = (label = "link", name = "links", min = 1, max = 5) => ({
+const links = (label = "Link", name = "links", min = 1, max = 5) => ({
   label,
   name,
   widget: "list",

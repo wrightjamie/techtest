@@ -19,7 +19,7 @@ const header = {
       default: "social",
       required: true,
     },
-    links,
+    links("Social Links", "sociallinks", 1, 4),
   ],
 };
 
