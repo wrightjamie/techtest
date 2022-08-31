@@ -45,7 +45,7 @@ const footer = {
           widget: "string",
           default: "Links:",
         },
-        links,
+        links(),
       ],
     },
   ],
