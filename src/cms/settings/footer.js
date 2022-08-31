@@ -37,7 +37,7 @@ const footer = {
       name: "columns",
       widget: "list",
       min: 1,
-      max: 4,
+      max: 3,
       fields: [
         {
           label: "Column Title",

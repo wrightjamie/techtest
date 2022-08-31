@@ -1,25 +1,25 @@
 import links from "../partials/links";
 
 const header = {
-  file: "content/settings/header.md",
-  label: "Header Links",
-  name: "Header_links",
+  file: "content/settings/social.md",
+  label: "Social Links",
+  name: "Social_links",
   fields: [
     {
       label: "Template",
       name: "template",
       widget: "hidden",
-      default: "header",
+      default: "social",
       required: true,
     },
     {
       label: "Area",
       name: "area",
       widget: "hidden",
-      default: "header",
+      default: "social",
       required: true,
     },
-    links,
+    links("Social Links", "sociallinks", 1, 4),
   ],
 };
 

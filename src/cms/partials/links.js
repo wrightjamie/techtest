@@ -1,9 +1,9 @@
-//import seo from "@/cms/partials/seo";
-
-const links = {
-  label: "Links",
-  name: "links",
+const links = (label = "Link", name = "links", min = 1, max = 5) => ({
+  label,
+  name,
   widget: "list",
+  min,
+  max,
   fields: [
     {
       label: "Link",
@@ -26,11 +26,11 @@ const links = {
           label: "Icon",
           name: "icon",
           widget: "select",
-          options: ["facebook", "twitter", "mail", "none"],
+          options: ["facebook", "twitter", "mail", "phone", "none"],
         },
       ],
     },
   ],
-};
+});
 
 export default links;

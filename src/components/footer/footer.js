@@ -30,7 +30,7 @@ const Footer = ({ data, scrollStop }) => {
       <SocialItems />
       <UtilityFlex jc>
         <FooterCopyright>
-          ©2022 2459 Poulton-le-Fylde Squadron RAFAC. UK Crown Copyright
+          ©{data.footer.frontmatter.year} {data.footer.frontmatter.copyright}
         </FooterCopyright>
       </UtilityFlex>
     </FooterStop>
@@ -72,6 +72,11 @@ const FooterGrid = styled.ul`
       "a b c"
       "logo logo logo";
   }
+  @media (max-width: 30em) {
+    grid-template:
+      "a b"
+      "c logo";
+  }
 
   list-style: none;
 `;
@@ -97,4 +102,5 @@ const FooterItem = styled.li`
 `;
 const FooterCopyright = styled.span`
   font-size: var(--f-s-300);
+  text-align: center;
 `;
