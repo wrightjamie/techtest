@@ -12,4 +12,16 @@ links:
       content: Twitter
       url: https://www.twitter.com/
       icon: twitter
+  - link:
+      icon: none
+  - link:
+      icon: none
+  - link:
+      icon: none
+  - link:
+      icon: none
+  - link:
+      icon: none
+  - link:
+      icon: none
 ---
