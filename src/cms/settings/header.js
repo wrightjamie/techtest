@@ -1,4 +1,3 @@
-//import seo from "@/cms/partials/seo";
 import links from "../partials/links";
 
 const header = {
