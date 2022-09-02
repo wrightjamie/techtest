@@ -58,6 +58,7 @@ const IndexPage = ({ data }) => {
         <PageHeader>Recent</PageHeader>
         {recent.map((post, index) => {
           const recent_post = {
+            slug: "posts/another-post-or-type-post",
             title: post.node.frontmatter.title,
             link: post.node.fields.slug,
           };
