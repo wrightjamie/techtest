@@ -1,4 +1,4 @@
-const post_collection = {
+const post_collection = () => ({
   label: "Choose Post",
   name: "post",
   widget: "relation",
@@ -6,4 +6,4 @@ const post_collection = {
   search_fields: ["title", "excerpt"],
   value_field: "slug",
   display_fields: ["title"],
-};
+});
