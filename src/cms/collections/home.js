@@ -33,6 +33,7 @@ const home = {
       ],
     },
     links("Header Links", "header_links"),
+    post_collection(),
   ],
 };
 
