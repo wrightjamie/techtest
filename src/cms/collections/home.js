@@ -31,7 +31,7 @@ const home = {
         },
       ],
     },
-    post_collection,
+    post_collection(),
   ],
 };
 
