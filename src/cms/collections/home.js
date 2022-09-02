@@ -31,14 +31,9 @@ const home = {
         },
       ],
     },
-    //post_collection,
+    links,
+    post_collection,
   ],
 };
 
 export default home;
-
-const three_page = {};
-
-const four_page = {};
-
-const hero_page = {};
