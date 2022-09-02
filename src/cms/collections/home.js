@@ -1,4 +1,5 @@
 import post_collection from "../partials/post_collection";
+import links from "../partials/links";
 
 const home = {
   name: "home",
@@ -31,6 +32,7 @@ const home = {
         },
       ],
     },
+    links("Header Links", "header_links"),
   ],
 };
 
