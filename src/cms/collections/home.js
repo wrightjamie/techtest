@@ -42,9 +42,6 @@ const home = {
       value_field: "slug",
       display_fields: ["title"],
     },
-    {
-      ...post_collection,
-    },
   ],
 };
 
