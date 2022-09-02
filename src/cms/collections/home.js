@@ -1,4 +1,4 @@
-import post_collection from "../partials/post_collection";
+//import post_collection from "../partials/post_collection";
 import links from "../partials/links";
 
 const home = {
@@ -42,7 +42,18 @@ const home = {
       value_field: "slug",
       display_fields: ["title"],
     },
+    post_collection,
   ],
 };
 
 export default home;
+
+const post_collection = {
+  label: "Choose Post",
+  name: "post",
+  widget: "relation",
+  collection: "post",
+  search_fields: ["title", "excerpt"],
+  value_field: "slug",
+  display_fields: ["title"],
+};
