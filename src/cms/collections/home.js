@@ -32,7 +32,6 @@ const home = {
       ],
     },
     links,
-    post_collection,
   ],
 };
 
