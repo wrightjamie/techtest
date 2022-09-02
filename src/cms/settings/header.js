@@ -19,7 +19,7 @@ const header = {
       default: "header",
       required: true,
     },
-    links(),
+    links("Header Links", "header_links"),
   ],
 };
 
