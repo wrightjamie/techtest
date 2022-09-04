@@ -1,4 +1,3 @@
-//import post_collection from "../partials/post_collection";
 import links from "../partials/links";
 import post_collection from "../partials/post_collection";
 
