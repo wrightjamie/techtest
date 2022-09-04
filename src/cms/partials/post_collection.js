@@ -7,3 +7,5 @@ const post_collection = {
   value_field: "slug",
   display_fields: ["title"],
 };
+
+export default post_collection;
