@@ -8,4 +8,8 @@ header_links:
       url: /admin/
       icon: none
 post: posts/another-post-or-type-post
+posts:
+  - posts/a-post-of-type-post
+  - posts/a-post-of-type-page2
+  - posts/a-post-of-type-post
 ---
