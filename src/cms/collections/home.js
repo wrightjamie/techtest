@@ -34,6 +34,14 @@ const home = {
     },
     links("Header Links", "header_links"),
     post_collection,
+    {
+      label: "Select 3 Posts",
+      name: "posts",
+      widget: "list",
+      field: { post_collection },
+      allow_add: false,
+      default: ["post", "post", "post", "post"],
+    },
   ],
 };
 
