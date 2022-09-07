@@ -1,5 +1,5 @@
 import links from "../partials/links";
-//import page_of_three from "../partials/pages";
+import page_of_three from "../partials/pages";
 import post_collection from "../partials/post_collection";
 
 const home = {
@@ -35,7 +35,7 @@ const home = {
     },
     links("Header Links", "header_links"),
     post_collection,
-    //page_of_three,
+    page_of_three,
   ],
 };
 
