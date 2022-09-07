@@ -20,6 +20,18 @@ const IndexPage = ({ data }) => {
   const recent = data.recent.edges;
   const meta = data.site.siteMetadata; //TODO Move siteMetaData to a custom hook
 
+  console.log(data);
+
+  //This returns an array of selected posts or pages that appear in the array slugs
+  const slugs = [
+    "posts/another-post-or-type-post",
+    "posts/with-content",
+    "posts/a-post-of-type-page",
+  ];
+  const selected_posts = data.post_and_pages.nodes.filter(({ frontmatter }) =>
+    slugs.includes(frontmatter.slug)
+  );
+
   const dummy = {
     landing: {
       title: "Ready?",
@@ -120,6 +132,18 @@ export const query = graphql`
             slug
           }
           id
+        }
+      }
+    }
+    post_and_pages: allMarkdownRemark(
+      filter: { frontmatter: { template: { in: ["post", "page"] } } }
+    ) {
+      nodes {
+        frontmatter {
+          excerpt
+          featured
+          slug
+          title
         }
       }
     }
