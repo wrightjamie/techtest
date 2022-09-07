@@ -39,8 +39,7 @@ const home = {
       name: "posts",
       widget: "list",
       field: post_collection,
-      allow_add: false,
-      default: ["post", "post", "post", "post"],
+      allow_add: true,
     },
   ],
 };
