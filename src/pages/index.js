@@ -17,8 +17,21 @@ import Hero from "../components/landingPage/Hero";
 // markup
 const IndexPage = ({ data }) => {
   const landing = data.landing.frontmatter.landing;
-  const recent = data.recent.edges;
+  const recent = data.recent.nodes;
   const meta = data.site.siteMetadata; //TODO Move siteMetaData to a custom hook
+
+  console.log(data);
+
+  //This returns an array of selected posts or pages that appear in the array slugs
+  const slugs = [
+    "posts/another-post-or-type-post",
+    "posts/with-content",
+    "posts/a-post-of-type-page",
+    "posts/a-post-of-type-page2",
+  ];
+  const selected_posts = data.post_and_pages.nodes.filter(({ frontmatter }) =>
+    slugs.includes(frontmatter.slug)
+  );
 
   const dummy = {
     landing: {
@@ -56,13 +69,9 @@ const IndexPage = ({ data }) => {
       </HeroPage>
       <ThreePage id="page3">
         <PageHeader>Recent</PageHeader>
-        {recent.map((post, index) => {
-          const recent_post = {
-            title: post.node.frontmatter.title,
-            link: post.node.fields.slug,
-          };
-          return <CardLink key={index} data={recent_post} />;
-        })}
+        {recent.map((post, index) => (
+          <CardLink key={index} data={post.frontmatter} />
+        ))}
         <NextPage link="#page4" />
       </ThreePage>
       <HeroPage left id="page4" background="img/advTrg.jpg">
@@ -71,11 +80,10 @@ const IndexPage = ({ data }) => {
         <NextPage link="#page5" />
       </HeroPage>
       <FourPage id="page5">
-        <PageHeader>A Page Title</PageHeader>
-        <CardLink data={card_data} />
-        <CardLink data={card_data} />
-        <CardLink data={card_data} />
-        <CardLink data={card_data} />
+        <PageHeader>Test of Post Slug Function</PageHeader>
+        {selected_posts.map((post, index) => (
+          <CardLink key={index} data={post.frontmatter} />
+        ))}
         <NextPage link="#page6" />
       </FourPage>
       <ChequeredPage id="page6">
@@ -110,15 +118,24 @@ export const query = graphql`
       sort: { order: DESC, fields: frontmatter___date }
       filter: { frontmatter: { template: { eq: "post" } } }
     ) {
-      edges {
-        node {
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
-          id
+      nodes {
+        frontmatter {
+          excerpt
+          featured
+          slug
+          title
+        }
+      }
+    }
+    post_and_pages: allMarkdownRemark(
+      filter: { frontmatter: { template: { in: ["post", "page"] } } }
+    ) {
+      nodes {
+        frontmatter {
+          excerpt
+          featured
+          slug
+          title
         }
       }
     }

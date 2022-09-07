@@ -14,6 +14,7 @@ const CardLink = ({ data }) => {
           <img src={image} />
           <div>
             <h2>{data.title}</h2>
+            <em>{data.slug}</em>
             <p>
               Cras egestas sed purus consequat convallis. Nunc a libero rutrum,
               mollis dui ut, mattis lacus.

@@ -1,3 +1,6 @@
+import links from "../partials/links";
+import post_collection from "../partials/post_collection";
+
 const home = {
   name: "home",
   label: "Home Page",
@@ -29,22 +32,9 @@ const home = {
         },
       ],
     },
-    {
-      label: "Choose Post",
-      name: "post",
-      widget: "relation",
-      collection: "post",
-      search_fields: ["title", "excerpt"],
-      value_field: "slug",
-      display_fields: ["title"],
-    },
+    links("Header Links", "header_links"),
+    post_collection,
   ],
 };
 
 export default home;
-
-const three_page = {};
-
-const four_page = {};
-
-const hero_page = {};
