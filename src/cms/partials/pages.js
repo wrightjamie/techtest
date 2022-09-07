@@ -1,3 +1,5 @@
+import post_collection from "../partials/post_collection";
+
 const page_of_three = {
   label: "Select 3 Posts",
   name: "posts",

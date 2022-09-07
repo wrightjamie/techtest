@@ -1,6 +1,6 @@
 import links from "../partials/links";
-//import page_of_three from "../partials/pages";
 import post_collection from "../partials/post_collection";
+import page_of_three from "../partials/pages";
 
 const home = {
   name: "home",
@@ -35,15 +35,7 @@ const home = {
     },
     links("Header Links", "header_links"),
     post_collection,
-    {
-      label: "Select 3 Posts",
-      name: "posts",
-      widget: "list",
-      field: post_collection,
-      allow_add: true,
-      max: 3,
-      min: 3,
-    },
+    page_of_three,
   ],
 };
 
