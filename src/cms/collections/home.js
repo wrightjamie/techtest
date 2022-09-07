@@ -40,11 +40,8 @@ const home = {
       widget: "list",
       field: post_collection,
       allow_add: true,
-      defaults: [
-        "posts/a-post-of-type-page",
-        "posts/a-post-of-type-post",
-        "posts/with-content",
-      ],
+      max: 3,
+      min: 3,
     },
   ],
 };
