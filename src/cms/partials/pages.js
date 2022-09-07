@@ -1,4 +1,4 @@
-export const page_of_three = {
+const page_of_three = {
   label: "Select 3 Posts",
   name: "posts",
   widget: "list",
@@ -7,3 +7,5 @@ export const page_of_three = {
   max: 3,
   min: 3,
 };
+
+export default page_of_three;

@@ -1,5 +1,5 @@
 import links from "../partials/links";
-import { page_of_three } from "../partials/pages";
+import page_of_three from "../partials/pages";
 import post_collection from "../partials/post_collection";
 
 const home = {
