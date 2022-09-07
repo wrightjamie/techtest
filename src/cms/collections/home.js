@@ -38,7 +38,7 @@ const home = {
       label: "Select 3 Posts",
       name: "posts",
       widget: "list",
-      field: { post_collection },
+      field: post_collection,
       allow_add: false,
       default: ["post", "post", "post", "post"],
     },
