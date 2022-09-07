@@ -7,5 +7,5 @@ header_links:
       content: Admin
       url: /admin/
       icon: none
-post: posts/a-post-of-type-post
+post: posts/another-post-or-type-post
 ---
