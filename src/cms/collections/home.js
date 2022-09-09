@@ -44,7 +44,7 @@ const home = {
       label: "Pages",
       name: "pages",
       widget: "list",
-      fields: [
+      types: [
         page_of_three(),
         page_of_four(),
         page_of_cheques(),
