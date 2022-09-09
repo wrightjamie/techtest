@@ -97,8 +97,8 @@ export const page_of_hero = (name = "page1") => ({
       required: false,
     },
     {
-      label: "Emphasised Content",
-      name: "em",
+      label: "Normal Content",
+      name: "para",
       widget: "text",
       required: false,
     },
