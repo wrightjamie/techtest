@@ -2,7 +2,7 @@ import post_collection from "../partials/post_collection";
 
 const page_title = {
   label: "Page Title",
-  name: "title",
+  name: "page_title",
   widget: "string",
   required: true,
 };
