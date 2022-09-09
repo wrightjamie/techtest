@@ -35,8 +35,8 @@ const home = {
     },
     links("Header Links", "header_links"),
     post_collection,
-    page_of_three,
-    page_of_four,
+    page_of_three(),
+    page_of_four(),
   ],
 };
 
