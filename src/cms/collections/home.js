@@ -44,7 +44,7 @@ const home = {
     page_of_four(),
     page_of_cheques(),
     page_of_recent(),
-    //page_of_hero(),
+    page_of_hero(),
   ],
 };
 

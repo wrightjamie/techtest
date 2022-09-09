@@ -62,45 +62,45 @@ export const page_of_recent = (name = "page2") => ({
   ],
 });
 
-// export const page_of_hero = (name = "page3") => ({
-//   label: "Hero Style",
-//   name,
-//   widget: "object",
-//   fields: [
-//     page_title,
-//     {
-//       label: "Content on left or right?",
-//       name: "content",
-//       widget: "select",
-//       default: "left",
-//       options: [
-//         {
-//           label: "Left",
-//           value: "left",
-//         },
-//         {
-//           label: "Right",
-//           value: "right",
-//         },
-//       ],
-//     },
-//     {
-//       label: "Content Title",
-//       name: "title",
-//       widget: "string",
-//       required: true,
-//     },
-//     {
-//       label: "Emphasised Content",
-//       name: "em",
-//       widget: "text",
-//       required: false,
-//     },
-//     {
-//       label: "Emphasised Content",
-//       name: "em",
-//       widget: "text",
-//       required: false,
-//     },
-//   ],
-// });
+export const page_of_hero = (name = "page3") => ({
+  label: "Hero Style",
+  name,
+  widget: "object",
+  fields: [
+    page_title,
+    // {
+    //   label: "Content on left or right?",
+    //   name: "content",
+    //   widget: "select",
+    //   default: "left",
+    //   options: [
+    //     {
+    //       label: "Left",
+    //       value: "left",
+    //     },
+    //     {
+    //       label: "Right",
+    //       value: "right",
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: "Content Title",
+    //   name: "title",
+    //   widget: "string",
+    //   required: true,
+    // },
+    // {
+    //   label: "Emphasised Content",
+    //   name: "em",
+    //   widget: "text",
+    //   required: false,
+    // },
+    // {
+    //   label: "Emphasised Content",
+    //   name: "em",
+    //   widget: "text",
+    //   required: false,
+    // },
+  ],
+});
