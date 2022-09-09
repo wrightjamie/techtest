@@ -1,6 +1,10 @@
 import links from "../partials/links";
 import post_collection from "../partials/post_collection";
-import { page_of_four, page_of_three } from "../partials/pages";
+import {
+  page_of_cheques,
+  page_of_four,
+  page_of_three,
+} from "../partials/pages";
 
 const home = {
   name: "home",
@@ -37,6 +41,7 @@ const home = {
     post_collection,
     page_of_three(),
     page_of_four(),
+    page_of_cheques(),
   ],
 };
 
