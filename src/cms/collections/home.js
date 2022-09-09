@@ -40,6 +40,19 @@ const home = {
       ],
     },
     links("Header Links", "header_links"),
+    {
+      label: "Pages",
+      name: "pages",
+      widget: "list",
+      fields: [
+        page_of_three(),
+        page_of_four(),
+        page_of_cheques(),
+        page_of_recent(),
+        page_of_hero(),
+      ],
+    },
+
     post_collection,
     page_of_three(),
     page_of_four(),
