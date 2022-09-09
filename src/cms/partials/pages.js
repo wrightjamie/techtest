@@ -8,7 +8,7 @@ const page_defaults = {
 
 export const page_of_three = (name = "page3") => ({
   ...page_defaults,
-  name
+  name,
   label: "Select 3 Posts",
   max: 3,
   min: 3,
