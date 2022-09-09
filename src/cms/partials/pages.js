@@ -62,7 +62,7 @@ export const page_of_recent = (name = "page2") => ({
   ],
 });
 
-export const page_of_hero = (name = "page3") => ({
+export const page_of_hero = (name = "page2") => ({
   label: "Hero Style",
   name,
   widget: "object",
