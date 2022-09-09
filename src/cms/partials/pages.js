@@ -38,5 +38,26 @@ export const page_of_recent = (name = "page2") => ({
   label: "Recent Posts",
   name,
   widget: "object",
-  fields: [page_title],
+  fields: [
+    page_title,
+    {
+      label: "Arrangement of Articles?",
+      name: "arrangement",
+      widget: "select",
+      options: [
+        {
+          label: "3 Vertical",
+          value: "3V",
+        },
+        {
+          label: "4 Staggered",
+          value: "3S",
+        },
+        {
+          label: "4 Chequered",
+          value: "4C",
+        },
+      ],
+    },
+  ],
 });

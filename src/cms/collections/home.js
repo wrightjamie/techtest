@@ -3,6 +3,7 @@ import post_collection from "../partials/post_collection";
 import {
   page_of_cheques,
   page_of_four,
+  page_of_recent,
   page_of_three,
 } from "../partials/pages";
 
@@ -42,6 +43,7 @@ const home = {
     page_of_three(),
     page_of_four(),
     page_of_cheques(),
+    page_of_recent(),
   ],
 };
 
