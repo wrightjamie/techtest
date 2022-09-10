@@ -1,4 +1,5 @@
 import post_collection from "../partials/post_collection";
+import { link } from "./links";
 
 const page_title = {
   label: "Page Title",
@@ -102,5 +103,6 @@ export const page_of_hero = (name = "page1") => ({
       widget: "text",
       required: false,
     },
+    link,
   ],
 });
