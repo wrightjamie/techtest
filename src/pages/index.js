@@ -110,6 +110,15 @@ export const query = graphql`
         landing {
           tag
         }
+        pages {
+          type
+          content
+          page_title
+          title
+          em
+          para
+          arrangement
+        }
       }
     }
 
