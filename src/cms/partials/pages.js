@@ -26,16 +26,16 @@ const page = (name, label, max, min) => ({
   ],
 });
 
-export const page_of_three = (name = "page3") =>
+export const page_of_three = (name = "3items") =>
   page(name, "Page of 3 Elements", 3, 3);
 
-export const page_of_four = (name = "page4") =>
+export const page_of_four = (name = "4items") =>
   page(name, "Page of 4 Elements", 4, 4);
 
-export const page_of_cheques = (name = "page5") =>
+export const page_of_cheques = (name = "4chequed") =>
   page(name, "Page of 4 Elements (Chequed)", 4, 4);
 
-export const page_of_recent = (name = "page2") => ({
+export const page_of_recent = (name = "recent") => ({
   label: "Recent Posts",
   name,
   widget: "object",
@@ -63,7 +63,7 @@ export const page_of_recent = (name = "page2") => ({
   ],
 });
 
-export const page_of_hero = (name = "page1") => ({
+export const page_of_hero = (name = "hero") => ({
   label: "Hero Style",
   name,
   widget: "object",

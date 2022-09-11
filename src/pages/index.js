@@ -19,6 +19,7 @@ const IndexPage = ({ data }) => {
   const landing = data.landing.frontmatter.landing;
   const recent = data.recent.nodes;
   const meta = data.site.siteMetadata; //TODO Move siteMetaData to a custom hook
+  const pages = data.landing.frontmatter.pages;
 
   console.log(data);
 
@@ -63,6 +64,9 @@ const IndexPage = ({ data }) => {
   };
   return (
     <Layout lead={<LeadPage data={leadpagedata} />} scrollStop>
+      {pages.map((page, index) => (
+        <PageSwitch data={page} key={index} />
+      ))}
       <HeroPage id="page2" background="img/advTrg.jpg">
         <Hero data={heropagedata} />
         <NextPage link="#page3" />
@@ -95,6 +99,21 @@ const IndexPage = ({ data }) => {
       </ChequeredPage>
     </Layout>
   );
+};
+
+const PageSwitch = ({ data }) => {
+  switch (data.type) {
+    case "hero":
+      return <h1>Hero</h1>;
+    case "recent":
+      return <h1>Recent</h1>;
+    case "3items":
+      return <h1>3 Items</h1>;
+    case "4item":
+      return <h1>4 Items</h1>;
+    case "4chequed":
+      return <h1>Chequed</h1>;
+  }
 };
 
 export const query = graphql`

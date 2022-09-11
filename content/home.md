@@ -13,24 +13,24 @@ posts:
   - posts/a-post-of-type-page2
   - posts/with-content
 pages:
-  - type: page1
+  - type: hero
     content: left
     page_title: Hero page title
     title: Content title
     em: Something emphasised
     para: Normal text
-  - type: page1
+  - type: hero
     content: right
     page_title: Another page title
     title: No emphasis
     para: Normal text again
-  - type: page3
+  - type: 3items
     page_title: "3 posts "
     page3:
       - posts/a-post-of-type-page
       - posts/a-post-of-type-post
       - posts/another-post-or-type-post
-  - type: page2
+  - type: recent
     page_title: Recent Posts
     arrangement: 4C
 ---
