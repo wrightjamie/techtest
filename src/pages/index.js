@@ -3,6 +3,8 @@ import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 
 import LeadPage from "../components/landingPage/LeadPage";
+import PageSwitch from "../components/page_switch";
+
 import CardLink from "../components/card_link";
 import {
   HeroPage,
@@ -17,9 +19,10 @@ import Hero from "../components/landingPage/Hero";
 // markup
 const IndexPage = ({ data }) => {
   const landing = data.landing.frontmatter.landing;
-  const recent = data.recent.nodes;
+  const recent = data.recent.nodes.map((x) => x.frontmatter.slug);
   const meta = data.site.siteMetadata; //TODO Move siteMetaData to a custom hook
   const pages = data.landing.frontmatter.pages;
+  const posts = data.post_and_pages.nodes.map((x) => x.frontmatter);
 
   console.log(data);
 
@@ -62,10 +65,11 @@ const IndexPage = ({ data }) => {
     title: "Here is a title",
     link: "/blog/",
   };
+
   return (
     <Layout lead={<LeadPage data={leadpagedata} />} scrollStop>
       {pages.map((page, index) => (
-        <PageSwitch data={page} key={index} />
+        <PageSwitch data={page} key={index} recent={recent} posts={posts} />
       ))}
       <HeroPage id="page2" background="img/advTrg.jpg">
         <Hero data={heropagedata} />
@@ -74,7 +78,7 @@ const IndexPage = ({ data }) => {
       <ThreePage id="page3">
         <PageHeader>Recent</PageHeader>
         {recent.map((post, index) => (
-          <CardLink key={index} data={post.frontmatter} />
+          <CardLink key={index} data={post} />
         ))}
         <NextPage link="#page4" />
       </ThreePage>
@@ -101,21 +105,6 @@ const IndexPage = ({ data }) => {
   );
 };
 
-const PageSwitch = ({ data }) => {
-  switch (data.type) {
-    case "hero":
-      return <h1>Hero</h1>;
-    case "recent":
-      return <h1>Recent</h1>;
-    case "3items":
-      return <h1>3 Items</h1>;
-    case "4item":
-      return <h1>4 Items</h1>;
-    case "4chequed":
-      return <h1>Chequed</h1>;
-  }
-};
-
 export const query = graphql`
   query {
     site {
@@ -137,21 +126,19 @@ export const query = graphql`
           em
           para
           arrangement
+          posts
         }
       }
     }
 
     recent: allMarkdownRemark(
-      limit: 3
+      limit: 4
       sort: { order: DESC, fields: frontmatter___date }
       filter: { frontmatter: { template: { eq: "post" } } }
     ) {
       nodes {
         frontmatter {
-          excerpt
-          featured
           slug
-          title
         }
       }
     }

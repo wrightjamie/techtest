@@ -26,11 +26,11 @@ pages:
     para: Normal text again
   - type: 3items
     page_title: "3 posts "
-    page3:
+    posts:
       - posts/a-post-of-type-page
       - posts/a-post-of-type-post
       - posts/another-post-or-type-post
   - type: recent
     page_title: Recent Posts
-    arrangement: 4C
+    arrangement: 4S
 ---
