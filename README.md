@@ -7,12 +7,13 @@
   Gatsby minimal starter
 </h1>
 
-//DONE Create a new Link Component
-//DONE Tidy up unused components in imports
-//TODO Add image manamagement through Gatsby
-//TODO Blog styling
-//TODO Scroll to content link
-//DONE Remove debug console logs
+- [x] DONE Create a new Link Component
+- [x] Tidy up unused components in imports
+- [ ] Add image manamagement through Gatsby
+- [ ] Blog styling
+- [ ] Scroll to content link
+- [x] Remove debug console logs
+- [ ] Pointer styles for cards
 
 ## 🚀 Quick start
 
