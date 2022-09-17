@@ -26,7 +26,7 @@ const PageSwitch = ({ data, recent, posts }) => {
           posts={posts.filter((post) => data.posts.includes(post.slug))}
         />
       );
-    case "4item":
+    case "4items":
       data.arrangement = "4S";
       return (
         <PageSwitchPosts
