@@ -40,7 +40,7 @@ pages:
       - posts/a-post-of-type-post
       - posts/another-post-or-type-post
       - posts/a-post-of-type-page2
-  - type: 4items
+  - type: 4chequed
     page_title: 4 posts With a Repeat
     posts:
       - posts/a-post-of-type-page
