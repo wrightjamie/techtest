@@ -39,6 +39,7 @@ pages:
       - posts/a-post-of-type-page
       - posts/a-post-of-type-post
       - posts/another-post-or-type-post
+      - posts/a-post-of-type-page2
   - type: 4items
     page_title: 4 posts With a Repeat
     posts:
