@@ -16,13 +16,32 @@ const PageSwitch = ({ data, recent, posts }) => {
     case "hero":
       return <PageSwitchHero data={data} />;
     case "recent":
-      return <PageSwitchRecent data={data} recent={recent} posts={posts} />;
+      const filtered_posts = posts.filter((post) => recent.includes(post.slug));
+      return <PageSwitchPosts data={data} posts={filtered_posts} />;
     case "3items":
-      return <h1>3 Items</h1>;
+      data.arrangement = "3V";
+      return (
+        <PageSwitchPosts
+          data={data}
+          posts={posts.filter((post) => data.posts.includes(post.slug))}
+        />
+      );
     case "4item":
-      return <h1>4 Items</h1>;
+      data.arrangement = "4S";
+      return (
+        <PageSwitchPosts
+          data={data}
+          posts={posts.filter((post) => data.posts.includes(post.slug))}
+        />
+      );
     case "4chequed":
-      return <h1>Chequed</h1>;
+      data.arrangement = "4C";
+      return (
+        <PageSwitchPosts
+          data={data}
+          posts={posts.filter((post) => data.posts.includes(post.slug))}
+        />
+      );
     default:
       break;
   }
@@ -44,29 +63,29 @@ const PageSwitchHero = ({ data }) => {
   );
 };
 
-const PageSwitchRecent = ({ data, recent, posts }) => {
-  const filtered_posts = posts.filter((post) => recent.includes(post.slug));
+const PageSwitchPosts = ({ data, posts }) => {
+  console.log("Page Title", data.page_title);
   switch (data.arrangement) {
     case "3V":
-      filtered_posts.length = 3;
+      posts.length = 3;
       return (
         <ThreePage id="page3">
           {data.page_title && <PageHeader>{data.page_title}</PageHeader>}
-          <Posts posts={filtered_posts} />
+          <Posts posts={posts} />
         </ThreePage>
       );
     case "4S":
       return (
         <FourPage id="page4">
           {data.page_title && <PageHeader>{data.page_title}</PageHeader>}
-          <Posts posts={filtered_posts} />
+          <Posts posts={posts} />
         </FourPage>
       );
     case "4C":
       return (
         <ChequeredPage id="page5">
           {data.page_title && <PageHeader>{data.page_title}</PageHeader>}
-          <Posts posts={filtered_posts} />
+          <Posts posts={posts} />
         </ChequeredPage>
       );
     default:
