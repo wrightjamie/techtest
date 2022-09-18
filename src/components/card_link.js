@@ -10,7 +10,7 @@ const CardLink = ({ data }) => {
   return (
     <>
       <StyledSection>
-        <Link to={data.link}>
+        <Link to={data.slug}>
           <img src={image} />
           <div>
             <h2>{data.title}</h2>
