@@ -12,15 +12,11 @@ const CardLink = ({ data }) => {
   return (
     <>
       <StyledSection>
-        <Link to={data.link}>
+        <Link to={data.slug}>
           <img src={image} />
           <div>
             <h2>{data.title}</h2>
-            <em>{data.slug}</em>
-            <p>
-              Cras egestas sed purus consequat convallis. Nunc a libero rutrum,
-              mollis dui ut, mattis lacus.
-            </p>
+            {data.excerpt && <p>{data.excerpt}</p>}
           </div>
         </Link>
       </StyledSection>

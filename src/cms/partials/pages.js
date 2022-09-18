@@ -18,7 +18,7 @@ const page = (name, label, max, min) => ({
       widget: "list",
       field: post_collection,
       allow_add: true,
-      name,
+      name: "posts",
       label: "Select Posts or Pages",
       max,
       min,
@@ -52,7 +52,7 @@ export const page_of_recent = (name = "recent") => ({
         },
         {
           label: "4 Staggered",
-          value: "3S",
+          value: "4S",
         },
         {
           label: "4 Chequered",
