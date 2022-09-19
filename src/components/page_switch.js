@@ -64,7 +64,6 @@ const PageSwitchHero = ({ data }) => {
 };
 
 const PageSwitchPosts = ({ data, posts }) => {
-  console.log("Page Title", data.page_title);
   switch (data.arrangement) {
     case "3V":
       posts.length = 3;
@@ -94,7 +93,6 @@ const PageSwitchPosts = ({ data, posts }) => {
 };
 
 const Posts = ({ posts }) => {
-  console.log("Filtered Posts", posts);
   return (
     <>
       {posts.map((post, index) => (
