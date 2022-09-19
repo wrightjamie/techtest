@@ -25,12 +25,26 @@ pages:
     title: No emphasis
     para: Normal text again
   - type: 3items
-    page_title: "3 posts "
-    page3:
+    page_title: 3 posts
+    posts:
       - posts/a-post-of-type-page
       - posts/a-post-of-type-post
       - posts/another-post-or-type-post
   - type: recent
     page_title: Recent Posts
-    arrangement: 4C
+    arrangement: 4S
+  - type: 4items
+    page_title: 4 posts
+    posts:
+      - posts/a-post-of-type-page
+      - posts/a-post-of-type-post
+      - posts/another-post-or-type-post
+      - posts/a-post-of-type-page2
+  - type: 4chequed
+    page_title: 4 posts With a Repeat
+    posts:
+      - posts/a-post-of-type-page
+      - posts/a-post-of-type-post
+      - posts/a-post-of-type-page
+      - posts/another-post-or-type-post
 ---
