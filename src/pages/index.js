@@ -85,10 +85,8 @@ export const query = graphql`
       nodes {
         frontmatter {
           excerpt
-          featured
           slug
           title
-          thumbnail
         }
       }
     }

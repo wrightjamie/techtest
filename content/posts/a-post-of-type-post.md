@@ -2,7 +2,7 @@
 template: post
 title: A post of type post
 slug: posts/a-post-of-type-post
-thumbnail: /img/20210429_221616.jpg
+thumbnail: ./20210429_221616.jpg
 ---
 
 ## A Header
