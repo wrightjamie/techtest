@@ -20,7 +20,7 @@ CMS.init({
         deleteMedia: "[skip ci] Delete “{{path}}”",
       },
     },
-    media_folder: "/content/img",
+    media_folder: "/static/img",
     public_folder: "/img",
     collections: [settings, posts, home],
   },

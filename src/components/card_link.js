@@ -7,8 +7,6 @@ const CardLink = ({ data }) => {
   const images = ["advTrg.jpg", "glider.jpg", "tutor.jpg"];
   const image = "img/" + images[Math.floor(Math.random() * images.length)];
 
-  console.log(data.thumbnail);
-
   return (
     <>
       <StyledSection>
