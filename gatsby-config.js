@@ -4,13 +4,6 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-netlify-cms",
-      options: {
-        manualInit: true,
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
     "gatsby-plugin-styled-components",
     //    "gatsby-plugin-sass",
     {
@@ -33,6 +26,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content`,
         name: "pages",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/img`,
+        name: "images",
       },
     },
     `gatsby-plugin-image`,
@@ -66,6 +66,13 @@ module.exports = {
     //     img: path.join(__dirname, "static/img"),
     //   },
     // },
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        manualInit: true,
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     "gatsby-plugin-netlify",
   ],
 };

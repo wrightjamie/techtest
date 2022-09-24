@@ -36,6 +36,13 @@ const posts = {
       required: false,
     },
     {
+      label: "Test Image",
+      name: "image",
+      widget: "image",
+      default: "",
+      required: false,
+    },
+    {
       label: "Date",
       name: "date",
       widget: "datetime",
