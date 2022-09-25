@@ -10,7 +10,7 @@ CMS.init({
     load_config_file: false,
     backend: {
       name: "git-gateway",
-      branch: "master",
+      branch: "Image-Tests", //Changed from master to allow testing
       repo: "techtest",
       commit_messages: {
         create: "Create {{collection}} “{{slug}}”",
