@@ -2,7 +2,7 @@
 import links from "../partials/links";
 
 const footer = {
-  file: "content/settings/footer.md",
+  file: "content/footer.md",
   label: "Footer",
   name: "Footer",
   fields: [

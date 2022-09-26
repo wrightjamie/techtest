@@ -1,7 +1,7 @@
 import links from "../partials/links";
 
 const header = {
-  file: "content/settings/social.md",
+  file: "content/social.md",
   label: "Social Links",
   name: "Social_links",
   fields: [

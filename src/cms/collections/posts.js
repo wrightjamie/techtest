@@ -5,7 +5,7 @@ const posts = {
     preview: false,
   },
   description: "Post Content",
-  folder: "content/posts",
+  folder: "content",
   slug: "{{slug}}",
   create: true,
   fields: [
