@@ -21,7 +21,7 @@ CMS.init({
       },
     },
     media_folder: "content/posts",
-    public_folder: "/img",
+    public_folder: "/",
     collections: [settings, posts, home],
   },
 });
