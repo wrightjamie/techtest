@@ -65,6 +65,13 @@ export const page_of_recent = (name = "recent") => ({
 
 export const hero_content = [
   {
+    label: "Background Image",
+    name: "bgimage",
+    widget: "image",
+    default: "",
+    required: false,
+  },
+  {
     label: "Content on left or right?",
     name: "content",
     widget: "select",
@@ -79,12 +86,6 @@ export const hero_content = [
         value: "right",
       },
     ],
-  },
-  {
-    label: "Content Title",
-    name: "title",
-    widget: "string",
-    required: true,
   },
   {
     label: "Emphasised Content",
@@ -104,5 +105,15 @@ export const page_of_hero = (name = "hero") => ({
   label: "Hero Style",
   name,
   widget: "object",
-  fields: [page_title, ...hero_content, link],
+  fields: [
+    page_title,
+    {
+      label: "Content Title",
+      name: "title",
+      widget: "string",
+      required: true,
+    },
+    ...hero_content,
+    link,
+  ],
 });
