@@ -1,5 +1,4 @@
 import links from "../partials/links";
-import post_collection from "../partials/post_collection";
 import {
   page_of_cheques,
   page_of_four,

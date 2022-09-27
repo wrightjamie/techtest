@@ -63,46 +63,46 @@ export const page_of_recent = (name = "recent") => ({
   ],
 });
 
+export const hero_content = [
+  {
+    label: "Content on left or right?",
+    name: "content",
+    widget: "select",
+    default: "left",
+    options: [
+      {
+        label: "Left",
+        value: "left",
+      },
+      {
+        label: "Right",
+        value: "right",
+      },
+    ],
+  },
+  {
+    label: "Content Title",
+    name: "title",
+    widget: "string",
+    required: true,
+  },
+  {
+    label: "Emphasised Content",
+    name: "em",
+    widget: "text",
+    required: false,
+  },
+  {
+    label: "Normal Content",
+    name: "para",
+    widget: "text",
+    required: false,
+  },
+];
+
 export const page_of_hero = (name = "hero") => ({
   label: "Hero Style",
   name,
   widget: "object",
-  fields: [
-    page_title,
-    {
-      label: "Content on left or right?",
-      name: "content",
-      widget: "select",
-      default: "left",
-      options: [
-        {
-          label: "Left",
-          value: "left",
-        },
-        {
-          label: "Right",
-          value: "right",
-        },
-      ],
-    },
-    {
-      label: "Content Title",
-      name: "title",
-      widget: "string",
-      required: true,
-    },
-    {
-      label: "Emphasised Content",
-      name: "em",
-      widget: "text",
-      required: false,
-    },
-    {
-      label: "Normal Content",
-      name: "para",
-      widget: "text",
-      required: false,
-    },
-    link,
-  ],
+  fields: [page_title, ...hero_content, link],
 });

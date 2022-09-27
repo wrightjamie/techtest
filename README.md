@@ -18,6 +18,7 @@
 - [ ] Add background images to pages
 - [ ] Change CMS branch back to master
 - [ ] Add deploy previews and editorial workflow
+- [ ] Tidy up unused components
 
 ## 🚀 Quick start
 
