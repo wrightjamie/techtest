@@ -2,6 +2,10 @@
 template: home
 landing:
   tag: Poulton-le-Fylde
+  bgimage: img/175944258_3810700588998429_1120796164934276004_n.jpg
+  content: right
+  em: Lorem Ipsum Emphasised Text
+  para: Some normal content
 header_links:
   - link:
       content: Admin
@@ -13,17 +17,6 @@ posts:
   - posts/a-post-of-type-page2
   - posts/with-content
 pages:
-  - type: hero
-    content: left
-    page_title: Hero page title
-    title: Content title
-    em: Something emphasised
-    para: Normal text
-  - type: hero
-    content: right
-    page_title: Another page title
-    title: No emphasis
-    para: Normal text again
   - type: 3items
     page_title: 3 posts
     posts:
