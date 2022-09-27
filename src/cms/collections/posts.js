@@ -5,7 +5,9 @@ const posts = {
     preview: false,
   },
   description: "Post Content",
-  folder: "content",
+  folder: "content/posts",
+  media_folder: "/img/",
+  public_folder: "./img/",
   slug: "{{slug}}",
   create: true,
   fields: [

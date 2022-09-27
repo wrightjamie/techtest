@@ -5,6 +5,7 @@ import social from "../settings/social";
 const settings = {
   name: "settings",
   label: "Settings",
+  folder: "content/settings/",
   files: [header, footer, social],
 };
 
