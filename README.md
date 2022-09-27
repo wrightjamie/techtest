@@ -14,6 +14,8 @@
 - [ ] Scroll to content link
 - [x] Remove debug console logs
 - [ ] Pointer styles for cards
+- [ ] Add author types to CMS (rank & name)
+- [ ] Add background images to pages
 
 ## 🚀 Quick start
 
