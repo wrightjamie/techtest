@@ -5,6 +5,7 @@ import {
   page_of_recent,
   page_of_three,
   page_of_hero,
+  hero_content,
 } from "../partials/pages";
 
 const home = {
@@ -38,6 +39,7 @@ const home = {
           widget: "string",
           required: false,
         },
+        ...hero_content,
       ],
     },
     links("Header Links", "header_links"),

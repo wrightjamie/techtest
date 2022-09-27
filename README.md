@@ -19,6 +19,7 @@
 - [ ] Change CMS branch back to master
 - [ ] Add deploy previews and editorial workflow
 - [ ] Tidy up unused components
+- [ ] FIgure out why Home Page doesn't have title in CMS
 
 ## 🚀 Quick start
 
