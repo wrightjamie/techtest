@@ -15,7 +15,9 @@ const home = {
     preview: false,
   },
   description: "Setup for Home Page",
-  folder: "content",
+  folder: "content/home/",
+  media_folder: "/img/",
+  public_folder: "./img/",
   file: "home.md",
 
   fields: [
