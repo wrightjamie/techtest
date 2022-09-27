@@ -16,6 +16,7 @@
 - [ ] Pointer styles for cards
 - [ ] Add author types to CMS (rank & name)
 - [ ] Add background images to pages
+- [ ] Add deploy previews and editorial workflow
 
 ## 🚀 Quick start
 
