@@ -3,11 +3,9 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import { GlobalStyle } from "../theme/globalStyle";
 
-import { styled } from "styled-components";
-
 import Header from "./header/header";
 import Footer from "./footer/footer";
-import { LayoutContainer, UtilityContainer } from "./utils/utility";
+import { LayoutContainer } from "./utils/utility";
 
 const Layout = ({ children, lead, scrollStop }) => {
   const data = useStaticQuery(

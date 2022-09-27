@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { VisHidden, flex } from "./utils/utility";
 
 export const Page = styled.section`
   height: ${(props) =>
