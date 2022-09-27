@@ -7,7 +7,7 @@
   Gatsby minimal starter
 </h1>
 
-- [x] DONE Create a new Link Component
+- [x] Create a new Link Component
 - [x] Tidy up unused components in imports
 - [ ] Add image manamagement through Gatsby
 - [ ] Blog styling
@@ -19,7 +19,8 @@
 - [ ] Change CMS branch back to master
 - [ ] Add deploy previews and editorial workflow
 - [ ] Tidy up unused components
-- [ ] FIgure out why Home Page doesn't have title in CMS
+- [ ] Figure out why Home Page doesn't have title in CMS
+- [ ] Make Next Page Links Work
 
 ## 🚀 Quick start
 
