@@ -35,8 +35,9 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout lead={<LeadPage data={leadpagedata} />} scrollStop>
+      {console.log("Index - Page: ", pages)}
       {pages.map((page, index) => (
-        <PageSwitch data={page} key={index} recent={recent} posts={posts} />
+        <PageSwitch data={page} recent={recent} posts={posts} key={index} />
       ))}
     </Layout>
   );
@@ -59,6 +60,7 @@ export const query = graphql`
           type
           page_title
           arrangement
+          posts
         }
       }
     }
