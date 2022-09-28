@@ -35,7 +35,6 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout lead={<LeadPage data={leadpagedata} />} scrollStop>
-      {console.log("Index - Page: ", pages)}
       {pages.map((page, index) => (
         <PageSwitch data={page} recent={recent} posts={posts} key={index} />
       ))}

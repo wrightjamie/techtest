@@ -12,9 +12,6 @@ import {
 import CardLink from "./card_link";
 
 const PageSwitch = ({ data, recent, posts }) => {
-  console.log("posts: ", posts);
-  console.log("data: ", data);
-  console.log("recent", recent);
   switch (data.type) {
     case "hero":
       return <PageSwitchHero data={data} />;
