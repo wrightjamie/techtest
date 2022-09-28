@@ -23,6 +23,26 @@ const page = (name, label, max, min) => ({
       max,
       min,
     },
+    {
+      name: "arrangement",
+      widget: "hidden",
+      default: "",
+    },
+    {
+      name: "em",
+      widget: "hidden",
+      default: "",
+    },
+    {
+      name: "para",
+      widget: "hidden",
+      default: "",
+    },
+    {
+      name: "arrangement",
+      widget: "hidden",
+      default: null,
+    },
   ],
 });
 
@@ -60,6 +80,11 @@ export const page_of_recent = (name = "recent") => ({
         },
       ],
     },
+    {
+      name: "posts",
+      widget: "hidden",
+      default: null,
+    },
   ],
 });
 
@@ -73,7 +98,7 @@ export const hero_content = [
   },
   {
     label: "Content on left or right?",
-    name: "content",
+    name: "arrangement",
     widget: "select",
     default: "left",
     options: [
@@ -98,6 +123,11 @@ export const hero_content = [
     name: "para",
     widget: "text",
     required: false,
+  },
+  {
+    name: "posts",
+    widget: "hidden",
+    default: "",
   },
 ];
 

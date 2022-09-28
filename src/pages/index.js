@@ -57,11 +57,7 @@ export const query = graphql`
         }
         pages {
           type
-          content
           page_title
-          title
-          em
-          para
           arrangement
           posts
         }
