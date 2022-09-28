@@ -54,7 +54,7 @@ const PageSwitchHero = ({ data }) => {
     <HeroPage
       id="page2"
       background="img/advTrg.jpg"
-      left={data.content === "left" ? true : undefined}
+      left={data.arrangement === "left" ? true : undefined}
     >
       {data.page_title && <PageHeader inverted>{data.page_title}</PageHeader>}
       <Hero data={data} />

@@ -38,11 +38,6 @@ const page = (name, label, max, min) => ({
       widget: "hidden",
       default: "",
     },
-    {
-      name: "arrangement",
-      widget: "hidden",
-      default: null,
-    },
   ],
 });
 
