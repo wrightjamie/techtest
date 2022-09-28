@@ -12,11 +12,6 @@ header_links:
       content: Admin
       url: /admin/
       icon: none
-post: posts/another-post-or-type-post
-posts:
-  - posts/a-post-of-type-post
-  - posts/a-post-of-type-page2
-  - posts/with-content
 pages:
   - type: 3items
     page_title: 3 posts
@@ -27,6 +22,7 @@ pages:
   - type: recent
     page_title: Recent Posts
     arrangement: 4S
+    posts: null
   - type: 4items
     page_title: 4 posts
     posts:
@@ -45,7 +41,7 @@ pages:
     page_title: A Hero Page
     em: Some Emphasised Text
     arrangement: left
-    posts: ""
+    posts: null
     bgimage: img/175944258_3810700588998429_1120796164934276004_n.jpg
     title: Some Content
     type: hero

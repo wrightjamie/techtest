@@ -59,7 +59,6 @@ export const query = graphql`
           type
           page_title
           arrangement
-          posts
         }
       }
     }
