@@ -23,21 +23,9 @@ const page = (name, label, max, min) => ({
       max,
       min,
     },
-    {
-      name: "arrangement",
-      widget: "hidden",
-      default: "",
-    },
-    {
-      name: "em",
-      widget: "hidden",
-      default: "",
-    },
-    {
-      name: "para",
-      widget: "hidden",
-      default: "",
-    },
+    hidden("arrangement"),
+    hidden("em"),
+    hidden("para"),
   ],
 });
 
@@ -75,11 +63,7 @@ export const page_of_recent = (name = "recent") => ({
         },
       ],
     },
-    {
-      name: "posts",
-      widget: "hidden",
-      default: null,
-    },
+    hidden("posts"),
   ],
 });
 
@@ -119,11 +103,7 @@ export const hero_content = [
     widget: "text",
     required: false,
   },
-  {
-    name: "posts",
-    widget: "hidden",
-    default: "",
-  },
+  hidden("posts"),
 ];
 
 export const page_of_hero = (name = "hero") => ({
@@ -141,4 +121,10 @@ export const page_of_hero = (name = "hero") => ({
     ...hero_content,
     link,
   ],
+});
+
+const hidden = (name = "hero", value = null) => ({
+  name,
+  widget: "hidden",
+  value,
 });
