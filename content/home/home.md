@@ -6,6 +6,7 @@ landing:
   content: right
   em: Lorem Ipsum Emphasised Text
   para: Some normal content
+  arrangement: left
 header_links:
   - link:
       content: Admin
