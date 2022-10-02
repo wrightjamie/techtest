@@ -23,7 +23,6 @@ const LeadPage = () => {
         <LeadPageLogo>
           <Logo />
         </LeadPageLogo>
-
         <LeadPageTitle>
           <h1>{title}</h1>
           <em>{landing.tag}</em>
