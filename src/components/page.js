@@ -37,9 +37,12 @@ export const Page = styled.section`
 `;
 
 export const TopPage = styled(Page)`
-  color: var(--col-light);
+  grid-row: 1/2;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
+
+  color: var(--col-light);
 `;
 
 export const HeroPage = styled(Page)`

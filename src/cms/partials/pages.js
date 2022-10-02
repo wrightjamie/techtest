@@ -1,5 +1,6 @@
 import post_collection from "../partials/post_collection";
 import { link } from "./links";
+import hidden from "./hidden";
 
 const page_title = {
   label: "Page Title",
@@ -121,10 +122,4 @@ export const page_of_hero = (name = "hero") => ({
     ...hero_content,
     link,
   ],
-});
-
-const hidden = (name = "hero", value = null) => ({
-  name,
-  widget: "hidden",
-  value,
 });

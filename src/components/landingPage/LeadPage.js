@@ -1,5 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import { useLandingData } from "../../hooks/useLandingData";
+import { useSiteMetaData } from "../../hooks/useSiteMetaData";
 
 import Logo from "../../svg/rafacLogo.svg";
 
@@ -7,21 +11,26 @@ import { TopPage, NextPage } from "../page";
 import { UtilityContainer, flow } from "../utils/utility";
 import { SocialItems } from "../utils/social_items";
 
-const LeadPage = ({ data }) => {
+const LeadPage = () => {
+  const landing = useLandingData();
+  const { title } = useSiteMetaData();
+
+  const bgimage = getImage(landing.bgimage);
   return (
-    <UtilityContainer bleed background="img/Torp.jpg" gridrow="1/2">
+    <UtilityContainer bleed gridrow="1/2">
+      <GImage image={bgimage} />
       <TopPage overlay fullHeight>
         <LeadPageLogo>
           <Logo />
         </LeadPageLogo>
 
         <LeadPageTitle>
-          <h1>{data.title}</h1>
-          <em>{data.tag}</em>
+          <h1>{title}</h1>
+          <em>{landing.tag}</em>
         </LeadPageTitle>
         <LeadPageText>
-          <em>{data.content1}</em>
-          <p>{data.content2}</p>
+          <em>{landing.em}</em>
+          <p>{landing.para}</p>
         </LeadPageText>
         <LeadPageSocial>
           <SocialItems />
@@ -68,4 +77,10 @@ const LeadPageLogo = styled.div`
   flex-basis: 100%;
   display: grid;
   justify-content: end;
+`;
+
+const GImage = styled(GatsbyImage)`
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  max-height: 100vh;
 `;

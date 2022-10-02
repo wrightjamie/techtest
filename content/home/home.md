@@ -3,10 +3,8 @@ template: home
 landing:
   tag: Poulton-le-Fylde
   bgimage: img/175944258_3810700588998429_1120796164934276004_n.jpg
-  content: right
-  em: Lorem Ipsum Emphasised Text
+  em: blah blah blah
   para: Some normal content
-  arrangement: left
 header_links:
   - link:
       content: Admin
