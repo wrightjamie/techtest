@@ -35,14 +35,14 @@ pages:
       - posts/a-post-of-type-post
       - posts/a-post-of-type-page
       - posts/another-post-or-type-post
-  - para: Some Normal Text
+  - type: hero
+    para: Some Normal Text
     page_title: A Hero Page
     em: Some Emphasised Text
     arrangement: left
     posts: null
     bgimage: img/175944258_3810700588998429_1120796164934276004_n.jpg
     title: Some Content
-    type: hero
     link:
       icon: none
 ---
