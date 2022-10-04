@@ -1,8 +1,5 @@
 import * as React from "react";
 
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import styled from "styled-components";
-
 import Hero from "./landingPage/Hero";
 import {
   ChequeredPage,
@@ -53,10 +50,12 @@ const PageSwitch = ({ data, recent, posts }) => {
 export default PageSwitch;
 
 const PageSwitchHero = ({ data }) => {
-  const bgimage = getImage(data.bgimage);
   return (
-    <HeroPage id="page2" left={data.arrangement === "left" ? true : undefined}>
-      <GImage image={bgimage} />
+    <HeroPage
+      id="page2"
+      background="img/advTrg.jpg"
+      left={data.arrangement === "left" ? true : undefined}
+    >
       {data.page_title && <PageHeader inverted>{data.page_title}</PageHeader>}
       <Hero data={data} />
       <NextPage link="#page3" />
@@ -102,8 +101,3 @@ const Posts = ({ posts }) => {
     </>
   );
 };
-
-const GImage = styled(GatsbyImage)`
-  position: absolute;
-  z-index: -1;
-`;

@@ -34,17 +34,6 @@ export const query = graphql`
           page_title
           arrangement
           posts
-          para
-          em
-          bgimage {
-            childImageSharp {
-              gatsbyImageData(
-                width: 1024
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
         }
       }
     }

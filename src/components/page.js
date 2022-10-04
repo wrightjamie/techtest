@@ -6,13 +6,13 @@ export const Page = styled.section`
     props.fullHeight ? "100vh" : "calc(100vh - var(--headerHeight))"};
   background-color: ${(props) =>
     props.overlay ? "var(--col-img-cover)" : "var(--col-bg-main)"};
-  /* ${(props) =>
+  ${(props) =>
     props.background
       ? `background-image: url(${props.background});
       background-attachment: fixed;
     background-position: 50%;
     background-size: cover;`
-      : ""} */
+      : ""}
 
   scroll-snap-align: start;
   overflow: hidden;
@@ -46,8 +46,6 @@ export const TopPage = styled(Page)`
 `;
 
 export const HeroPage = styled(Page)`
-  position: relative;
-  isolation: isolate;
   grid-template:
     "header header" auto
     ${(props) => (props.left ? `"content a" 1fr` : `"a content" 1fr`)}
