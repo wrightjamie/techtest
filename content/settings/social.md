@@ -1,4 +1,5 @@
 ---
+template: social
 social_links:
   - link:
       icon: twitter
