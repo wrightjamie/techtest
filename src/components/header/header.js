@@ -18,12 +18,11 @@ const Header = ({ data }) => {
   const [isMenuOpen, node, setToggle] = useMenu();
 
   const links = data.header.frontmatter.links;
-  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <HeaderContainer open={isMenuOpen}>
       <HeaderWrapper ref={node}>
-        <H1Link siteTitle={siteTitle}></H1Link>
+        <H1Link />
         <StyledNav as="nav" open={isMenuOpen} data-menuopen={isMenuOpen}>
           <SocialItems />
           <NavItems>

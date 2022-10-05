@@ -4,13 +4,17 @@ import styled from "styled-components";
 
 import Roundel from "../../svg/rafroundel.svg";
 import { UtilityFlex } from "../utils/utility";
+import { useSiteMetaData } from "../../hooks/useSiteMetaData";
 
-export const H1Link = ({ siteTitle }) => (
-  <StyledLink as={Link} to="/">
-    <StyledRoundel />
-    <H1>{siteTitle}</H1>
-  </StyledLink>
-);
+export const H1Link = () => {
+  const { title } = useSiteMetaData();
+  return (
+    <StyledLink as={Link} to="/">
+      <StyledRoundel />
+      <H1>{title}</H1>
+    </StyledLink>
+  );
+};
 
 const H1 = styled.h1`
   margin-left: calc(
