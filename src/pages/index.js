@@ -14,7 +14,13 @@ const IndexPage = ({ data }) => {
   return (
     <Layout lead={<LeadPage />} scrollStop>
       {pages.map((page, index) => (
-        <PageSwitch data={page} recent={recent} posts={posts} key={index} />
+        <PageSwitch
+          data={page}
+          recent={recent}
+          posts={posts}
+          key={index}
+          page={index}
+        />
       ))}
     </Layout>
   );

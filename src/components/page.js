@@ -165,6 +165,10 @@ const breatheAnimation = keyframes`
 `;
 
 const NextPageContainer = styled.div`
+  section:last-of-type & {
+    display: none;
+  }
+
   flex-basis: 100%;
   grid-area: footer;
   display: grid;

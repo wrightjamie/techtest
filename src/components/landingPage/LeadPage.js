@@ -34,7 +34,7 @@ const LeadPage = () => {
         <LeadPageSocial>
           <SocialItems />
         </LeadPageSocial>
-        <NextPage link="#page2" text="Learn More" />
+        <NextPage link="#page0" text="Learn More" />
       </TopPage>
     </UtilityContainer>
   );

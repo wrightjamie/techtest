@@ -15,12 +15,13 @@
 - [x] Remove debug console logs
 - [ ] Pointer styles for cards
 - [ ] Add author types to CMS (rank & name)
-- [ ] Add background images to pages
+- [x] Add background images to pages
 - [ ] Change CMS branch back to master
 - [ ] Add deploy previews and editorial workflow
 - [ ] Tidy up unused components
 - [ ] Figure out why Home Page doesn't have title in CMS
-- [ ] Make Next Page Links Work
+- [x] Make Next Page Links Work
+- [ ] Next Page animation more like social links
 
 ## 🚀 Quick start
 
