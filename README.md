@@ -22,6 +22,7 @@
 - [ ] Figure out why Home Page doesn't have title in CMS
 - [x] Make Next Page Links Work
 - [ ] Next Page animation more like social links
+- [ ] Add perspective to images
 
 ## 🚀 Quick start
 
