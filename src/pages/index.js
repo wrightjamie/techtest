@@ -28,11 +28,6 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     landing: markdownRemark(frontmatter: { template: { eq: "home" } }) {
       frontmatter {
         pages {
@@ -46,6 +41,7 @@ export const query = graphql`
             childImageSharp {
               gatsbyImageData(
                 width: 1024
+                layout: CONSTRAINED
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
