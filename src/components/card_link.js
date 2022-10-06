@@ -6,6 +6,7 @@ import { flow } from "./utils/utility";
 const CardLink = ({ data }) => {
   const images = ["advTrg.jpg", "glider.jpg", "tutor.jpg"];
   const image = "img/" + images[Math.floor(Math.random() * images.length)];
+  console.log("card data: ", data);
 
   return (
     <>

@@ -2,7 +2,7 @@
 template: post
 title: A Post with Content
 author: WO Jamie Wright
-featured: /img/20210429_221616.jpg
+featured: img/20210429_221616.jpg
 date: 2022-08-12T15:07:52.875Z
 excerpt: THis is a post with some content in it
 slug: posts/a-post-of-type-page
