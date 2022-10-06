@@ -12,7 +12,7 @@ export const useLandingData = () => {
             bgimage {
               childImageSharp {
                 gatsbyImageData(
-                  width: 1024
+                  layout: FULL_WIDTH
                   placeholder: BLURRED
                   formats: [AUTO, WEBP, AVIF]
                 )

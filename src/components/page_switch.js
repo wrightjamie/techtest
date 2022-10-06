@@ -115,4 +115,5 @@ const Posts = ({ posts }) => {
 const GImage = styled(GatsbyImage)`
   position: absolute;
   z-index: -1;
+  inset: 0;
 `;
