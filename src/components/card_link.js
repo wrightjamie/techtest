@@ -2,18 +2,16 @@ import React from "react";
 import Link from "./utils/link";
 import styled from "styled-components";
 import { flow } from "./utils/utility";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CardLink = ({ data }) => {
-  const images = ["advTrg.jpg", "glider.jpg", "tutor.jpg"];
-  const image = "img/" + images[Math.floor(Math.random() * images.length)];
-  console.log("card data: ", data);
-
+  const featImage = getImage(data.featured);
   return (
     <>
       <StyledSection>
         <Link to={data.slug}>
-          <img src={image} />
-          <div>
+          <GImage image={featImage} />
+          <div className="cardText">
             <h2>{data.title}</h2>
             {data.excerpt && <p>{data.excerpt}</p>}
           </div>
@@ -31,23 +29,17 @@ const StyledSection = styled.section`
 
   --heading: var(--f-s-heading, var(--f-s-500));
 
-  * {
+  .gatsby-image-wrapper {
     transition: all 0.5s ease-in-out;
   }
 
-  img {
-    position: absolute;
-    object-fit: cover;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-  }
-  div {
+  .cardText {
     position: absolute;
     inset: 0;
 
     opacity: 0.7;
     background-color: var(--col-img-cover);
+    transition: all 0.5s ease-in-out;
     transform: translateY(
       calc(100% - var(--heading) * var(--f-lh-heading) - var(--gap))
     );
@@ -66,7 +58,7 @@ const StyledSection = styled.section`
 
   &:hover,
   &:focus-within {
-    img {
+    .gatsby-image-wrapper {
       transform: scale(1.05);
     }
     div {
@@ -78,4 +70,9 @@ const StyledSection = styled.section`
       text-decoration: underline;
     }
   }
+`;
+
+const GImage = styled(GatsbyImage)`
+  position: absolute;
+  inset: 0;
 `;

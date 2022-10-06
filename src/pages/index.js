@@ -67,7 +67,16 @@ export const query = graphql`
       nodes {
         frontmatter {
           excerpt
-          featured
+          featured {
+            childImageSharp {
+              gatsbyImageData(
+                width: 750
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
           slug
           title
         }

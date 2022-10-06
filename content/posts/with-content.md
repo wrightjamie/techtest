@@ -5,6 +5,7 @@ slug: posts/with-content
 author: Jamie Wright
 date: 2022-05-04T20:39:05.294Z
 excerpt: This is the excerpt of a post
+featured: img/20210429_221616.jpg
 ---
 
 ## A Header
