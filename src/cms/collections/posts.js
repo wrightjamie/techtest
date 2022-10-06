@@ -32,7 +32,7 @@ const posts = {
     },
     {
       label: "Featured Image",
-      name: "thumbnail",
+      name: "featured",
       widget: "image",
       default: "",
       required: false,
@@ -42,13 +42,6 @@ const posts = {
       name: "date",
       widget: "datetime",
       default: "",
-      required: true,
-    },
-    {
-      label: "Featured",
-      name: "featured",
-      widget: "boolean",
-      default: true,
       required: true,
     },
     {
