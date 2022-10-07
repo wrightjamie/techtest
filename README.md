@@ -23,6 +23,7 @@
 - [x] Make Next Page Links Work
 - [ ] Next Page animation more like social links
 - [ ] Add perspective to images
+- [ ] Sort out heading heirarchy
 
 ## 🚀 Quick start
 
