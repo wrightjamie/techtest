@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const UtilityContainer = styled.div`
+  position: relative;
   display: grid;
 
   ${(props) => (props.bleed ? "grid-column: 1/-1" : "")};

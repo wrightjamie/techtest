@@ -6,28 +6,24 @@ import Layout from "../components/Layout";
 import { UtilityContainer } from "../components/utils/utility";
 import { NextPage } from "../components/page";
 import { PostContent } from "../components/postcontent";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function BlogPost({ data }) {
-  const post = data.markdownRemark;
+  const { title, author, date, featured } = data.markdownRemark.frontmatter;
+  const content = data.markdownRemark.html;
   return (
-    <Layout lead={<Lead title={post.frontmatter.title} />}>
+    <Layout lead={<Lead title={title} image={featured} />}>
       <Post id="content">
         <PostHeader>
-          {post.frontmatter.title && (
-            <PostTitle>{post.frontmatter.title}</PostTitle>
-          )}
-          {post.frontmatter.author && (
-            <PostAuthor>{post.frontmatter.author}</PostAuthor>
-          )}
-          {post.frontmatter.date && (
-            <PostDate>{post.frontmatter.date}</PostDate>
-          )}
+          {title && <PostTitle>{title}</PostTitle>}
+          {author && <PostAuthor>{author}</PostAuthor>}
+          {date && <PostDate>{date}</PostDate>}
         </PostHeader>
         {/* TODO - sort out excerpt
         {post.fields?.excerpt && (
           <PostExcerpt>{post.frontmatter.excerpt}</PostExcerpt>
         )} */}
-        <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
+        <PostContent dangerouslySetInnerHTML={{ __html: content }} />
       </Post>
     </Layout>
   );
@@ -40,6 +36,15 @@ export const query = graphql`
         title
         author
         date
+        featured {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
       }
     }
   }
@@ -65,9 +70,12 @@ const StyledHeader = styled.h1`
   font-size: var(--f-s-900);
 `;
 
-const Lead = ({ title }) => {
+const Lead = ({ title, image }) => {
+  const bgimage = getImage(image);
+
   return (
-    <UtilityContainer bleed background="../../img/Torp.jpg">
+    <UtilityContainer bleed>
+      <GImage image={bgimage} />
       <Page>
         <StyledHeader>{title}</StyledHeader>
         <NextPage link="#content" />
@@ -78,6 +86,7 @@ const Lead = ({ title }) => {
 
 const Post = styled.div`
   background-color: var(--white);
+  padding: var(--gap);
 `;
 
 const PostHeader = styled.div`
@@ -86,7 +95,8 @@ const PostHeader = styled.div`
     "title title"
     "author date" auto/1fr 1fr;
   border-bottom: 1px dashed var(--col-text);
-  margin: var(--gap);
+  margin-bottom: 1rem;
+  //margin: var(--gap);
 `;
 
 const PostTitle = styled.span`
@@ -104,6 +114,12 @@ const PostDate = styled.span`
   grid-area: date;
   margin-left: auto;
   font-size: var(--f-s-300);
+`;
+
+const GImage = styled(GatsbyImage)`
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 `;
 
 //TODO: Sort out what an excerpt is and how it is presented.

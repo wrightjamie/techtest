@@ -24,6 +24,7 @@
 - [ ] Next Page animation more like social links
 - [ ] Add perspective to images
 - [ ] Sort out heading heirarchy
+- [ ] Hide 2nd title in posts from screen readers
 
 ## 🚀 Quick start
 
