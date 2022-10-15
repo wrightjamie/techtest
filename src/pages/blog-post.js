@@ -120,6 +120,7 @@ const GImage = styled(GatsbyImage)`
   position: absolute;
   inset: 0;
   z-index: -1;
+  grid-column: 1/-1;
 `;
 
 //TODO: Sort out what an excerpt is and how it is presented.
