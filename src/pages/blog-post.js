@@ -28,27 +28,6 @@ export default function BlogPost({ data }) {
     </Layout>
   );
 }
-export const query = graphql`
-  query ($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        author
-        date
-        featured {
-          childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
-          }
-        }
-      }
-    }
-  }
-`;
 
 const Page = styled.div`
   height: 100vh;
@@ -68,6 +47,7 @@ const StyledHeader = styled.h1`
   padding-inline: var(--gap);
   font-variant: small-caps;
   font-size: var(--f-s-900);
+  border-bottom: 1px dashed var(--col-light);
 `;
 
 const Lead = ({ title, image }) => {
@@ -92,11 +72,10 @@ const Post = styled.div`
 const PostHeader = styled.div`
   display: grid;
   grid-template:
-    "title title"
-    "author date" auto/1fr 1fr;
-  border-bottom: 1px dashed var(--col-text);
+    "... title title ..."
+    "... author date ..." auto/1fr min(50%, 20rem) min(50%, 20rem) 1fr;
+
   margin-bottom: 1rem;
-  //margin: var(--gap);
 `;
 
 const PostTitle = styled.span`
@@ -128,3 +107,25 @@ const GImage = styled(GatsbyImage)`
 //   font-weight: var(--f-w-600);
 //   font-size: var(--f-s-500);
 // `;
+
+export const query = graphql`
+  query ($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        author
+        date
+        featured {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+      }
+    }
+  }
+`;
