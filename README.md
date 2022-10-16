@@ -10,7 +10,7 @@
 - [x] Create a new Link Component
 - [x] Tidy up unused components in imports
 - [ ] Add image manamagement through Gatsby
-- [ ] Blog styling
+- [x] Blog styling
 - [ ] Scroll to content link
 - [x] Remove debug console logs
 - [ ] Pointer styles for cards
@@ -25,6 +25,7 @@
 - [ ] Add perspective to images
 - [ ] Sort out heading heirarchy
 - [ ] Hide 2nd title in posts from screen readers
+- [ ] Add ability for galleries in posts
 
 ## 🚀 Quick start
 
