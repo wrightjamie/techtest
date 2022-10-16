@@ -47,7 +47,6 @@ const StyledHeader = styled.h1`
   padding-inline: var(--gap);
   font-variant: small-caps;
   font-size: var(--f-s-900);
-  border-bottom: 1px dashed var(--col-light);
 `;
 
 const Lead = ({ title, image }) => {
@@ -84,6 +83,7 @@ const PostTitle = styled.span`
   font-size: var(--f-s-700);
   font-weight: var(--f-w-900);
   color: var(--col-heading);
+  border-bottom: 1px dashed var(--col-light);
 `;
 const PostAuthor = styled.span`
   grid-area: author;
