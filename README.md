@@ -7,25 +7,34 @@
   Gatsby minimal starter
 </h1>
 
-- [x] Create a new Link Component
-- [x] Tidy up unused components in imports
-- [ ] Add image manamagement through Gatsby
-- [x] Blog styling
-- [ ] Scroll to content link
-- [x] Remove debug console logs
-- [ ] Pointer styles for cards
-- [ ] Add author types to CMS (rank & name)
-- [x] Add background images to pages
+Must Do
+
 - [ ] Change CMS branch back to master
-- [ ] Add deploy previews and editorial workflow
-- [ ] Tidy up unused components
-- [ ] Figure out why Home Page doesn't have title in CMS
-- [x] Make Next Page Links Work
+- [ ] Scroll to content link
+- [ ] Pointer styles for cards
+- [ ] Hide 2nd title in posts from screen readers
+- [ ] Add CTA Links on Hero Pages
+
+Nice To Have
+
+- [ ] Add ability for galleries in posts
 - [ ] Next Page animation more like social links
 - [ ] Add perspective to images
 - [ ] Sort out heading heirarchy
-- [ ] Hide 2nd title in posts from screen readers
-- [ ] Add ability for galleries in posts
+- [ ] Add deploy previews and editorial workflow
+- [ ] Tidy up unused components
+- [ ] Figure out why Home Page doesn't have title in CMS
+- [ ] Add author types to CMS (rank & name)
+
+Done
+
+- [x] Create a new Link Component
+- [x] Tidy up unused components in imports
+- [x] Add background images to pages
+- [x] Make Next Page Links Work
+- [x] Remove debug console logs
+- [x] Blog styling
+- [x] Add image manamagement through Gatsby
 
 ## 🚀 Quick start
 
