@@ -25,6 +25,14 @@ export const PostContent = styled.article`
   blockquote {
     border-left: 10px var(--col-light) solid;
     padding-inline: var(--gap);
+    cite {
+      display: block;
+      text-align: right;
+      font-size: var(--f-s-300);
+      &:before {
+        content: "-- ";
+      }
+    }
   }
   hr {
     border-top: 1px dashed var(--col-light);
