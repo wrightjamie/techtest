@@ -115,7 +115,7 @@ export const query = graphql`
       frontmatter {
         title
         author
-        date
+        date(formatString: "MMMM YYYY")
         featured {
           childImageSharp {
             gatsbyImageData(
