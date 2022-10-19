@@ -109,7 +109,7 @@ const GImage = styled(GatsbyImage)`
 // `;
 
 export const query = graphql`
-  query ($slug: String!) {
+  query ($slug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
