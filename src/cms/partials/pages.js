@@ -1,5 +1,5 @@
 import post_collection from "../partials/post_collection";
-import { link } from "./links";
+import links from "./links";
 import hidden from "./hidden";
 
 const page_title = {
@@ -120,6 +120,6 @@ export const page_of_hero = (name = "hero") => ({
       required: true,
     },
     ...hero_content,
-    link,
+    links("Call To Action", "links", 0, 2),
   ],
 });
