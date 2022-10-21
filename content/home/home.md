@@ -12,6 +12,19 @@ header_links:
       url: /admin/
       icon: none
 pages:
+  - type: hero
+    para: Some Normal Text
+    page_title: A Hero Page
+    em: Some Emphasised Text
+    arrangement: left
+    posts: null
+    bgimage: img/175944258_3810700588998429_1120796164934276004_n.jpg
+    title: Some Content
+    links:
+      - link:
+          content: Join Us
+          url: /join-us/
+          icon: none
   - type: 3items
     page_title: 3 posts
     posts:
@@ -36,19 +49,4 @@ pages:
       - posts/a-post-of-type-post
       - posts/a-post-of-type-page
       - posts/another-post-or-type-post
-  - para: Some Normal Text
-    page_title: A Hero Page
-    em: Some Emphasised Text
-    arrangement: left
-    posts: null
-    bgimage: img/175944258_3810700588998429_1120796164934276004_n.jpg
-    title: Some Content
-    links:
-      - link:
-          content: Join Us
-          url: /join-us/
-          icon: none
-    type: hero
-    link:
-      icon: none
 ---
