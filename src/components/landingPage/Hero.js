@@ -2,6 +2,7 @@ import * as React from "react";
 import Link from "../utils/link";
 import styled from "styled-components";
 import { flow } from "../utils/utility";
+import Icon from "../utils/icon";
 
 const Hero = ({ data }) => {
   return (
@@ -10,14 +11,15 @@ const Hero = ({ data }) => {
         {data.title && <h3>{data.title}</h3>}
         {data.em && <em>{data.em}</em>}
         <p>{data.content}</p>
-        {data.cta1 && (
-          <Cta>
-            <CtaButton to={data.cta1.to}>{data.cta1.title}</CtaButton>
-            {data.cta2 && (
-              <StyledLink to={data.cta2.to}>{data.cta2.title}</StyledLink>
-            )}
-          </Cta>
-        )}
+        {console.log(data.links)}
+        <Cta>
+          {data.links.map((link) => (
+            <StyledLink href={link.link.url}>
+              <Icon icon={link.link.icon} />
+              <span>{link.link.content}</span>
+            </StyledLink>
+          ))}
+        </Cta>
       </HeroContainer>
     </>
   );
@@ -46,30 +48,41 @@ const Cta = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  color: var(--col-light);
-  cursor: pointer;
-  line-height: var(--f-lh-heading);
+  display: flex;
   padding: calc(var(--gap) / 2) var(--gap);
+
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: var(--col-img-cover);
+
+  background-color: var(--col-img-cover);
+
+  cursor: pointer;
+
+  color: var(--col-light);
+
+  font-size: var(--fs, var(--f-s-400));
+  line-height: var(--f-lh-heading);
+
   &:hover,
   &:focus-within {
     text-decoration: underline;
     color: var(--white);
   }
-`;
-const CtaButton = styled(Link)`
-  background-color: var(--bg-col, var(--red));
-  border-radius: 5px;
-  color: var(--col-light);
-  cursor: pointer;
-  font-size: var(--fs, var(--f-s-500));
-  font-variant: small-caps;
-  font-weight: var(--f-w-600);
-  line-height: var(--f-lh-heading);
-  padding: calc(var(--gap) / 2) var(--gap);
-  &:hover,
-  &:focus-within {
-    text-decoration: underline;
-    color: var(--white);
-    background-color: var(--bg-col-hover, var(--blue));
+  &:first-child {
+    color: var(--col-light);
+    background-color: var(--bg-col, var(--red));
+    font-weight: var(--f-w-600);
+    font-size: var(--fs, var(--f-s-500));
+    font-variant: small-caps;
+
+    &:hover,
+    &:focus-within {
+      background-color: var(--bg-col, var(--col-text));
+    }
+  }
+
+  svg {
+    margin-inline-end: 1rem;
   }
 `;

@@ -47,6 +47,13 @@ export const query = graphql`
               )
             }
           }
+          links {
+            link {
+              content
+              url
+              icon
+            }
+          }
         }
       }
     }

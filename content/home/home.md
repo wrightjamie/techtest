@@ -25,6 +25,10 @@ pages:
           content: Join Us
           url: /join-us/
           icon: none
+      - link:
+          content: Learn More
+          url: /learn-more/
+          icon: none
   - type: 3items
     page_title: 3 posts
     posts:
