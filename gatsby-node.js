@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      allMarkdownRemark(
+      PostsAndPages: allMarkdownRemark(
         filter: { frontmatter: { template: { in: ["post", "page"] } } }
       ) {
         edges {
@@ -23,8 +23,16 @@ exports.createPages = async function ({ actions, graphql }) {
             fields {
               slug
             }
-            frontmatter {
-              template
+          }
+        }
+      }
+      Posts: allMarkdownRemark(
+        filter: { frontmatter: { template: { in: "post" } } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
             }
           }
         }
@@ -32,11 +40,9 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `);
 
-  const posts = data.allMarkdownRemark.edges;
-
   //Create news paginated list. Built from news template
   const postsPerPage = 2;
-  const numPages = Math.ceil(posts.length / postsPerPage);
+  const numPages = Math.ceil(data.Posts.edges.length / postsPerPage);
 
   Array.from({ length: numPages }).forEach((_, i) => {
     actions.createPage({
@@ -52,7 +58,7 @@ exports.createPages = async function ({ actions, graphql }) {
   });
 
   //Create a page for each slug, blog-post template
-  posts.forEach((edge) => {
+  data.PostsAndPages.edges.forEach((edge) => {
     const slug = edge.node.fields.slug;
     actions.createPage({
       path: slug,
