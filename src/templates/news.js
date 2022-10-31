@@ -4,14 +4,21 @@ import styled from "styled-components";
 
 import Layout from "../components/Layout";
 import CardLink from "../components/card_link";
+import { usePagination } from "../hooks/usePagination";
 
 export default function News({ data }) {
+  const pagination = usePagination(113, 6, 4, 2);
+
+  console.log(pagination);
+
   return (
     <Layout>
       <Post id="content">
-        <h1>News (page 1)</h1>
+        <h1>News (page {pagination.currentPage})</h1>
         <Posts posts={data.allMarkdownRemark.nodes} />
       </Post>
+      {pagination.nextPageAvailable && <h4>Next</h4>}
+      {pagination.prevPageAvailable && <h4>Prev</h4>}
     </Layout>
   );
 }
