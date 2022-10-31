@@ -6,9 +6,9 @@ import Layout from "../components/Layout";
 import CardLink from "../components/card_link";
 import { usePagination } from "../hooks/usePagination";
 
-export default function News({ data }) {
+export default function News({ data, pageContext }) {
   const pagination = usePagination(113, 6, 4, 2);
-
+  console.log("pageContext:", pageContext);
   console.log(pagination);
 
   return (
@@ -53,10 +53,12 @@ const Posts = ({ posts }) => {
 };
 
 export const query = graphql`
-  query {
+  query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { template: { eq: "post" } } }
+      limit: $limit
+      skip: $skip
     ) {
       nodes {
         frontmatter {
