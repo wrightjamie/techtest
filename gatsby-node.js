@@ -32,7 +32,27 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `);
 
-  data.allMarkdownRemark.edges.forEach((edge) => {
+  const posts = data.allMarkdownRemark.edges;
+
+  //Create news paginated list. Built from news template
+  const postsPerPage = 2;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    actions.createPage({
+      path: i === 0 ? `/news` : `/news/${i + 1}`,
+      component: require.resolve(`./src/templates/news.js`),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    });
+  });
+
+  //Create a page for each slug, blog-post template
+  posts.forEach((edge) => {
     const slug = edge.node.fields.slug;
     actions.createPage({
       path: slug,
