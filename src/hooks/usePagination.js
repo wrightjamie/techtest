@@ -6,16 +6,32 @@ export const usePagination = (
   currentPage,
   sizeOfRange
 ) => {
+  //Total Pages
   const totalPages = Math.ceil(totalItems / perPage);
-  const rangeBefore = useMemo(() => {
-    return [0, 1];
-  }, [totalItems, perPage, currentPage, sizeOfRange]);
 
-  const rangeAfter = [5, 6];
-  const dotsBefore = false;
-  const dotsAfter = true;
+  //Items Before
+  const rangeBefore = [];
+  for (let i = currentPage - sizeOfRange - 1; i < currentPage - 1; i++) {
+    rangeBefore.push(i);
+  }
+
+  //Items After
+  const rangeAfter = [];
+  for (let i = currentPage; i < currentPage + sizeOfRange; i++) {
+    rangeAfter.push(i);
+  }
+
+  //SHow Dots?
+  const dotsBefore = currentPage > sizeOfRange + 2;
+  const dotsAfter = currentPage + sizeOfRange + 1 < totalPages;
+
+  //Is Next / Prev Buttons Enabled?
   const nextPageAvailable = totalPages > currentPage;
   const prevPageAvailable = 1 < currentPage;
+
+  //Is First / Last Buttons Enabled?
+  const firstPageAvailable = currentPage > 1;
+  const lastPageAvailable = currentPage < totalPages;
 
   return {
     totalPages,
@@ -25,6 +41,8 @@ export const usePagination = (
     dotsAfter,
     nextPageAvailable,
     prevPageAvailable,
+    firstPageAvailable,
+    lastPageAvailable,
     currentPage,
     perPage,
   };

@@ -9,6 +9,8 @@ export default function Pagination({
     dotsAfter,
     nextPageAvailable,
     prevPageAvailable,
+    firstPageAvailable,
+    lastPageAvailable,
     currentPage,
     perPage,
   },
@@ -19,15 +21,17 @@ export default function Pagination({
     <ul>
       {prevPageAvailable && <li>Prev</li>}
       <li>
-        <Link href="/news">1</Link>
+        <Link href="/news">First</Link>
       </li>
       {dotsBefore && <li>...</li>}
       {rangeBefore && <Range range={rangeBefore} />}
-      <li>Current: {currentPage}</li>
+      <li>
+        {currentPage} of {totalPages}
+      </li>
       {rangeAfter && <Range range={rangeAfter} />}
       {dotsAfter && <li>...</li>}
       <li>
-        <Link href={`/news/${totalPages}`}>{totalPages}</Link>
+        <Link href={`/news/${totalPages}`}>Last</Link>
       </li>
       {nextPageAvailable && <li>Next</li>}
     </ul>
