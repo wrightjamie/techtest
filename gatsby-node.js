@@ -49,6 +49,7 @@ exports.createPages = async function ({ actions, graphql }) {
       path: i === 0 ? `/news` : `/news/${i + 1}`,
       component: require.resolve(`./src/templates/news.js`),
       context: {
+        totalItems: data.Posts.edges.length,
         limit: postsPerPage,
         skip: i * postsPerPage,
         numPages,

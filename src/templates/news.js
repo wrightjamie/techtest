@@ -5,11 +5,15 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import CardLink from "../components/card_link";
 import { usePagination } from "../hooks/usePagination";
+import Pagination from "../components/pagination";
 
 export default function News({ data, pageContext }) {
-  const pagination = usePagination(113, 6, 4, 2);
-  console.log("pageContext:", pageContext);
-  console.log(pagination);
+  const pagination = usePagination(
+    pageContext.totalItems,
+    pageContext.limit,
+    pageContext.currentPage,
+    2
+  );
 
   return (
     <Layout>
@@ -17,8 +21,7 @@ export default function News({ data, pageContext }) {
         <h1>News (page {pagination.currentPage})</h1>
         <Posts posts={data.allMarkdownRemark.nodes} />
       </Post>
-      {pagination.nextPageAvailable && <h4>Next</h4>}
-      {pagination.prevPageAvailable && <h4>Prev</h4>}
+      <Pagination data={pagination} />
     </Layout>
   );
 }

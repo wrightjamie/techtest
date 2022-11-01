@@ -7,19 +7,22 @@ export const usePagination = (
   sizeOfRange
 ) => {
   const totalPages = Math.ceil(totalItems / perPage);
-  const rangeBefore = useMemo(() => {}, [
-    totalItems,
-    perPage,
-    currentPage,
-    sizeOfRange,
-  ]);
+  const rangeBefore = useMemo(() => {
+    return [0, 1];
+  }, [totalItems, perPage, currentPage, sizeOfRange]);
 
+  const rangeAfter = [5, 6];
+  const dotsBefore = false;
+  const dotsAfter = true;
   const nextPageAvailable = totalPages > currentPage;
   const prevPageAvailable = 1 < currentPage;
 
   return {
     totalPages,
+    dotsBefore,
     rangeBefore,
+    rangeAfter,
+    dotsAfter,
     nextPageAvailable,
     prevPageAvailable,
     currentPage,
