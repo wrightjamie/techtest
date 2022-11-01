@@ -1,5 +1,3 @@
-import { useMemo } from "react";
-
 export const usePagination = (
   totalItems,
   perPage,
@@ -12,7 +10,7 @@ export const usePagination = (
   //Items Before
   const rangeBefore = [];
   for (
-    let i = Math.max(currentPage - sizeOfRange - 1, 1);
+    let i = Math.max(currentPage - sizeOfRange - 1, 0);
     i < currentPage - 1;
     i++
   ) {
@@ -23,7 +21,7 @@ export const usePagination = (
   const rangeAfter = [];
   for (
     let i = currentPage;
-    i < Math.min(currentPage + sizeOfRange, totalPages - 1);
+    i < Math.min(currentPage + sizeOfRange, totalPages);
     i++
   ) {
     rangeAfter.push(i);
@@ -53,5 +51,6 @@ export const usePagination = (
     lastPageAvailable,
     currentPage,
     perPage,
+    sizeOfRange,
   };
 };
