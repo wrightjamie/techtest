@@ -41,7 +41,7 @@ exports.createPages = async function ({ actions, graphql }) {
   `);
 
   //Create news paginated list. Built from news template
-  const postsPerPage = 2;
+  const postsPerPage = 5;
   const numPages = Math.ceil(data.Posts.edges.length / postsPerPage);
 
   Array.from({ length: numPages }).forEach((_, i) => {
