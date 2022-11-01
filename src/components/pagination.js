@@ -19,21 +19,27 @@ export default function Pagination({
   rangeAfter = rangeAfter.map((v) => v + 1);
   return (
     <ul>
-      {prevPageAvailable && <li>Prev</li>}
-      <li>
-        <Link href="/news">First</Link>
-      </li>
-      {dotsBefore && <li>...</li>}
-      {rangeBefore && <Range range={rangeBefore} />}
-      <li>
+      {firstPageAvailable && (
+        <li className="pagination-first">
+          <Link href="/news">First</Link>
+        </li>
+      )}
+      {prevPageAvailable && <li className="pagination-prev">Prev</li>}
+      {dotsBefore && <li className="pagination-dots-before">...</li>}
+      {rangeBefore && (
+        <Range className="pagination-before" range={rangeBefore} />
+      )}
+      <li className="pagination-current">
         {currentPage} of {totalPages}
       </li>
-      {rangeAfter && <Range range={rangeAfter} />}
-      {dotsAfter && <li>...</li>}
-      <li>
-        <Link href={`/news/${totalPages}`}>Last</Link>
-      </li>
-      {nextPageAvailable && <li>Next</li>}
+      {rangeAfter && <Range range={rangeAfter} className="pagination-after" />}
+      {dotsAfter && <li className="pagination-dots-after">...</li>}
+      {nextPageAvailable && <li className="pagination-next">Next</li>}
+      {lastPageAvailable && (
+        <li className="pagination-last">
+          <Link href={`/news/${totalPages}`}>Last</Link>
+        </li>
+      )}
     </ul>
   );
 }

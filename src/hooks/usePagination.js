@@ -11,13 +11,21 @@ export const usePagination = (
 
   //Items Before
   const rangeBefore = [];
-  for (let i = currentPage - sizeOfRange - 1; i < currentPage - 1; i++) {
+  for (
+    let i = Math.max(currentPage - sizeOfRange - 1, 1);
+    i < currentPage - 1;
+    i++
+  ) {
     rangeBefore.push(i);
   }
 
   //Items After
   const rangeAfter = [];
-  for (let i = currentPage; i < currentPage + sizeOfRange; i++) {
+  for (
+    let i = currentPage;
+    i < Math.min(currentPage + sizeOfRange, totalPages - 1);
+    i++
+  ) {
     rangeAfter.push(i);
   }
 
