@@ -8,6 +8,6 @@ links:
       content: Home
       url: /
   - link:
-      content: Fb
-      url: https://www.facebook.com/
+      content: News
+      url: /news/
 ---
