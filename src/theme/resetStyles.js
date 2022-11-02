@@ -80,7 +80,7 @@ export const Reset = css`
     color: unset;
     text-decoration: unset;
     &:hover {
-      color: var(--col-hover, var(--white));
+      color: var(--col-hover, var(--col-v-light));
       text-decoration: underline;
     }
   }

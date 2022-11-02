@@ -35,7 +35,7 @@ const HeroContainer = styled.div`
   padding: var(--gap);
   ${flow}
   h3 {
-    color: var(--white);
+    color: var(--col-v-light);
     font-size: var(--f-s-700);
     font-weight: var(--f-w-500);
   }
@@ -67,7 +67,7 @@ const StyledLink = styled(Link)`
   &:hover,
   &:focus-within {
     text-decoration: underline;
-    color: var(--white);
+    color: var(--col-v-light);
   }
   &:first-child {
     color: var(--col-light);

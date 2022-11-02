@@ -49,7 +49,7 @@ const StyledSection = styled.section`
     font-size: var(--heading);
     font-weight: var(--f-w-600);
     line-height: var(--f-lh-heading);
-    color: var(--white);
+    color: var(--col-v-light);
   }
   p {
     color: var(--col-light);

@@ -9,6 +9,7 @@ export const Variables = css`
     --col-heading: rgb(49, 99, 158);
     --col-text: rgb(27, 50, 87);
     --col-light: rgb(183, 203, 226);
+    --col-v-light: var(--white);
     --col-accent: rgb(255, 217, 17);
 
     --col-img-cover: rgba(27, 50, 87, 0.7);
@@ -43,5 +44,17 @@ export const Variables = css`
     --f-w-600: 600;
     --f-w-500: 500;
     --f-w-900: 700;
+  }
+  .dark {
+    --col-heading: rgb(49, 99, 158);
+    --col-text: rgb(183, 203, 226); //updated
+    --col-light: rgb(183, 203, 226);
+    --col-v-light: rgb(27, 50, 87); //Updated
+    --col-accent: rgb(255, 217, 17);
+
+    --col-img-cover: rgba(27, 50, 87, 0.7);
+    --col-bg: rgb(183, 203, 226);
+    --col-header: var(--col-text);
+    --col-bg-main: rgb(183, 203, 226);
   }
 `;

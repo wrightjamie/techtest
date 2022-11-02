@@ -27,7 +27,7 @@ export default function News({ data, pageContext }) {
 }
 
 const Post = styled.div`
-  background-color: var(--white);
+  background-color: var(--col-v-light);
   padding: var(--gap);
   grid-row-start: 3;
   display: flex;

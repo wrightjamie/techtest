@@ -64,7 +64,7 @@ const Lead = ({ title, image }) => {
 };
 
 const Post = styled.div`
-  background-color: var(--white);
+  background-color: var(--col-v-light);
   padding: var(--gap);
 `;
 

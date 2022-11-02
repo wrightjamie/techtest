@@ -119,7 +119,7 @@ export const PageHeader = styled.h2`
     props.inverted
       ? `
       background-color: var(--col-img-cover);
-color: var(--white);`
+color: var(--col-v-light);`
       : `color: var(--col-header);`}
   font-variant: small-caps;
   font-weight: 600;
@@ -152,12 +152,12 @@ const breatheAnimation = keyframes`
  10% {
   background-color: rgb(0 0 0 / 0.2);
   box-shadow: 0 0 0.5rem 1rem rgb(0 0 0 / 0.2);
-  //color:var(--white);
+  //color:var(--col-v-light);
 }
 15% {
   background-color: rgb(0 0 0 / 0.2);
   box-shadow: 0 0 .5rem 1rem rgb(0 0 0 / 0.2);
-//  color:var(--white);
+//  color:var(--col-v-light);
 }
  25% {
   background-color:transparent;

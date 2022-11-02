@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { flow } from "./utils/utility";
 
 export const PostContent = styled.article`
-  background-color: var(--white);
+  background-color: var(--col-v-light);
   padding-block: var(--gap);
   display: grid;
   grid-template-columns: 1fr min(100%, 40rem) 1fr;

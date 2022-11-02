@@ -67,7 +67,7 @@ const StyledSection = styled.section`
       transform: none;
     }
     h2 {
-      color: var(--white);
+      color: var(--col-v-light);
       text-decoration: underline;
     }
   }

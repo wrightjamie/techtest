@@ -118,7 +118,7 @@ function linkPath(i) {
 const PaginationContainer = styled.div`
   grid-row-start: 4;
   display: flex;
-  background-color: var(--white);
+  background-color: var(--col-v-light);
   padding-block: var(--gap);
   ul {
     margin-inline: auto;
@@ -161,7 +161,7 @@ const PaginationContainer = styled.div`
       &:hover a {
         background-color: var(--col-heading);
         text-decoration: none;
-        color: var(--white);
+        color: var(--col-v-light);
       }
     }
   }
