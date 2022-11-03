@@ -10,13 +10,16 @@
 Must Do
 
 - [ ] Change CMS branch back to master
-- [ ] Scroll to content link
+- [x] Scroll to content link
 - [ ] Pointer styles for cards
-- [ ] Hide 2nd title in posts from screen readers
-- [ ] Add CTA Links on Hero Pages
+- [x] Hide 2nd title in posts from screen readers
+- [x] Add CTA Links on Hero Pages
 
 Nice To Have
 
+- [ ] Add clearer ARIA roles / attributes
+- [ ] Prefers reduced motion
+- [ ] Relook at moving header to top on focus - it jumps on click preventing click
 - [ ] Add ability for galleries in posts
 - [ ] Next Page animation more like social links
 - [ ] Add perspective to images
@@ -25,6 +28,7 @@ Nice To Have
 - [ ] Tidy up unused components
 - [ ] Figure out why Home Page doesn't have title in CMS
 - [ ] Add author types to CMS (rank & name)
+- [ ] Create a min height for content so that footer is always pushed down
 
 Done
 
