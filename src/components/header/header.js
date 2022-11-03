@@ -13,6 +13,9 @@ import {
   UtilityNavList,
 } from "../utils/utility";
 import { SocialItems } from "../utils/social_items";
+import ThemeToggleButton from "./themeToggleButton";
+
+import SunMoon from "../../svg/sunMoon.svg";
 
 const Header = ({ data }) => {
   const [isMenuOpen, node, setToggle] = useMenu();
@@ -24,6 +27,9 @@ const Header = ({ data }) => {
       <HeaderWrapper ref={node}>
         <H1Link />
         <StyledNav as="nav" open={isMenuOpen} data-menuopen={isMenuOpen}>
+          <ThemeToggleButton>
+            <SunMoon />
+          </ThemeToggleButton>
           <SocialItems />
           <NavItems>
             {links.map((link, index) => (
