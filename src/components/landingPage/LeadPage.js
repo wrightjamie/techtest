@@ -17,7 +17,7 @@ const LeadPage = () => {
 
   const bgimage = getImage(landing.bgimage);
   return (
-    <UtilityContainer bleed gridrow="1/2">
+    <UtilityContainer bleed gridrow="1/2" id="#content">
       <GImage image={bgimage} />
       <TopPage overlay fullHeight>
         <LeadPageLogo>
