@@ -39,7 +39,7 @@ const Page = styled.div`
   padding-block: var(--gap);
 `;
 
-const StyledHeader = styled.h1`
+const StyledHeader = styled.span`
   grid-area: title;
   background-color: var(--col-img-cover);
   color: var(--col-light);
@@ -47,6 +47,7 @@ const StyledHeader = styled.h1`
   padding-inline: var(--gap);
   font-variant: small-caps;
   font-size: var(--f-s-900);
+  font-weight: var(--f-w-900);
 `;
 
 const Lead = ({ title, image }) => {
@@ -56,7 +57,7 @@ const Lead = ({ title, image }) => {
     <UtilityContainer bleed>
       <GImage image={bgimage} />
       <Page>
-        <StyledHeader>{title}</StyledHeader>
+        <StyledHeader aria-hidden="true">{title}</StyledHeader>
         <NextPage link="#content" />
       </Page>
     </UtilityContainer>
@@ -77,7 +78,7 @@ const PostHeader = styled.div`
   margin-bottom: 1rem;
 `;
 
-const PostTitle = styled.span`
+const PostTitle = styled.h1`
   grid-area: title;
   font-variant: small-caps;
   font-size: var(--f-s-700);
