@@ -49,11 +49,10 @@ const Cta = styled.div`
 
 const StyledLink = styled(Link)`
   display: flex;
+  align-items: center;
   padding: calc(var(--gap) / 2) var(--gap);
 
   border-radius: 5px;
-  border: 1px solid;
-  border-color: var(--col-img-cover);
 
   background-color: var(--col-img-cover);
 
@@ -61,24 +60,29 @@ const StyledLink = styled(Link)`
 
   color: var(--col-light);
 
-  font-size: var(--fs, var(--f-s-400));
+  font-size: var(--fs, var(--f-s-500));
   line-height: var(--f-lh-heading);
 
   &:hover,
   &:focus-within {
-    text-decoration: underline;
-    color: var(--white);
   }
   &:first-child {
-    color: var(--col-light);
     background-color: var(--bg-col, var(--red));
     font-weight: var(--f-w-600);
-    font-size: var(--fs, var(--f-s-500));
+
     font-variant: small-caps;
 
     &:hover,
     &:focus-within {
       background-color: var(--bg-col, var(--col-text));
+      box-shadow: 0 0 10px 3px var(--red);
+    }
+  }
+  &:last-child {
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 0 10px 3px var(--col-img-cover);
+      font-size: var(--f-s-400);
     }
   }
 

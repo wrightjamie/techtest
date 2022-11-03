@@ -41,7 +41,6 @@ export const Variables = css`
 
     --f-w-500: 500;
     --f-w-600: 600;
-    --f-w-500: 500;
     --f-w-900: 700;
   }
 `;
