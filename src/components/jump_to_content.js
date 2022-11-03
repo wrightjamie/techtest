@@ -12,7 +12,9 @@ const JumpToContent = styled.a`
   background-color: var(--col-light);
   color: var(--red);
   border-radius: 0 0 5px 5px;
-  transition: transform 0.3s, outline-offset 0.5s, outline-color 0.5s;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.3s, outline-offset 0.5s, outline-color 0.5s;
+  }
   outline-offset: 0px;
   &:focus {
     transform: translateX(-50%) translateY(0%);
