@@ -30,7 +30,6 @@ const StyledSection = styled.section`
   --heading: var(--f-s-heading, var(--f-s-500));
 
   .gatsby-image-wrapper {
-    transition: all 0.5s ease-in-out;
   }
 
   .cardText {
@@ -73,6 +72,7 @@ const StyledSection = styled.section`
 `;
 
 const GImage = styled(GatsbyImage)`
-  position: absolute;
+  transition: all 0.5s ease-in-out;
+  position: absolute !important;
   inset: 0;
 `;
