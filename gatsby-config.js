@@ -49,6 +49,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `2459 (Poulton-le-Fylde) Squadron`,
+        short_name: `2459 Sqn`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      },
+    },
 
     // {
     //   resolve: "gatsby-plugin-root-import",
