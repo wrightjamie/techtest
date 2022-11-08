@@ -8,6 +8,7 @@ import PageSwitch from "../components/page_switch";
 // markup
 const IndexPage = ({ data }) => {
   const recent = data.recent.nodes.map((x) => x.frontmatter.slug);
+  console.log("Recent Posts: ", recent);
   const pages = data.landing.frontmatter.pages;
   const posts = data.post_and_pages.nodes.map((x) => x.frontmatter);
 
