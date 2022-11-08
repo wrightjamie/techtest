@@ -97,7 +97,7 @@ const PostDate = styled.span`
 `;
 
 const GImage = styled(GatsbyImage)`
-  position: absolute;
+  position: absolute !important;
   inset: 0;
   z-index: -1;
   grid-column: 1/-1;
