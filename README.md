@@ -10,10 +10,7 @@
 Must Do
 
 - [ ] Change CMS branch back to master
-- [x] Scroll to content link
 - [ ] Pointer styles for cards
-- [x] Hide 2nd title in posts from screen readers
-- [x] Add CTA Links on Hero Pages
 
 Nice To Have
 
@@ -39,6 +36,9 @@ Done
 - [x] Remove debug console logs
 - [x] Blog styling
 - [x] Add image manamagement through Gatsby
+- [x] Hide 2nd title in posts from screen readers
+- [x] Add CTA Links on Hero Pages
+- [x] Scroll to content link
 
 ## 🚀 Quick start
 
