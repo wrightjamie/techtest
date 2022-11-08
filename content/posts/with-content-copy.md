@@ -1,7 +1,7 @@
 ---
 template: page
 title: With Content
-slug: posts/with-content
+slug: posts/with-content-copy
 author: Jamie Wright
 date: 2022-05-04T20:39:05.294Z
 excerpt: This is the excerpt of a post

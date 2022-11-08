@@ -1,7 +1,7 @@
 ---
 template: post
 title: A post of type post
-slug: posts/a-post-of-type-post
+slug: posts/a-post-of-type-post-copy
 featured: img/20210429_221616.jpg
 author: A N Other
 ---
