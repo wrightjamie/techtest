@@ -47,7 +47,6 @@ const Posts = ({ posts }) => {
   return (
     <>
       {posts.map((post, index) => {
-        console.log(post.frontmatter);
         return <CardLink key={index} data={post.frontmatter} />;
       })}
     </>
