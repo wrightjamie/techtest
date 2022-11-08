@@ -11,7 +11,6 @@ const Hero = ({ data }) => {
         {data.title && <h3>{data.title}</h3>}
         {data.em && <em>{data.em}</em>}
         <p>{data.content}</p>
-        {console.log(data.links)}
         <Cta>
           {data.links.map((link) => (
             <StyledLink href={link.link.url}>

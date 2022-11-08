@@ -99,7 +99,6 @@ const Range = ({ range, className }) => {
 };
 
 const CellButton = ({ i, enabled, entity, className }) => {
-  console.log(i);
   return (
     <li className={className} disabled={!enabled}>
       {enabled ? (

@@ -44,7 +44,6 @@ const Post = styled.div`
 `;
 
 const Posts = ({ posts }) => {
-  console.log("Posts: ", posts);
   return (
     <>
       {posts.map((post, index) => {

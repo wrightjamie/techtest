@@ -6,7 +6,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CardLink = ({ data }) => {
   const featImage = getImage(data.featured);
-  console.log(data);
   return (
     <>
       <StyledSection>
