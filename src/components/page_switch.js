@@ -20,6 +20,7 @@ const PageSwitch = ({ data, recent, posts, page }) => {
       return <PageSwitchHero data={data} page={page} />;
     case "recent":
       const filtered_posts = posts.filter((post) => recent.includes(post.slug));
+      console.log("Recent Posts: ", filtered_posts);
       return <PageSwitchPosts data={data} posts={filtered_posts} page={page} />;
     case "3items":
       data.arrangement = "3V";
