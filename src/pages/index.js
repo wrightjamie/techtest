@@ -59,7 +59,7 @@ export const query = graphql`
     }
     recent: allMarkdownRemark(
       limit: 4
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { template: { eq: "post" } } }
     ) {
       nodes {
