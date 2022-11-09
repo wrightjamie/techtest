@@ -3,10 +3,10 @@ template: home
 landing:
   tag: Poulton-le-Fylde
   bgimage: img/175944258_3810700588998429_1120796164934276004_n.jpg
-  em: Being a member of the Royal Air Force Air Cadets is exciting and rewarding.
-    Flying, Gliding, Adventurous Training, Marksmanship, DofE Awards, Overseas
-    Visits, STEM and Friendships.
-  para: "Are you in Year 8 or above at school? Looking for a challenge? "
+  em: Are you in Year 8 or above at school? Looking for a challenge?
+  para: Being a member of the Royal Air Force Air Cadets is exciting and
+    rewarding. Flying, Gliding, Adventurous Training, Marksmanship, DofE Awards,
+    Overseas Visits, STEM and Friendships.
   arrangement: right
 header_links:
   - link:
