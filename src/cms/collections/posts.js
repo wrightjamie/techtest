@@ -58,11 +58,6 @@ const posts = {
       default: "",
       required: false,
     },
-    {
-      name: "slug",
-      widget: "hidden",
-      default: "{{slug}}",
-    },
   ],
 };
 
