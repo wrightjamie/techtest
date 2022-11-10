@@ -18,6 +18,13 @@ header_links:
       url: /join-us/
       icon: none
 pages:
+  - type: 4items
+    page_title: What We Do
+    posts:
+      - posts/a-post-of-type-page
+      - posts/a-post-of-type-post
+      - posts/another-post-or-type-post
+      - posts/a-post-of-type-page2
   - para: We meet at out building on Ashton playing fields, Poulton-le-Fylde, every
       Monday and Thursday evening. Starting at 1900hrs through to 2130hrs.
     page_title: Find Out More
@@ -42,11 +49,4 @@ pages:
     page_title: Recent Posts
     arrangement: 4S
     posts: null
-  - type: 4items
-    page_title: 4 posts
-    posts:
-      - posts/a-post-of-type-page
-      - posts/a-post-of-type-post
-      - posts/another-post-or-type-post
-      - posts/a-post-of-type-page2
 ---
