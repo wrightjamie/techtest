@@ -35,7 +35,7 @@ const posts = {
       name: "featured",
       widget: "image",
       default: "",
-      required: false,
+      required: true,
     },
     {
       label: "Date",
