@@ -21,7 +21,7 @@ pages:
   - type: 4items
     page_title: What We Do
     posts:
-      - posts/a-post-of-type-post-copy-2
+      - posts/flying-and-gliding
       - posts/a-post-of-type-post
       - posts/another-post-or-type-post
       - posts/a-post-of-type-page2
