@@ -4,10 +4,10 @@ title: Flying and Gliding
 author: WO J Wright
 featured: img/20210429_221616.jpg
 date: 2022-11-10T20:08:38.009Z
+slug: posts/flying-and-gliding
 excerpt: Want to get airborne? RAF Air Cadets get the opportunity to fly in
   military aircraft and be trained to fly by experienced instructors. Learn
   more...
-slug: posts/flying-and-gliding
 ---
 
 A﻿s a member of the RAFAC, Cadets can expect to be given the opportunity to fly in a variety of military aircraft, including taking control themselves under the tuition of experienced instructors. Some will even have the opportunity to fly solo!
