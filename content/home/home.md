@@ -49,4 +49,11 @@ pages:
     page_title: Recent Posts
     arrangement: 4S
     posts: null
+  - type: 4chequed
+    page_title: Meet the Staff
+    posts:
+      - posts/civilian-committee
+      - posts/civilian-instructors
+      - posts/our-non-commissioned-officers
+      - posts/our-officers
 ---
