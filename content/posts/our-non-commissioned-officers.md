@@ -9,22 +9,25 @@ excerpt: >-
 
   You'll hear this from our adult Senior NCO team whenever new Cadets mistakenly salute them... But who are they and who shouldn't they be saluted?
 ---
-W﻿e have 3 Cadet Forces Adult Volunteer (CFAV) Senior Non-Commissioned Officers (SNCOs). As non-commissioned officers they aren't saluted.
+
+We have 3 Cadet Forces Adult Volunteer (CFAV) Senior Non-Commissioned Officers (SNCOs). As non-commissioned officers they aren't saluted.
 
 The traditional role of an SNCO is to look after drill and discipline of the Cadets, although that isn't always the case. The SNCO's within the RAFAC hold one of 3 ranks - Sergeant, Flight Sergeant or Warrant Officer.
 
-### W﻿arrant Officer Paul Davison
+### Warrant Officer Paul Davison
 
-W﻿O Davison is the Squadron Warrant Officer and ultimately responsible for the drill and discipline of all of our Cadets.
+WO Davison is the Squadron Warrant Officer and ultimately responsible for the drill and discipline of all of our Cadets.
 
-> S﻿ome words from Paul
+> Some words from Paul
 
-### W﻿arrant Officer Jamie Wright
+### Warrant Officer Jamie Wright
 
-W﻿O Wright looks after the training programme for our Cadets. 
+WO Wright looks after the training programme for our Cadets.
 
-> As an ex-Cadet I really understand the value that the RAFAC can bring to young people. 
+> As an ex-Cadet I really understand the value that the RAFAC can bring to young people.
 
-### F﻿light Sergeant Charlie Cartwright
+### Flight Sergeant Charlie Cartwright
 
-F﻿S Cartwright is one of the jewels of the Squadron. He is constantly found bounding around the Squadron with a huge grin and a cheeky outlook. As an ex-Serviceman Charlie has a huge amount of personal experience to draw upon.
+FS Cartwright is one of the jewels of the Squadron. He is constantly found bouncing around the Squadron with a huge grin and a cheeky outlook. As an ex-Serviceman Charlie has a huge amount of personal experience to draw upon.
+
+> Some words from Charlie
