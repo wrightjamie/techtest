@@ -32,7 +32,7 @@ const PageSwitch = ({ data, recent, posts, page }) => {
       );
     case "4items":
       console.log("Data: ", data);
-      console.log("Posts: ", posts); // Includes a trailing slash
+      console.log("Posts: ", posts); // Includes leading and trailing slash
       console.log("Page: ", page);
       data.arrangement = "4S";
       return (
