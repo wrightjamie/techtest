@@ -44,7 +44,7 @@ const PageSwitch = ({ data, recent, posts, page }) => {
       return (
         <PageSwitchPosts
           data={data}
-          posts={posts.filter((post) => data.posts.includes(post.slug))}
+          posts={posts.filter((post) => data.posts.fields.includes(post.slug))}
           page={page}
         />
       );
@@ -57,6 +57,7 @@ export default PageSwitch;
 
 const PageSwitchHero = ({ data, page }) => {
   const bgimage = getImage(data.bgimage);
+
   return (
     <HeroPage
       id={`page${page}`}
@@ -71,6 +72,9 @@ const PageSwitchHero = ({ data, page }) => {
 };
 
 const PageSwitchPosts = ({ data, posts, page }) => {
+  console.log("Data: ", data);
+  console.log("Page: ", page);
+  console.log("Posts: ", posts);
   switch (data.arrangement) {
     case "3V":
       posts.length = 3;

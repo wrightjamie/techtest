@@ -7,6 +7,7 @@ import PageSwitch from "../components/page_switch";
 
 // markup
 const IndexPage = ({ data }) => {
+  console.log(data);
   const recent = data.recent.nodes.map((x) => x.frontmatter.slug);
   const pages = data.landing.frontmatter.pages;
   const posts = data.post_and_pages.nodes.map((x) => x.frontmatter);
@@ -86,6 +87,9 @@ export const query = graphql`
           }
           slug
           title
+        }
+        fields {
+          slug
         }
       }
     }
