@@ -23,12 +23,12 @@ pages:
     posts:
       - posts/flying-and-gliding
       - flying-and-gliding
-  - para:
-      We meet at out building on Ashton playing fields, Poulton-le-Fylde, every
+      - posts/a-test-of-slug
+      - posts/a-test-of-slug
+  - para: We meet at out building on Ashton playing fields, Poulton-le-Fylde, every
       Monday and Thursday evening. Starting at 1900hrs through to 2130hrs.
     page_title: Find Out More
-    em:
-      The RAF Air Cadets are the premier youth organisation in the United Kingdom.
+    em: The RAF Air Cadets are the premier youth organisation in the United Kingdom.
       Our Squadron is one of almost 1000 across the UK, with over 40,000 Cadets
       and highly experienced staff members.
     arrangement: left
