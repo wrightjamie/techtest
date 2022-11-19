@@ -31,11 +31,16 @@ const PageSwitch = ({ data, recent, posts, page }) => {
         />
       );
     case "4items":
+      console.log("Data: ", data);
+      console.log("Posts: ", posts); // Includes a trailing slash
+      console.log("Page: ", page);
       data.arrangement = "4S";
       return (
         <PageSwitchPosts
           data={data}
-          posts={posts.filter((post) => data.posts.includes(post.slug))}
+          posts={posts.filter((post) =>
+            data.posts.includes(post.slug.slice(1, -1))
+          )}
           page={page}
         />
       );
@@ -44,7 +49,7 @@ const PageSwitch = ({ data, recent, posts, page }) => {
       return (
         <PageSwitchPosts
           data={data}
-          posts={posts.filter((post) => data.posts.fields.includes(post.slug))}
+          posts={posts.filter((post) => data.posts.includes(post.slug))}
           page={page}
         />
       );
@@ -72,9 +77,6 @@ const PageSwitchHero = ({ data, page }) => {
 };
 
 const PageSwitchPosts = ({ data, posts, page }) => {
-  console.log("Data: ", data);
-  console.log("Page: ", page);
-  console.log("Posts: ", posts);
   switch (data.arrangement) {
     case "3V":
       posts.length = 3;
