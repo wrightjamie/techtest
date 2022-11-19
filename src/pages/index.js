@@ -7,10 +7,12 @@ import PageSwitch from "../components/page_switch";
 
 // markup
 const IndexPage = ({ data }) => {
-  console.log(data);
-  const recent = data.recent.nodes.map((x) => x.frontmatter.slug);
+  const recent = data.recent.nodes.map((x) => x.fields.slug);
   const pages = data.landing.frontmatter.pages;
-  const posts = data.post_and_pages.nodes.map((x) => x.frontmatter);
+  const posts = data.post_and_pages.nodes.map(({ frontmatter, fields }) => ({
+    ...frontmatter,
+    ...fields,
+  }));
 
   return (
     <Layout lead={<LeadPage />} scrollStop>
@@ -26,6 +28,11 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 };
+
+/*
+Recent filter changed to easier testing, should be:
+filter: { frontmatter: { template: { eq: "post" } } }
+*/
 
 export const query = graphql`
   query {
@@ -61,10 +68,10 @@ export const query = graphql`
     recent: allMarkdownRemark(
       limit: 4
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { template: { eq: "post" } } }
+      filter: { frontmatter: { template: { in: ["post", "page"] } } }
     ) {
       nodes {
-        frontmatter {
+        fields {
           slug
         }
       }
@@ -85,7 +92,6 @@ export const query = graphql`
               )
             }
           }
-          slug
           title
         }
         fields {
