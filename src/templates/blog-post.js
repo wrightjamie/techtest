@@ -15,7 +15,7 @@ export default function BlogPost({ data }) {
     <Layout lead={<Lead title={title} image={featured} />}>
       <Post id="content">
         <PostHeader>
-          {title && <PostTitle aria-hidder={true}>{title}</PostTitle>}
+          {title && <PostTitle aria-hidden={true}>{title}</PostTitle>}
           {author && <PostAuthor>{author}</PostAuthor>}
           {date && <PostDate>{date}</PostDate>}
         </PostHeader>

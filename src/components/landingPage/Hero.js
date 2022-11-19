@@ -12,8 +12,8 @@ const Hero = ({ data }) => {
         {data.em && <em>{data.em}</em>}
         <p>{data.content}</p>
         <Cta>
-          {data.links.map((link) => (
-            <StyledLink href={link.link.url}>
+          {data.links.map((link, index) => (
+            <StyledLink key={index} href={link.link.url}>
               <Icon icon={link.link.icon} />
               <span>{link.link.content}</span>
             </StyledLink>

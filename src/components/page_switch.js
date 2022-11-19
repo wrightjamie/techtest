@@ -62,7 +62,7 @@ const PageSwitchHero = ({ data, page }) => {
       id={`page${page}`}
       left={data.arrangement === "left" ? true : undefined}
     >
-      <GImage image={bgimage} />
+      <GImage image={bgimage} alt="Background Image" />
       {data.page_title && <PageHeader inverted>{data.page_title}</PageHeader>}
       <Hero data={data} />
       <NextPage link={`#page${page + 1}`} />
