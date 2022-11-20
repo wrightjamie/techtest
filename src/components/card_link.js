@@ -10,7 +10,7 @@ const CardLink = ({ data }) => {
     <>
       <StyledSection>
         <Link to={data.slug}>
-          <GImage image={featImage} />
+          <GImage image={featImage} alt="Image" />
           <div className="cardText">
             <h2>{data.title}</h2>
             {data.excerpt && <p>{data.excerpt}</p>}

@@ -31,9 +31,6 @@ const PageSwitch = ({ data, recent, posts, page }) => {
         />
       );
     case "4items":
-      console.log("Data: ", data);
-      console.log("Posts: ", posts); // Includes leading and trailing slash
-      console.log("Page: ", page);
       data.arrangement = "4S";
       return (
         <PageSwitchPosts
@@ -49,7 +46,9 @@ const PageSwitch = ({ data, recent, posts, page }) => {
       return (
         <PageSwitchPosts
           data={data}
-          posts={posts.filter((post) => data.posts.includes(post.slug))}
+          posts={posts.filter((post) =>
+            data.posts.includes(post.slug.slice(1, -1))
+          )}
           page={page}
         />
       );

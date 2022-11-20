@@ -14,9 +14,13 @@ Must Do
 - [ ] Hero normal text not showing
 - [ ] Second CTA Hover style
 - [ ] Menu items
+- [ ] SEO
+- [ ] Better background images (alt tags)
 
 Nice To Have
 
+- [ ] Parallax background image
+- [ ] Move top background image into a reuseable component
 - [ ] Add clearer ARIA roles / attributes
 - [ ] Prefers reduced motion
 - [ ] Relook at moving header to top on focus - it jumps on click preventing click

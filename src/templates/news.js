@@ -47,7 +47,8 @@ const Posts = ({ posts }) => {
   return (
     <>
       {posts.map((post, index) => {
-        return <CardLink key={index} data={post.frontmatter} />;
+        const data = { ...post.frontmatter, ...post.fields };
+        return <CardLink key={index} data={data} />;
       })}
     </>
   );
@@ -57,7 +58,7 @@ export const query = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { template: { eq: "post" } } }
+      filter: { frontmatter: { template: { eq: "page" } } }
       limit: $limit
       skip: $skip
     ) {
@@ -74,8 +75,10 @@ export const query = graphql`
               )
             }
           }
-          slug
           title
+        }
+        fields {
+          slug
         }
       }
     }

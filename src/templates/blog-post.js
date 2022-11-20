@@ -55,7 +55,7 @@ const Lead = ({ title, image }) => {
 
   return (
     <UtilityContainer bleed>
-      <GImage image={bgimage} />
+      <GImage image={bgimage} alt="background image" />
       <Page>
         <StyledHeader aria-hidden="true">{title}</StyledHeader>
         <NextPage link="#content" />

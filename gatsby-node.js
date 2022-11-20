@@ -27,7 +27,7 @@ exports.createPages = async function ({ actions, graphql }) {
         }
       }
       Posts: allMarkdownRemark(
-        filter: { frontmatter: { template: { in: "post" } } }
+        filter: { frontmatter: { template: { in: "page" } } }
       ) {
         edges {
           node {
