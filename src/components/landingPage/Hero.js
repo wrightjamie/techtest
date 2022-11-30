@@ -62,26 +62,25 @@ const StyledLink = styled(Link)`
   font-size: var(--fs, var(--f-s-500));
   line-height: var(--f-lh-heading);
 
-  &:hover,
-  &:focus-within {
-  }
   &:first-child {
     background-color: var(--bg-col, var(--red));
     font-weight: var(--f-w-600);
 
     font-variant: small-caps;
+    transition: transform 50ms ease;
 
     &:hover,
     &:focus-within {
       background-color: var(--bg-col, var(--col-text));
-      box-shadow: 0 0 10px 3px var(--red);
+      box-shadow: 0 0.25rem 10px 3px var(--col-text);
+      transform: translateY(-0.25rem);
     }
   }
   &:last-child {
+    font-size: var(--f-s-400);
     &:hover,
     &:focus-within {
       box-shadow: 0 0 10px 3px var(--col-img-cover);
-      font-size: var(--f-s-400);
     }
   }
 

@@ -6,7 +6,6 @@ import { GlobalStyle } from "../theme/globalStyle";
 import Header from "./header/header";
 import Footer from "./footer/footer";
 import { LayoutContainer } from "./utils/utility";
-import Jump_to_content from "./jump_to_content";
 import JumpToContent from "./jump_to_content";
 
 const Layout = ({ children, lead, scrollStop }) => {
