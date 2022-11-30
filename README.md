@@ -10,9 +10,9 @@
 Must Do
 
 - [ ] Change CMS branch back to master
-- [ ] Pointer styles for cards
-- [ ] Hero normal text not showing
-- [ ] Second CTA Hover style
+- [x] Pointer styles for cards
+- [x] Hero normal text not showing
+- [x] Second CTA Hover style
 - [ ] Menu items
 - [ ] SEO
 - [ ] Better background images (alt tags)

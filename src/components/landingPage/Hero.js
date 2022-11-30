@@ -10,7 +10,7 @@ const Hero = ({ data }) => {
       <HeroContainer>
         {data.title && <h3>{data.title}</h3>}
         {data.em && <em>{data.em}</em>}
-        <p>{data.content}</p>
+        {data.para && <p>{data.para}</p>}
         <Cta>
           {data.links.map((link, index) => (
             <StyledLink key={index} href={link.link.url}>
