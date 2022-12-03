@@ -1,7 +1,7 @@
 import React from "react";
 
 export const SEO = ({ title, description, pathname, children }) => {
-  const title = "Page Title";
+  const defaultTitle = "Page Title";
   const seo = {
     // vaiable: override || fallback
     title: title || defaultTitle,
