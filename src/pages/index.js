@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 
 import LeadPage from "../components/landingPage/LeadPage";
 import PageSwitch from "../components/page_switch";
+import { SEO } from "../components/utils/seo";
 
 // markup
 const IndexPage = ({ data }) => {
