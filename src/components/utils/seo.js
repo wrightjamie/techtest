@@ -7,11 +7,13 @@ export const SEO = ({ title, description, pathname, children }) => {
   const seo = {
     // vaiable: override || fallback
     title: title || siteMetadata.title,
+    description: description || siteMetadata.description,
   };
 
   return (
     <>
       <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
       {children}
     </>
   );
