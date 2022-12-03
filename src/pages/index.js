@@ -29,6 +29,8 @@ const IndexPage = ({ data }) => {
   );
 };
 
+export const Head = () => <SEO />;
+
 /*
 Recent filter changed to easier testing, should be:
 filter: { frontmatter: { template: { eq: "post" } } }

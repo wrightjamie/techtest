@@ -13,8 +13,9 @@ Must Do
 - [x] Pointer styles for cards
 - [x] Hero normal text not showing
 - [x] Second CTA Hover style
-- [ ] Menu items
+- [x] Menu items
 - [ ] SEO
+- [ ] Add SEO component
 - [ ] Better background images (alt tags)
 
 Nice To Have
