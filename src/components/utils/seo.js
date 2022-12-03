@@ -1,10 +1,12 @@
 import React from "react";
+import { useSiteMetaData } from "../../hooks/useSiteMetaData";
 
 export const SEO = ({ title, description, pathname, children }) => {
-  const defaultTitle = "Page Title";
+  const siteMetadata = useSiteMetaData();
+
   const seo = {
     // vaiable: override || fallback
-    title: title || defaultTitle,
+    title: title || siteMetadata.title,
   };
 
   return (

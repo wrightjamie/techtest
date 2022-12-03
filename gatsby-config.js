@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `2459 Squadron`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://development--jw-techtest.netlify.app/`,
+    description: `The RAF Air Cadets are the premier youth organisation in the United Kingdom. Poulton-le-Fylde Squadron is one of almost 1000 across the UK, with over 40,000 Cadets and highly experienced staff members.`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
