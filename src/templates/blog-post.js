@@ -7,6 +7,7 @@ import { UtilityContainer } from "../components/utils/utility";
 import { NextPage } from "../components/page";
 import { PostContent } from "../components/postcontent";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { SEO } from "../components/utils/seo";
 
 export default function BlogPost({ data }) {
   const { title, author, date, featured } = data.markdownRemark.frontmatter;
@@ -28,6 +29,11 @@ export default function BlogPost({ data }) {
     </Layout>
   );
 }
+
+export const Head = ({ data }) => {
+  const { title, author, date, featured } = data.markdownRemark.frontmatter;
+  return <SEO title={title} />;
+};
 
 const Page = styled.div`
   height: 100vh;
