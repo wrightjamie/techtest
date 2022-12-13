@@ -5,7 +5,7 @@ export const SEO = ({ title, description, pathname, children, featured }) => {
   const siteMetadata = useSiteMetaData();
   const seo = {
     // vaiable: override || fallback
-    title: `${siteMetadata.title} ${title && ` - ${title}`}`,
+    title: [siteMetadata.title, title].filter(Boolean).join(" - "),
     description: description || siteMetadata.description,
     featured: featured || null,
     url: "www.example.com",
