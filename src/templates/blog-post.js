@@ -31,9 +31,8 @@ export default function BlogPost({ data }) {
 }
 
 export const Head = ({ data }) => {
-  console.log("Data: ", data);
   const { title, author, date, social } = data.markdownRemark.frontmatter;
-  return <SEO title={title} featured={social} />;
+  return <SEO title={title} featured={social} author={author} date={date} />;
 };
 
 const Page = styled.div`
