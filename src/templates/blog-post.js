@@ -31,8 +31,9 @@ export default function BlogPost({ data }) {
 }
 
 export const Head = ({ data }) => {
-  const { title, author, date, featured } = data.markdownRemark.frontmatter;
-  return <SEO title={title} featured={featured} />;
+  console.log("Data: ", data);
+  const { title, author, date, social } = data.markdownRemark.frontmatter;
+  return <SEO title={title} featured={social} />;
 };
 
 const Page = styled.div`
@@ -130,6 +131,13 @@ export const query = graphql`
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )
+          }
+        }
+        social: featured {
+          childImageSharp {
+            fixed(height: 630, width: 1200) {
+              src
+            }
           }
         }
       }
