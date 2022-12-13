@@ -1,15 +1,16 @@
 import React from "react";
 import { useSiteMetaData } from "../../hooks/useSiteMetaData";
 
-export const SEO = ({ title, description, pathname, children }) => {
+export const SEO = ({ title, description, pathname, children, featured }) => {
   const siteMetadata = useSiteMetaData();
   const seo = {
     // vaiable: override || fallback
-    title: title || siteMetadata.title,
+    title: `${siteMetadata.title} ${title && ` - ${title}`}`,
     description: description || siteMetadata.description,
-    featured: null,
+    featured: featured || null,
     url: "www.example.com",
   };
+  console.log("SEO Object: ", seo);
 
   return (
     <>

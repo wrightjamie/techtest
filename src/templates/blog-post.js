@@ -32,7 +32,7 @@ export default function BlogPost({ data }) {
 
 export const Head = ({ data }) => {
   const { title, author, date, featured } = data.markdownRemark.frontmatter;
-  return <SEO title={title} />;
+  return <SEO title={title} featured={featured} />;
 };
 
 const Page = styled.div`

@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import CardLink from "../components/card_link";
 import { usePagination } from "../hooks/usePagination";
 import Pagination from "../components/pagination";
+import { SEO } from "../components/utils/seo";
 
 export default function News({ data, pageContext }) {
   const pagination = usePagination(
@@ -25,6 +26,18 @@ export default function News({ data, pageContext }) {
     </Layout>
   );
 }
+
+export const Head = ({ pageContext }) => {
+  const pagination = usePagination(
+    pageContext.totalItems,
+    pageContext.limit,
+    pageContext.currentPage,
+    2
+  );
+  const title = `Page ${pagination.currentPage} of ${pagination.totalPages}`;
+
+  return <SEO title={title} />;
+};
 
 const Post = styled.div`
   background-color: var(--white);

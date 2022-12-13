@@ -30,7 +30,9 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export const Head = () => <SEO />;
+export const Head = ({ data }) => (
+  <SEO featured={data.landing.frontmatter.pages.bgimage} />
+);
 
 /*
 Recent filter changed to easier testing, should be:
