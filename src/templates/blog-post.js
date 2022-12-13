@@ -134,9 +134,7 @@ export const query = graphql`
         }
         social: featured {
           childImageSharp {
-            fixed(height: 630, width: 1200) {
-              src
-            }
+            gatsbyImageData(height: 630, width: 1200, formats: [AUTO])
           }
         }
       }
